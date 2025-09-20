@@ -1,0 +1,244 @@
+/* Testimonial Section Styles */
+.testimonial-section {
+  position: relative;
+  overflow: hidden;
+  background: #2c3546;
+  padding: 30px 0;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 350px;
+}
+
+.testimonial-image {
+  flex: 0 0 50%;
+  position: relative;
+  z-index: 1;
+  perspective: 1000px;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-image:hover img {
+  transform: translateY(-8px) rotateX(5deg) rotateY(-5deg) scale(1.05);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+  filter: brightness(1.2) contrast(1.15) saturate(1.1);
+}
+
+/* Embossed effect overlay */
+.testimonial-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 25%, 
+    rgba(0, 0, 0, 0.05) 75%, 
+    rgba(0, 0, 0, 0.1) 100%);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.testimonial-image:hover::before {
+  opacity: 1;
+}
+
+/* Inner glow effect */
+.testimonial-image::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    transparent 50%, 
+    rgba(0, 0, 0, 0.1) 100%);
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.testimonial-image:hover::after {
+  opacity: 1;
+}
+
+.testimonial-content {
+  flex: 0 0 50%;
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.testimonial-content-inner {
+  max-width: 600px;
+}
+
+.testimonial-details {
+  margin-bottom: 15px;
+}
+
+.testimonial-details p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+}
+
+.testimonial-person-info {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.testimonial-person-info .name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  display: block;
+}
+
+.testimonial-person-info .designation {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .testimonial-main {
+    gap: 30px;
+    min-height: 280px;
+  }
+  
+  .testimonial-details p {
+    font-size: 17px;
+  }
+  
+  .testimonial-person-info .name {
+    font-size: 15px;
+  }
+  
+  .testimonial-person-info .designation {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 40px 0;
+  }
+  
+  .testimonial-main {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    min-height: 250px;
+  }
+  
+  .testimonial-image {
+    flex: none;
+    order: 2;
+    perspective: 800px;
+  }
+  
+  .testimonial-image:hover img {
+    transform: translateY(-5px) rotateX(3deg) rotateY(-3deg) scale(1.03);
+  }
+  
+  .testimonial-content {
+    flex: none;
+    order: 1;
+  }
+  
+  .testimonial-content-inner {
+    max-width: none;
+  }
+  
+  .testimonial-details p {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .testimonial-person-info {
+    align-items: center;
+  }
+  
+  .testimonial-person-info .name {
+    font-size: 15px;
+  }
+  
+  .testimonial-person-info .designation {
+    font-size: 13px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .testimonial-section {
+    padding: 30px 0;
+  }
+  
+  .testimonial-main {
+    gap: 20px;
+    min-height: 220px;
+  }
+  
+  .testimonial-details p {
+    font-size: 15px;
+  }
+  
+  .testimonial-person-info .name {
+    font-size: 14px;
+  }
+  
+  .testimonial-person-info .designation {
+    font-size: 12px;
+  }
+  
+}

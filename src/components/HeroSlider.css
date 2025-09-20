@@ -1,0 +1,329 @@
+/* Hero Slider Styles - Sutherland Global Card Design */
+
+.homepage-banner-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  padding: 0 20px;
+}
+
+.homepage-banner-slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.homepage-banner-slider-cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-banner-card {
+  position: absolute;
+  width: 80%;
+  max-width: 1200px;
+  height: 70vh;
+  min-height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  z-index: 1;
+}
+
+/* Active card (center) */
+.homepage-banner-card.active {
+  z-index: 3;
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+/* Previous card (left side) */
+.homepage-banner-card.prev {
+  z-index: 2;
+  transform: translateX(-60%) scale(0.8);
+  opacity: 0.7;
+}
+
+/* Next card (right side) */
+.homepage-banner-card.next {
+  z-index: 2;
+  transform: translateX(60%) scale(0.8);
+  opacity: 0.7;
+}
+
+/* Cards that are not visible */
+.homepage-banner-card:not(.active):not(.prev):not(.next) {
+  opacity: 0;
+  transform: translateX(0) scale(0.6);
+  z-index: 0;
+}
+
+.homepage-banner-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.homepage-banner-card-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 2;
+}
+
+.homepage-banner-card-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 3;
+  max-width: 600px;
+  padding: 0 20px;
+  text-align: left;
+  color: white;
+}
+
+.homepage-banner-card-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.homepage-banner-card-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 550px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn-main {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #f6f6f6;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(112, 111, 188, 0.3);
+}
+
+/* Navigation Controls */
+.homepage-banner-navigation {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 4;
+}
+
+.nav-arrow {
+  width: 50px;
+  height: 40px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.nav-arrow:hover {
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.05);
+}
+
+.nav-arrow svg {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.nav-arrow svg path {
+  stroke: white !important;
+  stroke-width: 3 !important;
+  fill: none !important;
+}
+
+.nav-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.nav-dot.active {
+  background-color: white;
+  border-color: white;
+}
+
+.nav-dot:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+  .homepage-banner-card {
+    width: 90%;
+    height: 60vh;
+  }
+  
+  .homepage-banner-card-content {
+    left: 20px;
+    right: 20px;
+    max-width: none;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .homepage-banner-card-heading {
+    font-size: 48px;
+  }
+  
+  .homepage-banner-card-description {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .homepage-banner-slider {
+    min-height: 400px;
+    padding: 0 10px;
+  }
+  
+  .homepage-banner-card {
+    width: 95%;
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .homepage-banner-card.prev {
+    transform: translateX(-70%) scale(0.7);
+  }
+  
+  .homepage-banner-card.next {
+    transform: translateX(70%) scale(0.7);
+  }
+  
+  .homepage-banner-card-heading {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .homepage-banner-card-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-main {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+  
+  .homepage-banner-navigation {
+    bottom: 15px;
+    right: 15px;
+    gap: 10px;
+  }
+  
+  .nav-arrow {
+    width: 50px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 4px;
+  }
+  
+  .nav-arrow svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+  
+  .nav-arrow svg path {
+    stroke: white !important;
+    stroke-width: 2.5 !important;
+    fill: none !important;
+  }
+  
+  .nav-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .homepage-banner-card-heading {
+    font-size: 28px;
+  }
+  
+  .homepage-banner-card-description {
+    font-size: 13px;
+  }
+  
+  .btn-main {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
