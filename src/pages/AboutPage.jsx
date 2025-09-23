@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import MissionVision from '../components/MissionVision';
 import './AboutPage.css';
-import CaseStudySlider from '../components/CaseStudySlider'
+import CaseStudySlider from '../components/CaseStudySlider';
+import aboutBanner from '../assets/aboutus/about_banner.jpg';
+import casestudy3 from '../assets/casestudy/casestudy3.jpg';
 
 const AboutPage = () => {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -86,14 +88,14 @@ const AboutPage = () => {
               <div className="story-visual">
                 <div className="visual-card main-card">
                   <div className="card-image">
-                    <img src="/src/assets/aboutus/about_banner.jpg" alt="About StellarRCM" />
+                    <img src={aboutBanner} alt="About StellarRCM" />
                   </div>
                   <h4>Our Journey</h4>
                   <p>Transforming healthcare through innovation</p>
                 </div>
                 <div className="visual-card secondary-card">
                   <div className="card-image">
-                    <img src="/src/assets/casestudy/casestudy3.jpg" alt="Healthcare Excellence" />
+                    <img src={casestudy3} alt="Healthcare Excellence" />
                   </div>
                   <h4>Healthcare Excellence</h4>
                   <p>Proven track record of success</p>

@@ -30,7 +30,7 @@ const Navigation = () => {
         </li>
         
         <li className="menu-item">
-          <a href="/why-stellar-rcm">Why CarePro</a>
+          <Link to="/why-carepro">Why CarePro</Link>
         </li>
         
         <li 
