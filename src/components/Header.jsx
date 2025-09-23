@@ -42,9 +42,9 @@ const Header = () => {
           
           <div className="header-right-section">
             <div className="header-contact-button">
-              <a href="#contact" className="contactus-button btn-contact-us" role="button">
+              <Link to="/contact" className="contactus-button btn-contact-us" role="button">
                 Contact Us
-              </a>
+              </Link>
             </div>
             
             <div className="header-toggle-box">

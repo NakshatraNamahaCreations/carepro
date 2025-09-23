@@ -19,7 +19,7 @@ const AboutPage = () => {
           <div className="about-hero-overlay"></div>
           <div className="container">
             <div className="hero-content">
-              <h1>About StellarRCM</h1>
+              <h1>About CarePro</h1>
               <p>Transforming healthcare delivery through innovative home care solutions</p>
             </div>
           </div>
