@@ -1,0 +1,285 @@
+/* Company History Timeline Styles - Sutherland Global Inspired */
+
+.timeline-section {
+  padding: 90px 90px 50px 90px;
+  background-image: linear-gradient(0deg, rgb(237, 239, 238) 0%, rgb(255, 255, 255) 100%);
+  background-color: #26235d;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.03) 50%, transparent 60%);
+  background-size: 60px 60px;
+  z-index: 1;
+}
+
+.timeline-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-header {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.top-header h2 {
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.top-header p {
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Year Navigation */
+.year-nav {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.slick-list {
+  overflow: hidden;
+  margin: 0 60px;
+}
+
+.slick-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.year-nav__item {
+  flex: 0 0 100%;
+  padding: 0 20px;
+  text-align: center;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.year-nav__item.slick-current {
+  opacity: 1;
+}
+
+.timeline-year {
+  font-family: 'Poppins', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1;
+  text-align: center;
+}
+
+.timeline-item-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Navigation Arrows */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.slick-arrow:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.4);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+/* Timeline Dots */
+.timeline-dots {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.slick-dots {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+}
+
+.slick-dots li {
+  display: inline-block;
+}
+
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0;
+  padding: 0;
+}
+
+.slick-dots li.slick-active button {
+  background: #000000;
+  transform: scale(1.2);
+}
+
+.slick-dots li button:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .timeline-section {
+    padding: 70px 60px 40px 60px;
+  }
+  
+  .top-header h2 {
+    font-size: 42px;
+  }
+  
+  .timeline-year {
+    font-size: 64px;
+  }
+  
+  .timeline-item-desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-section {
+    padding: 60px 30px 30px 30px;
+  }
+  
+  .top-header h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .top-header p {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .slick-list {
+    margin: 0 40px;
+  }
+  
+  .timeline-year {
+    font-size: 48px;
+  }
+  
+  .timeline-item-desc {
+    font-size: 15px;
+  }
+  
+  .slick-arrow {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .slick-prev {
+    left: -10px;
+  }
+  
+  .slick-next {
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-section {
+    padding: 40px 20px 20px 20px;
+  }
+  
+  .top-header h2 {
+    font-size: 28px;
+  }
+  
+  .slick-list {
+    margin: 0 30px;
+  }
+  
+  .timeline-year {
+    font-size: 36px;
+  }
+  
+  .timeline-item-desc {
+    font-size: 14px;
+  }
+  
+  .slick-arrow {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .slick-prev {
+    left: -5px;
+  }
+  
+  .slick-next {
+    right: -5px;
+  }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.year-nav__item.slick-current .timeline-year,
+.year-nav__item.slick-current .timeline-item-desc {
+  animation: fadeInUp 0.6s ease-out;
+}

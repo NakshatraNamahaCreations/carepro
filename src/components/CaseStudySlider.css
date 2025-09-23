@@ -41,7 +41,7 @@ a, a:visited, a:hover, a:focus, a:-webkit-any-link {
 
 .casestudy-slider__title-section h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   color: #272F3D;
   margin: 0;
@@ -229,7 +229,7 @@ a, a:visited, a:hover, a:focus, a:-webkit-any-link {
 
 .drawer-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   color: #ffffff;
   text-transform: uppercase;

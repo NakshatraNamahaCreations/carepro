@@ -1,34 +1,23 @@
-import { useState } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import HeroSlider from './components/HeroSlider'
-import AboutUs from './components/AboutUs'
-import ServicesSection from './components/ServicesSection'
-import MissionVision from './components/MissionVision'
-import CaseStudySlider from './components/CaseStudySlider'
-import TestimonialSection from './components/TestimonialSection'
 import Footer from './components/Footer'
-import './App.css'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Header />
-      <HeroSlider />
-      <ServicesSection />
-      <MissionVision />
-      <AboutUs />
-      <CaseStudySlider />
-      <TestimonialSection />
-      <Footer />
-    </>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
 export default App
-
-
-
-
-

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -21,11 +22,11 @@ const Navigation = () => {
     <div className="menu-header-menu-container">
       <ul id="header-primary-menu" className="menu">
         <li className="menu-item">
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         
         <li className="menu-item">
-          <a href="/about-us">About Us</a>
+          <Link to="/about">About Us</Link>
         </li>
         
         <li className="menu-item">

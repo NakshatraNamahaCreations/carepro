@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import './Header.css';
 
@@ -13,7 +14,7 @@ const Header = () => {
     <header className="stellar-header">
       <div className="header-inner primary-header-inner">
         <div className="site-logo-main">
-          <a href="/">
+          <Link to="/">
             <img 
               src="/stellar-logo.svg" 
               className="site_logo" 
@@ -21,7 +22,7 @@ const Header = () => {
               alt="Stellar RCM" 
               title="Stellar RCM"
             />
-          </a>
+          </Link>
         </div>
         
         <div className="header-nav-section">
