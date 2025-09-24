@@ -38,7 +38,7 @@ const Navigation = () => {
           onMouseEnter={() => handleMouseEnter('services')}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="/our-services">Our Services</a>
+          <Link to="/our-services">Our Services</Link>
           
           <div className="megamenu-main">
             <div className="megamenu-wrap">

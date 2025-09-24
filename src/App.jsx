@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import WhyCareProPage from './pages/WhyCareProPage'
 import ContactPage from './pages/ContactPage'
+import OurServicesPage from './pages/OurServicesPage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/why-carepro" element={<WhyCareProPage />} />
+          <Route path="/our-services" element={<OurServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
