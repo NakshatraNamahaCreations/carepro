@@ -1,0 +1,203 @@
+/* Our Team Page */
+
+.our-team-page {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.team-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 320px;
+  background: linear-gradient(135deg, #2c3546 0%, #1a2332 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.25));
+}
+
+.team-hero .container {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.team-hero .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.team-hero .hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.team-section {
+  padding: 70px 0;
+  background: #f8f9fa;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.team-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 12px;
+  border: 3px solid #e9ecef;
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3546;
+  margin-bottom: 6px;
+}
+
+.team-card .role {
+  display: block;
+  font-size: 0.95rem;
+  color: #64b5f6;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.team-card .bio {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .team-hero .hero-content h1 { font-size: 2rem; }
+}
+
+/* Our Team Page */
+
+.our-team-page {
+  min-height: 100vh;
+}
+
+.team-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.team-hero-banner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2c3546 0%, #1a2332 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 100%);
+  z-index: 1;
+}
+
+.team-hero .container {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.team-hero .hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.team-hero .hero-content p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+.team-grid-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  background: linear-gradient(135deg, #2c3546 0%, #64b5f6 100%);
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3546;
+  margin-bottom: 4px;
+}
+
+.role {
+  font-size: 0.95rem;
+  color: #64b5f6;
+  margin-bottom: 8px;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .team-hero .hero-content h1 { font-size: 2rem; }
+}
+
+

@@ -101,7 +101,7 @@ const OurServicesPage = () => {
       name: 'Dr. Sarah Johnson',
       role: 'Medical Director',
       practice: 'City Medical Center',
-      content: 'StellarRCM transformed our revenue cycle management. We\'ve seen a 20% increase in collections and significantly reduced our administrative burden.',
+      content: 'Care Pro transformed our revenue cycle management. We\'ve seen a 20% increase in collections and significantly reduced our administrative burden.',
       rating: 5
     },
     {
@@ -115,14 +115,14 @@ const OurServicesPage = () => {
       name: 'Emily Rodriguez',
       role: 'Billing Director',
       practice: 'Specialty Medical Group',
-      content: 'The team at StellarRCM is professional, responsive, and knowledgeable. They\'ve helped us streamline our entire billing process.',
+      content: 'The team at Care Pro is professional, responsive, and knowledgeable. They\'ve helped us streamline our entire billing process.',
       rating: 5
     },
     {
       name: 'Dr. James Wilson',
       role: 'Chief Medical Officer',
       practice: 'Regional Healthcare System',
-      content: 'Outstanding service! Our revenue cycle efficiency improved by 35% within the first quarter. Highly recommend StellarRCM.',
+      content: 'Outstanding service! Our revenue cycle efficiency improved by 35% within the first quarter. Highly recommend Care Pro.',
       rating: 5
     },
     {
@@ -136,7 +136,7 @@ const OurServicesPage = () => {
       name: 'Dr. Robert Martinez',
       role: 'Practice Owner',
       practice: 'Premier Medical Associates',
-      content: 'Professional, reliable, and cost-effective. StellarRCM has become an integral part of our practice operations.',
+      content: 'Professional, reliable, and cost-effective. Care Pro has become an integral part of our practice operations.',
       rating: 5
     },
     {
@@ -176,39 +176,39 @@ const OurServicesPage = () => {
         <div className="container">
           <div className="process-header">
             <h2>Our Process</h2>
-            <p>How we work with you to achieve success</p>
+            <p>Compassionate, at‑home elder care—from first visit to ongoing support</p>
           </div>
           
           <div className="process-steps">
             <div className="process-step">
               <div className="step-number">01</div>
               <div className="step-content">
-                <h3>Assessment</h3>
-                <p>We analyze your current processes and identify areas for improvement</p>
+                <h3>In‑Home Assessment</h3>
+                <p>Our nurse visits your home to understand medical history, mobility, medications, daily routines, and safety needs—keeping elders comfortable and heard.</p>
               </div>
             </div>
             
             <div className="process-step">
               <div className="step-number">02</div>
               <div className="step-content">
-                <h3>Strategy</h3>
-                <p>Develop a customized solution tailored to your specific needs</p>
+                <h3>Personalized Care Plan</h3>
+                <p>Together we create a simple, clear plan: medication schedules, vitals tracking, hydration/nutrition, fall‑prevention, and doctor consultation cadence.</p>
               </div>
             </div>
             
             <div className="process-step">
               <div className="step-number">03</div>
               <div className="step-content">
-                <h3>Implementation</h3>
-                <p>Seamlessly integrate our services with your existing workflow</p>
+                <h3>Care at Home</h3>
+                <p>Our caregivers administer medicines on time, check BP/SpO₂/temperature, coordinate tele‑/in‑person doctor consults, and support daily activities.</p>
               </div>
             </div>
             
             <div className="process-step">
               <div className="step-number">04</div>
               <div className="step-content">
-                <h3>Optimization</h3>
-                <p>Continuously monitor and improve performance for maximum results</p>
+                <h3>Ongoing Monitoring & Updates</h3>
+                <p>We track health changes, adjust the plan with your doctor, and keep family informed—prioritizing safety, comfort, and dignity at every step.</p>
               </div>
             </div>
           </div>

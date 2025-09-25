@@ -125,7 +125,7 @@ const AboutUs = () => {
               <div className="outcome-item">
                 <div className="outcome-number">{counts.outcome5}%</div>
                 <div className="outcome-description">
-                  Cost savings for families through our comprehensive home care.
+                  Cost savings for families through our comprehensive patient monitoring.
                 </div>
               </div>
               

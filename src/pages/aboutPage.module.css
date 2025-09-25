@@ -2,8 +2,10 @@
 .about-page {
   min-height: 100vh;
   background: #ffffff;
+  color: #fff;
 }
 
+/* Hero Section */
 /* Hero Section */
 .about-hero {
   position: relative;
@@ -26,21 +28,34 @@
   justify-content: center;
 }
 
+/* Overlay should be BELOW the text */
 .about-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
-  z-index: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1; /* lower than text */
 }
 
+/* Text container */
 .about-hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* above overlay */
   color: white;
   text-align: center;
+}
+
+.hero-content h1,
+.hero-content p {
+  position: relative;
+  z-index: 3; /* make sure it's on top */
+  color: white !important;
 }
 
 .hero-content h1 {
@@ -49,6 +64,8 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
+  color:white !important;
+  z-index: 20 ;
 }
 
 .hero-content p {
@@ -58,6 +75,9 @@
   opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
+  color:white;
+  z-index: 20 ;
+
 }
 
 /* Company Overview - Our Story */

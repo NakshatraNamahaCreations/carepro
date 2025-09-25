@@ -1,22 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [activeTab, setActiveTab] = useState('tabs-services-1');
-
-  const handleMouseEnter = (dropdownId) => {
-    setActiveDropdown(dropdownId);
-  };
-
-  const handleMouseLeave = () => {
-    setActiveDropdown(null);
-  };
-
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId);
-  };
+  // Services dropdown removed; keeping the header clean with simple links
 
   return (
     <div className="menu-header-menu-container">
@@ -33,44 +20,12 @@ const Navigation = () => {
           <Link to="/why-carepro">Why CarePro</Link>
         </li>
         
-        <li 
-          className="services-mega-menu menu-item menu-item-has-children stellar-has-mega-menu"
-          onMouseEnter={() => handleMouseEnter('services')}
-          onMouseLeave={handleMouseLeave}
-        >
+        <li className="menu-item">
           <Link to="/our-services">Our Services</Link>
-          
-          <div className="megamenu-main">
-            <div className="megamenu-wrap">
-              
-              <div className="mega-menu-tabs__body">
-                <div className="stellar-mega-menu-tab-item mega-menu-tabs__content active" id="tabs-services-1">
-                  <ul className="simple-dropdown">
-                    <li className="menu-item">
-                      <a href="/services/revenue-cycle-management">
-                        Revenue Cycle Management
-                      </a>
-                    </li>
-                    <li className="menu-item">
-                      <a href="/services/medical-billing">
-                        Medical Billing
-                      </a>
-                    </li>
-                    <li className="menu-item">
-                      <a href="/services/medical-coding">
-                        Medical Coding
-                      </a>
-                    </li>
-                    <li className="menu-item">
-                      <a href="/services/payers-solution">
-                        Payers Solution
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        </li>
+
+        <li className="menu-item">
+          <Link to="/our-team">Our Team</Link>
         </li>
         
       </ul>

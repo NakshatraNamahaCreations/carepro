@@ -19,7 +19,7 @@ const HeroSlider = () => {
       id: 2,
       type: 'image',
       imageSrc: '/src/assets/home_banner/home2.jpg',
-      heading: 'Compassionate Home Care',
+      heading: 'Compassionate Patient Monitoring',
       description: 'Professional medical care delivered with compassion and convenience. We understand that mobility challenges shouldn\'t prevent access to quality healthcare.',
       buttonText: 'Learn More',
       buttonLink: '/services'

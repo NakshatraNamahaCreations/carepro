@@ -5,7 +5,7 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "Home Healthcare Services",
+      title: "Patient Monitoring",
       description: "Comprehensive medical care delivered directly to your doorstep, ensuring comfort and convenience for patients who cannot travel to medical facilities."
     },
     {

@@ -72,94 +72,43 @@
   line-height: 1.6;
 }
 
-/* Contact Info Section */
-.contact-info-section {
+/* Main two-column section */
+.contact-main-section {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: #ffffff;
 }
 
-.contact-info-grid {
+.contact-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.contact-info-card {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
-}
-
-.contact-info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.info-icon {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #2c3546 0%, #64b5f6 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  color: white;
-}
-
-.contact-info-card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #2c3546;
-  margin-bottom: 15px;
-}
-
-.contact-info-card p {
-  color: #666666;
-  margin-bottom: 8px;
-  line-height: 1.6;
-}
-
-/* Contact Form Section */
-.contact-form-section {
-  padding: 80px 0;
-  background: #ffffff;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
 }
 
 .contact-form-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
+  background: #f8f9fa;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .form-header {
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
 }
 
 .form-header h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #2c3546;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .form-header p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #666666;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 .contact-form {
-  background: #f8f9fa;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 8px;
 }
 
 .form-row {
@@ -207,15 +156,15 @@
 .submit-btn {
   background: #2c3546;
   color: white;
-  padding: 15px 40px;
+  padding: 14px 28px;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  border-radius: 6px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .submit-btn:hover {
@@ -224,46 +173,80 @@
   box-shadow: 0 8px 25px rgba(44, 53, 70, 0.3);
 }
 
-/* Map Section */
-.map-section {
-  padding: 80px 0;
-  background: #f8f9fa;
+/* Sidebar */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.map-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
+.sidebar-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+  font-size: 1.25rem;
   font-weight: 700;
   color: #2c3546;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
 }
 
-.map-placeholder {
-  background: #ffffff;
-  border-radius: 12px;
-  height: 400px;
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e9ecef;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.map-content {
-  text-align: center;
-  color: #666666;
+.info-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  align-items: start;
 }
 
-.map-content svg {
-  color: #2c3546;
-  margin-bottom: 20px;
-}
-
-.map-content h3 {
-  font-size: 1.5rem;
+.info-item .label {
   font-weight: 600;
   color: #2c3546;
-  margin-bottom: 10px;
+}
+
+.info-item .values a,
+.info-item .values p {
+  color: #2c3546;
+  text-decoration: none;
+  display: block;
+}
+
+.location-block {
+  margin-bottom: 12px;
+}
+
+.location-block h4 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  color: #2c3546;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.social-pill {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #e9ecef;
+  border-radius: 999px;
+  color: #2c3546;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -276,31 +259,24 @@
     font-size: 1.1rem;
   }
   
-  .contact-info-section,
-  .contact-form-section,
-  .map-section {
+  .contact-main-section {
     padding: 60px 0;
   }
-  
-  .contact-info-grid {
+
+  .contact-main {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  
-  .contact-form {
-    padding: 30px 20px;
+
+  .contact-form-wrapper {
+    padding: 24px 16px;
   }
-  
+
   .form-header h2 {
-    font-size: 2rem;
-  }
-  
-  .map-section h2 {
     font-size: 2rem;
   }
 }
@@ -315,17 +291,11 @@
     font-size: 2rem;
   }
   
-  .contact-info-section,
-  .contact-form-section,
-  .map-section {
+  .contact-main-section {
     padding: 40px 0;
   }
-  
-  .contact-info-card {
-    padding: 30px 20px;
-  }
-  
-  .contact-form {
-    padding: 20px 15px;
+
+  .contact-form-wrapper {
+    padding: 16px;
   }
 }

@@ -40,7 +40,7 @@ const CaseStudySlider = () => {
     },
     {
       id: 5,
-      title: "Enhancing Post-Surgical Recovery Through Integrated Home Care Services",
+      title: "Enhancing Post-Surgical Recovery Through Integrated Patient Monitoring Services",
       image: "/src/assets/casestudy/casestudy5.jpg",
       link: "/case-study/post-surgical-recovery",
       category: "Case Study",

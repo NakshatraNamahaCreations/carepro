@@ -14,7 +14,7 @@ const HomePage = () => {
       <ServicesSection />
       <MissionVision/>
       <AboutUs />
-      <CaseStudySlider />
+      <CaseStudySlider/>
       <TestimonialSection />
     
     </div>

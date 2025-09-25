@@ -41,7 +41,7 @@ const WhyCareProPage = () => {
               <div className="feature-item" data-delay="0">
                 <div className="feature-number">01</div>
                 <div className="feature-content">
-                  <h3>Revolutionary Home Healthcare</h3>
+                  <h3>Patient Monitoring </h3>
                   <p>We've transformed traditional healthcare by bringing world-class medical services directly to your doorstep, eliminating the need for hospital visits and long waiting times.</p>
                 </div>
                 <div className="feature-line"></div>
@@ -127,6 +127,121 @@ const WhyCareProPage = () => {
       </section>
 
       <ServicesSection />
+      <section className="how-we-work-section">
+        <div className="container">
+          <div className="how-we-work-header">
+            <h2>How We <span className="highlight-text">Work</span></h2>
+            <p>Our streamlined process ensures you receive the best care in the comfort of your home</p>
+          </div>
+          
+          <div className="process-timeline">
+            <div className="timeline-line"></div>
+            
+            <div className="timeline-item">
+              <div className="timeline-dot">
+                <div className="dot-inner">01</div>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                  </svg>
+                </div>
+                <h3>Book Your Appointment</h3>
+                <p>Schedule your healthcare service through our website, app, or phone call. Choose your preferred date and time.</p>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot">
+                <div className="dot-inner">02</div>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <h3>Healthcare Professional Arrives</h3>
+                <p>Our certified healthcare professional arrives at your doorstep with all necessary equipment and supplies.</p>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot">
+                <div className="dot-inner">03</div>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m0-7v7m0-7h10a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2H9m0-7V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"></path>
+                  </svg>
+                </div>
+                <h3>Receive Quality Care</h3>
+                <p>Get professional medical care in the comfort of your home with personalized attention and treatment.</p>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot">
+                <div className="dot-inner">04</div>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14,2 14,8 20,8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10,9 9,9 8,9"></polyline>
+                  </svg>
+                </div>
+                <h3>Get Your Results</h3>
+                <p>Receive your test results and medical reports within 12-72 hours through our secure online portal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="process-benefits">
+            <div className="benefit-item">
+              <div className="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              <span>Quick & Efficient</span>
+            </div>
+            <div className="benefit-item">
+              <div className="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 12l2 2 4-4"></path>
+                </svg>
+              </div>
+              <span>Certified Professionals</span>
+            </div>
+            <div className="benefit-item">
+              <div className="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span>Safe & Secure</span>
+            </div>
+            <div className="benefit-item">
+              <div className="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Statistics Section */}
       
@@ -138,7 +253,7 @@ const WhyCareProPage = () => {
         <div className="container">
           <div className="cta-content">
             <h2>Ready to Experience CarePro?</h2>
-            <p>Transform your healthcare experience with our innovative home care solutions</p>
+            <p>Transform your healthcare experience with our innovative patient monitoring solutions</p>
             <div className="cta-buttons">
               <button className="btn-primary">Book Appointment</button>
               <button className="btn-secondary">Learn More</button>
