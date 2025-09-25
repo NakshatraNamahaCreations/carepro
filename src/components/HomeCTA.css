@@ -1,0 +1,93 @@
+.home-cta {
+  padding: 80px 0;
+  background: #f8f9fa; /* match section base */
+  position: relative;
+  overflow: hidden;
+}
+
+.home-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(45deg, transparent 40%, rgba(44, 53, 70, 0.03) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(44, 53, 70, 0.02) 50%, transparent 60%);
+  background-size: 60px 60px; /* identical to why-choose-us */
+  z-index: 0;
+}
+
+/* removed ::before texture; pattern is baked into background above */
+
+.home-cta .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta-content {
+  text-align: center;
+  position: relative;
+  z-index: 1; /* above pattern */
+}
+
+.cta-content h2 {
+  color: #2c3546;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  color: #666666;
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 28px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 16px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background: #2c3546;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(44, 53, 70, 0.25);
+}
+
+.btn-secondary {
+  background: #e2e6ea;
+  color: #2c3546;
+}
+
+.btn-secondary:hover {
+  background: #cfd6dd;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .cta-content h2 { font-size: 2.2rem; }
+  .cta-content p { font-size: 1.05rem; }
+}
+
+

@@ -4,6 +4,7 @@ import ServicesSection from '../components/ServicesSection'
 import AboutUs from '../components/AboutUs'
 import CaseStudySlider from '../components/CaseStudySlider'
 import TestimonialSection from '../components/TestimonialSection'
+import HomeCTA from '../components/HomeCTA'
 import MissionVision from '../components/MissionVision'
 
 
@@ -16,7 +17,7 @@ const HomePage = () => {
       <AboutUs />
       <CaseStudySlider/>
       <TestimonialSection />
-    
+      <HomeCTA />
     </div>
   )
 }
