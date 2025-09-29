@@ -28,6 +28,10 @@ const Navigation = () => {
           <Link to="/our-team">Our Team</Link>
         </li>
         
+        {/* Contact Us button - only visible in mobile menu */}
+        <li className="menu-item menu-contact-item mobile-only">
+          <Link to="/contact" className="menu-contact-button">Contact Us</Link>
+        </li>
       </ul>
     </div>
   );

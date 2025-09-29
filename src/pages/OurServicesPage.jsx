@@ -183,7 +183,7 @@ const OurServicesPage = () => {
             <div className="process-step">
               <div className="step-number">01</div>
               <div className="step-content">
-                <h3>In‑Home Assessment</h3>
+                <h3>Patient Monitoring</h3>
                 <p>Our nurse visits your home to understand medical history, mobility, medications, daily routines, and safety needs—keeping elders comfortable and heard.</p>
               </div>
             </div>

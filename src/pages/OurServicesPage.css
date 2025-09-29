@@ -365,7 +365,7 @@
 .process-header p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: #666666;
+  color: black;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
@@ -478,7 +478,7 @@
 
 .step-content p {
   font-family: 'Poppins', sans-serif;
-  color: #666666;
+  color: black;
   line-height: 1.5;
   font-size: 0.95rem;
   max-width: 230px;
@@ -672,7 +672,7 @@
 /* CTA Section */
 .services-cta {
   padding: 80px 0;
-  background: #f8f9fa;
+  background: #f5f5f5;
   color: #2c3546;
   position: relative;
 }
@@ -684,13 +684,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    linear-gradient(45deg, rgba(44, 53, 70, 0.03) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(44, 53, 70, 0.03) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(44, 53, 70, 0.03) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(44, 53, 70, 0.03) 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  background:
+    linear-gradient(45deg, transparent 40%, rgba(44, 53, 70, 0.03) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(44, 53, 70, 0.02) 50%, transparent 60%);
+  background-size: 60px 60px;
   z-index: 0;
 }
 
@@ -706,11 +703,12 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
+  color: #2c3546;
 }
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #666666;
+  color: #4a5568;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -734,27 +732,27 @@
 }
 
 .btn-primary {
-  background: #64b5f6;
+  background: #2c3546;
   color: white;
 }
 
 .btn-primary:hover {
-  background: #42a5f5;
+  background: #1e2a3a;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(100, 181, 246, 0.4);
+  box-shadow: 0 8px 25px rgba(44, 53, 70, 0.4);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: #2c3546;
-  border: 2px solid #2c3546;
+  background: #6b7280;
+  color: white;
+  border: none;
 }
 
 .btn-secondary:hover {
-  background: #2c3546;
+  background: #4b5563;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(44, 53, 70, 0.3);
+  box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
 }
 
 /* Responsive Design */
