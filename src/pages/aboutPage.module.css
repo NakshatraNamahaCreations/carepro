@@ -412,14 +412,81 @@
   border-radius: 20px 20px 0 0;
 }
 
+/* Why Choose Single Card Styles */
+.why-choose-single-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(44, 53, 70, 0.1);
+  padding: 40px;
+  border: 1px solid rgba(44, 53, 70, 0.1);
+  transition: all 0.3s ease;
+}
+
+.why-choose-single-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(44, 53, 70, 0.15);
+}
+
+.why-choose-single-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #2c3546;
+  border-radius: 20px 20px 0 0;
+}
+
+.why-choose-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-choose-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(44, 53, 70, 0.1);
+}
+
+.why-choose-point:last-child {
+  border-bottom: none;
+}
+
+.check-icon {
+  font-size: 20px;
+  color: #2c3546;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.point-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #2c3546;
+  line-height: 1.6;
+}
+
+.point-content strong {
+  color: #2c3546;
+  font-weight: 600;
+}
+
 /* Responsive Design for Why Choose Us */
 @media (max-width: 1200px) {
   .why-choose-header h2 {
     font-size: 42px;
   }
-  .why-choose-content p {
-    font-size: 17px;
-    padding: 35px 40px;
+  .why-choose-single-card {
+    padding: 35px;
+  }
+  .point-content {
+    font-size: 15px;
   }
 }
 
@@ -433,9 +500,17 @@
   .why-choose-header h2 {
     font-size: 36px;
   }
-  .why-choose-content p {
-    font-size: 16px;
-    padding: 30px 35px;
+  .why-choose-single-card {
+    padding: 30px;
+  }
+  .why-choose-points {
+    gap: 18px;
+  }
+  .why-choose-point {
+    padding: 12px 0;
+  }
+  .point-content {
+    font-size: 15px;
   }
 }
 
@@ -443,9 +518,22 @@
   .why-choose-header h2 {
     font-size: 32px;
   }
-  .why-choose-content p {
-    font-size: 15px;
-    padding: 25px 30px;
+  .why-choose-single-card {
+    padding: 25px;
+    margin: 0 15px;
+  }
+  .why-choose-points {
+    gap: 15px;
+  }
+  .why-choose-point {
+    padding: 10px 0;
+    gap: 12px;
+  }
+  .check-icon {
+    font-size: 18px;
+  }
+  .point-content {
+    font-size: 14px;
   }
 }
 
@@ -459,9 +547,22 @@
   .why-choose-header h2 {
     font-size: 28px;
   }
-  .why-choose-content p {
-    font-size: 14px;
-    padding: 20px 25px;
+  .why-choose-single-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  .why-choose-points {
+    gap: 12px;
+  }
+  .why-choose-point {
+    padding: 8px 0;
+    gap: 10px;
+  }
+  .check-icon {
+    font-size: 16px;
+  }
+  .point-content {
+    font-size: 13px;
   }
 }
 

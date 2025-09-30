@@ -10,10 +10,10 @@ const HeroSlider = () => {
       id: 1,
       type: 'image',
       imageSrc: '/src/assets/home_banner/home1.jpg',
-      heading: 'Healthcare at Your Doorstep',
-      description: 'Bringing comprehensive medical services directly to your home. Our skilled healthcare professionals provide quality care for those who cannot travel to medical facilities.',
-      buttonText: 'Book Home Visit',
-      buttonLink: '/book-visit'
+      heading: 'Your Health. Connected. 24/7.',
+      description: 'CarePro brings hospital-level monitoring to homes and communities with smart 4G, Bluetooth, and WiFi-enabled devices — supported by our trained Care Coordinators (nurses) available within seconds.',
+      buttonText: 'Book a Demo',
+      buttonLink: 'Talk to Our Team'
     },
     {
       id: 2,
@@ -21,8 +21,8 @@ const HeroSlider = () => {
       imageSrc: '/src/assets/home_banner/home2.jpg',
       heading: 'Compassionate Patient Monitoring',
       description: 'Professional medical care delivered with compassion and convenience. We understand that mobility challenges shouldn\'t prevent access to quality healthcare.',
-      buttonText: 'Learn More',
-      buttonLink: '/services'
+      buttonText: 'Book a Demo',
+      buttonLink: 'Talk to Our Team'
     },
     {
       id: 3,
@@ -30,8 +30,8 @@ const HeroSlider = () => {
       imageSrc: '/src/assets/home_banner/home3.jpg',
       heading: 'Your Health, Our Priority',
       description: 'From routine check-ups to specialized treatments, our home healthcare services ensure you receive the medical attention you need in the comfort of your own home.',
-      buttonText: 'Get Started',
-      buttonLink: '/contact'
+      buttonText: 'Book a Demo',
+      buttonLink: 'Talk to Our Team'
     }
   ];
 

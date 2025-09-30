@@ -147,7 +147,7 @@ const Header = () => {
                     </svg>
                   </div>
                   
-                  <Navigation />
+                  <Navigation onLinkClick={closeMenu} />
                 </div>
               </nav>
             </div>

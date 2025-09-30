@@ -5,6 +5,165 @@ import ServicesSection from '../components/ServicesSection';
 
 const OurServicesPage = () => {
   const [activeTab, setActiveTab] = useState('revenue-cycle');
+  const [currentStakeholder, setCurrentStakeholder] = useState(0);
+
+  const stakeholders = [
+    {
+      id: 'hospitals',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 21h18"/>
+          <path d="M5 21V7l8-4v18"/>
+          <path d="M19 21V11l-6-4"/>
+          <path d="M9 9v.01"/>
+          <path d="M9 12v.01"/>
+          <path d="M9 15v.01"/>
+          <path d="M9 18v.01"/>
+        </svg>
+      ),
+      title: 'Hospitals & Clinics',
+      challenges: [
+        'High readmission rates',
+        'Limited staff capacity to monitor discharged patients',
+        'Difficulty integrating new devices with existing systems'
+      ],
+      solutions: [
+        'Real-time patient vitals displayed directly in the doctor\'s portal',
+        'HMS integration ensures patient history, next steps, and long-term records are always updated',
+        'Care Coordinators (nurses at our office) act as an extension of the hospital team, contacting patients immediately on abnormal readings',
+        'Certified devices (FDA, CE, CDSCO) guarantee clinical accuracy'
+      ],
+      benefits: [
+        'Lower readmissions',
+        'Smarter discharge planning',
+        'Increased doctor efficiency',
+        'Improved patient outcomes'
+      ]
+    },
+    {
+      id: 'homecare',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9,22 9,12 15,12 15,22"/>
+        </svg>
+      ),
+      title: 'Home Healthcare Agencies',
+      challenges: [
+        'Scaling care without adding staff',
+        'Limited oversight between physical visits',
+        'Families want continuous updates'
+      ],
+      solutions: [
+        'Continuous monitoring with 4G/Bluetooth/WiFi devices that don\'t require patient training',
+        'Families get peace of mind knowing a Care Coordinator nurse is always watching',
+        'Real-time vitals help agencies respond faster, even outside normal visit schedules'
+      ],
+      benefits: [
+        '24/7 nurse-led support',
+        'Confidence for families',
+        'Extended care coverage without additional staff burden'
+      ]
+    },
+    {
+      id: 'government',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 21h18"/>
+          <path d="M5 21V7l8-4v18"/>
+          <path d="M19 21V11l-6-4"/>
+          <path d="M9 9v.01"/>
+          <path d="M9 12v.01"/>
+          <path d="M9 15v.01"/>
+          <path d="M9 18v.01"/>
+        </svg>
+      ),
+      title: 'Government & Public Health Programs',
+      challenges: [
+        'Last-mile healthcare delivery in rural areas',
+        'Ensuring devices are certified and compliant',
+        'Building large-scale telehealth ecosystems'
+      ],
+      solutions: [
+        '4G-enabled devices remove dependence on WiFi or smartphones',
+        'Fully compliant with DPDPA (India), CDSCO, and ISO certifications',
+        'Seamless integration with eSanjeevani and National Digital Health Mission (NDHM)',
+        'Care Coordinators (nurses) provide real-time patient engagement at scale'
+      ],
+      benefits: [
+        'Extend care to underserved communities',
+        'Reduce healthcare inequality',
+        'Build sustainable public health infrastructure'
+      ]
+    },
+    {
+      id: 'insurance',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+          <path d="M12 11h4"/>
+          <path d="M12 16h4"/>
+          <path d="M8 11h.01"/>
+          <path d="M8 16h.01"/>
+        </svg>
+      ),
+      title: 'Insurance & Payors',
+      challenges: [
+        'Rising claim costs due to preventable hospitalizations',
+        'Limited access to real-time patient health data',
+        'Difficulty validating long-term patient history'
+      ],
+      solutions: [
+        'Historical vitals securely stored in Hospital Management Software for easy audits',
+        'Early detection via CarePro reduces hospitalizations and claim costs',
+        'Globally recognized certifications (FDA, CE, CDSCO, ISO) assure quality data for claims management'
+      ],
+      benefits: [
+        'Preventive care lowers payouts',
+        'Accurate records simplify claims validation',
+        'Supports value-based healthcare models'
+      ]
+    },
+    {
+      id: 'physicians',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+          <path d="M12 14l3-3 3 3-3 3-3-3z"/>
+        </svg>
+      ),
+      title: 'Physicians & Specialists',
+      challenges: [
+        'Managing multiple chronic patients remotely',
+        'Limited visibility between clinic visits',
+        'Need for accurate, secure data'
+      ],
+      solutions: [
+        'Doctor Portal provides real-time vitals for every patient',
+        'Integrated with HMS for historical comparisons',
+        'Abnormal readings trigger Care Coordinator support, saving doctors time'
+      ],
+      benefits: [
+        'Continuous patient visibility',
+        'Faster, data-driven decisions',
+        'Better patient satisfaction'
+      ]
+    }
+  ];
+
+  const nextStakeholder = () => {
+    setCurrentStakeholder((prev) => (prev + 1) % stakeholders.length);
+  };
+
+  const prevStakeholder = () => {
+    setCurrentStakeholder((prev) => (prev - 1 + stakeholders.length) % stakeholders.length);
+  };
+
+  const goToStakeholder = (index) => {
+    setCurrentStakeholder(index);
+  };
 
   const services = {
     'revenue-cycle': {
@@ -98,59 +257,59 @@ const OurServicesPage = () => {
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Johnson',
-      role: 'Medical Director',
-      practice: 'City Medical Center',
-      content: 'Care Pro transformed our revenue cycle management. We\'ve seen a 20% increase in collections and significantly reduced our administrative burden.',
+      name: 'Family Member',
+      role: 'Patient Family',
+      practice: 'Home Care Patient',
+      content: 'The Care Coordinator team gave us confidence. My father got immediate support when his BP spiked.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      role: 'Practice Manager',
-      practice: 'Family Health Clinic',
-      content: 'Their medical coding expertise is outstanding. Our documentation quality improved dramatically, and we\'re getting better reimbursement rates.',
+      name: 'Hospital Director',
+      role: 'Hospital Director',
+      practice: 'Metro General Hospital',
+      content: 'Our hospital trusts CarePro\'s certified devices because they\'re FDA, CE, and CDSCO approved. Integration with our HMS has been seamless.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Billing Director',
-      practice: 'Specialty Medical Group',
-      content: 'The team at Care Pro is professional, responsive, and knowledgeable. They\'ve helped us streamline our entire billing process.',
+      name: 'Dr. Priya Sharma',
+      role: 'Cardiologist',
+      practice: 'Heart Care Specialists',
+      content: 'The real-time monitoring alerts help me intervene quickly. My patients feel safer knowing they\'re being watched 24/7.',
       rating: 5
     },
     {
-      name: 'Dr. James Wilson',
-      role: 'Chief Medical Officer',
-      practice: 'Regional Healthcare System',
-      content: 'Outstanding service! Our revenue cycle efficiency improved by 35% within the first quarter. Highly recommend Care Pro.',
+      name: 'Nurse Manager',
+      role: 'Nursing Supervisor',
+      practice: 'Community Health Center',
+      content: 'CarePro\'s devices are so easy to use. Our elderly patients can operate them independently, and we get accurate readings every time.',
       rating: 5
     },
     {
-      name: 'Lisa Thompson',
-      role: 'Finance Director',
-      practice: 'Metro Health Network',
-      content: 'The analytics and reporting features are exceptional. We now have complete visibility into our financial performance.',
+      name: 'Dr. Rajesh Kumar',
+      role: 'Family Physician',
+      practice: 'Primary Care Clinic',
+      content: 'The Care Coordinators are like having a dedicated nursing team. They catch issues before they become emergencies.',
       rating: 5
     },
     {
-      name: 'Dr. Robert Martinez',
-      role: 'Practice Owner',
-      practice: 'Premier Medical Associates',
-      content: 'Professional, reliable, and cost-effective. Care Pro has become an integral part of our practice operations.',
+      name: 'Patient Caregiver',
+      role: 'Family Caregiver',
+      practice: 'Home Care Setting',
+      content: 'Knowing that professionals are monitoring my mother\'s vitals gives me peace of mind. The response time is incredible.',
       rating: 5
     },
     {
-      name: 'Jennifer Lee',
-      role: 'Operations Manager',
-      practice: 'Advanced Care Clinic',
-      content: 'Their support team is incredible. Quick response times and always available when we need assistance.',
+      name: 'Dr. Maria Santos',
+      role: 'Emergency Physician',
+      practice: 'City Emergency Hospital',
+      content: 'The early warning system has prevented multiple cardiac events. CarePro\'s technology saves lives every day.',
       rating: 5
     },
     {
-      name: 'Dr. Amanda Foster',
-      role: 'Clinical Director',
-      practice: 'Wellness Medical Group',
-      content: 'The implementation was seamless. Our staff adapted quickly and we saw immediate improvements in our workflow.',
+      name: 'Healthcare Administrator',
+      role: 'Quality Assurance Manager',
+      practice: 'Regional Medical Center',
+      content: 'Compliance with healthcare standards has never been easier. CarePro ensures we meet all regulatory requirements.',
       rating: 5
     }
   ];
@@ -244,6 +403,84 @@ const OurServicesPage = () => {
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stakeholder Solutions Section */}
+      <section className="stakeholder-solutions">
+        <div className="container">
+          <div className="stakeholder-header">
+            <h2>Solutions for Every Healthcare Stakeholder</h2>
+            <p>Comprehensive CarePro solutions tailored to meet the unique needs of different healthcare organizations</p>
+          </div>
+
+          <div className="stakeholder-carousel">
+            <div className="carousel-container">
+              <button className="carousel-arrow carousel-prev" onClick={prevStakeholder}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              <div className="carousel-track">
+                <div className="carousel-slide" style={{ transform: `translateX(-${currentStakeholder * 100}%)` }}>
+                  {stakeholders.map((stakeholder, index) => (
+                    <div key={stakeholder.id} className="stakeholder-card">
+                      <div className="stakeholder-icon">
+                        <div className="icon-wrapper">
+                          {stakeholder.icon}
+                        </div>
+                      </div>
+                      <h3>{stakeholder.title}</h3>
+                      
+                      <div className="challenges-section">
+                        <h4>Challenges {stakeholder.title.split(' ')[0]} Face:</h4>
+                        <ul>
+                          {stakeholder.challenges.map((challenge, idx) => (
+                            <li key={idx}>{challenge}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="solution-section">
+                        <h4>CarePro Solution:</h4>
+                        <ul>
+                          {stakeholder.solutions.map((solution, idx) => (
+                            <li key={idx}>{solution}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="benefits-section">
+                        <h4>Key Benefits:</h4>
+                        <div className="benefits-list">
+                          {stakeholder.benefits.map((benefit, idx) => (
+                            <span key={idx} className="benefit">✅ {benefit}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <button className="carousel-arrow carousel-next" onClick={nextStakeholder}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div className="carousel-dots">
+              {stakeholders.map((_, index) => (
+                <button
+                  key={index}
+                  className={`dot ${index === currentStakeholder ? 'active' : ''}`}
+                  onClick={() => goToStakeholder(index)}
+                />
               ))}
             </div>
           </div>

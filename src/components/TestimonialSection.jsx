@@ -19,12 +19,13 @@ const TestimonialSection = () => {
             <div className="testimonial-content-inner">
               <div className="testimonial-details">
                 <p>
-                  "At Care Pro, we have revolutionized healthcare delivery by bringing comprehensive medical services directly to patients' homes. Our commitment to excellence, innovative technology solutions, and compassionate care have made us a trusted partner in transforming how healthcare is delivered. We believe that quality medical care should be accessible, convenient, and personalized for every individual and family we serve."
+                Every healthcare stakeholder has unique challenges — from reducing hospital readmissions to ensuring last-mile care delivery in rural areas. CarePro’s Remote Patient Monitoring (RPM) ecosystem is designed to fit seamlessly into hospitals, clinics, government programs, insurance systems, and home healthcare agencies.
                 </p>
+                <p>Our FDA, CE, CDSCO-certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, ensure safety, accuracy, and trust for every partner.</p>
               </div>
               <div className="testimonial-person-info">
-                <span className="name">Care Pro</span>
-                <span className="designation">Leading Home Healthcare Solutions</span>
+                <span className="name">CarePro -</span>
+               
               </div>
             </div>
           </div>

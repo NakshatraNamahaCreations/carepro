@@ -78,16 +78,16 @@ const AboutUs = () => {
             <h2>About Care Pro</h2>
             <div className="about-text-content">
               <p>
-                Home Healthcare. Medical Technology. Patient Care. Advanced Analytics. For patients and families, these are key factors of healing. For us, they're our core expertise.
+                CarePro is a next-generation Remote Patient Monitoring (RPM) and telehealth ecosystem designed to bridge the gap between patients, doctors, and hospitals.
               </p>
               <p>
-                We work with healthcare professionals and deliver comprehensive home healthcare services for rapid recovery and improved quality of life.
+                With FDA, CE, and CDSCO-certified devices, backed by ISO 13485, ISO 27001, and ISO 9001 standards, CarePro ensures medical accuracy, data security, and global reliability.
               </p>
               <p>
-                We've served thousands of patients with personalized care plans, utilizing cutting-edge medical technology and evidence-based practices. We drive healthcare innovation, optimize patient outcomes, transform care delivery, and pioneer new solutions through our "at-home healthcare" model.
+                Our trained Care Coordinators (nurses at our office) ensure patients receive 24/7 assistance, coordinating between families, doctors, and hospitals within seconds.
               </p>
               <p>
-                For each patient, we provide comprehensive care for their health, the families they love, and the communities they serve. With proven medical strategies and compassionate execution, we don't just treat conditions – we heal lives.
+                We are DPDPA-compliant, ensuring Indian data privacy laws are strictly followed, along with HIPAA and GDPR frameworks for global partners.
               </p>
             </div>
           </div>

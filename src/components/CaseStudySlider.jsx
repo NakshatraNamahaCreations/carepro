@@ -8,43 +8,43 @@ const CaseStudySlider = () => {
   const caseStudies = [
     {
       id: 1,
-      title: "Transforming Home Healthcare Delivery with Advanced Technology Solutions",
+      title: "Post-Surgical Care",
+      description: "Discharged patients are still monitored 24/7; Care Coordinators escalate abnormal readings to surgeons.",
       image: "/src/assets/casestudy/casestudy1.jpg",
-      link: "/case-study/home-healthcare-transformation",
-      category: "Case Study",
-     
+      link: "/case-study/post-surgical-care",
+      category: "Case Scenario",
     },
     {
       id: 2,
-      title: "Achieving 40% Cost Reduction Through Digital Patient Management Systems",
+      title: "Chronic Care (Diabetes/Hypertension)",
+      description: "Vitals are securely logged in HMS for doctors to adjust care remotely.",
       image: "/src/assets/casestudy/casestudy2.jpg",
-      link: "/case-study/digital-patient-management",
-      category: "Case Study",
-      
+      link: "/case-study/chronic-care-management",
+      category: "Case Scenario",
     },
     {
       id: 3,
-      title: "Delivering 98% Patient Satisfaction Through Personalized Care Programs",
+      title: "Emergency Intervention",
+      description: "When oxygen saturation drops, a Care Coordinator reaches out within seconds, and the doctor is simultaneously notified.",
       image: "/src/assets/casestudy/casestudy3.jpg",
-      link: "/case-study/personalized-care-programs",
-      category: "Case Study",
-      
+      link: "/case-study/emergency-intervention",
+      category: "Case Scenario",
     },
     {
       id: 4,
-      title: "Revolutionizing Chronic Disease Management with AI-Powered Care Coordination",
+      title: "Cardiac Monitoring",
+      description: "Continuous heart rhythm monitoring detects arrhythmias instantly, with immediate alerts sent to cardiologists for rapid intervention.",
       image: "/src/assets/casestudy/casestudy4.jpg",
-      link: "/case-study/ai-chronic-disease-management",
-      category: "Case Study",
-      
+      link: "/case-study/cardiac-monitoring",
+      category: "Case Scenario",
     },
     {
       id: 5,
-      title: "Enhancing Post-Surgical Recovery Through Integrated Patient Monitoring Services",
+      title: "Pediatric Care",
+      description: "Specialized monitoring for children with chronic conditions, ensuring parents receive real-time updates and pediatricians stay informed.",
       image: "/src/assets/casestudy/casestudy5.jpg",
-      link: "/case-study/post-surgical-recovery",
-      category: "Case Study",
-      
+      link: "/case-study/pediatric-care",
+      category: "Case Scenario",
     }
   ];
 
@@ -74,7 +74,7 @@ const CaseStudySlider = () => {
     <section className="case-study-slider">
       <div className="case-study-container">
         <div className="casestudy-slider__title-section">
-          <h2>Case Studies</h2>
+          <h2>Case Scenarios</h2>
         </div>
         
         <div className="casestudy-slider__slide-main slick-init-loader slick-initialized slick-slider" 

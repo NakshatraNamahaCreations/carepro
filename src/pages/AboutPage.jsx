@@ -359,23 +359,52 @@ const AboutPage = () => {
         <div className="container">
           <div className={styles["why-choose-header"]}>
             <h2>
-              Why Choose Our{" "}
+              Why Choose {" "}
               <span className={styles["highlight-text"]}>
-                Healthcare Services
+                CarePro
               </span>
               ?
             </h2>
           </div>
           <div className={styles["why-choose-content"]}>
-            <p>
-              Professional healthcare delivered to your doorstep. CarePro brings
-              comprehensive medical services directly to your home with
-              certified healthcare professionals ensuring safe, comfortable
-              care. Get results in 12-72 hours via secure portal. All equipment
-              sterilized to highest standards. 24/7 customer support and
-              flexible scheduling available. Trusted by thousands of families
-              for reliable home healthcare solutions.
-            </p>
+            <div className={styles["why-choose-single-card"]}>
+              <div className={styles["why-choose-points"]}>
+                <div className={styles["why-choose-point"]}>
+                  <span className={styles["check-icon"]}>✅</span>
+                  <div className={styles["point-content"]}>
+                    <strong>Certified Devices</strong> – FDA, CE, CDSCO approved; ISO 13485 compliant for medical device quality.
+                  </div>
+                </div>
+                
+                <div className={styles["why-choose-point"]}>
+                  <span className={styles["check-icon"]}>✅</span>
+                  <div className={styles["point-content"]}>
+                    <strong>Data Security</strong> – ISO 27001 certified, HIPAA, GDPR, and DPDPA compliant.
+                  </div>
+                </div>
+                
+                <div className={styles["why-choose-point"]}>
+                  <span className={styles["check-icon"]}>✅</span>
+                  <div className={styles["point-content"]}>
+                    <strong>Quality Standards</strong> – ISO 9001 ensures reliability and consistent service delivery.
+                  </div>
+                </div>
+                
+                <div className={styles["why-choose-point"]}>
+                  <span className={styles["check-icon"]}>✅</span>
+                  <div className={styles["point-content"]}>
+                    <strong>Care Coordinators (nurses)</strong> – Available within seconds to guide patients, families, and providers.
+                  </div>
+                </div>
+                
+                <div className={styles["why-choose-point"]}>
+                  <span className={styles["check-icon"]}>✅</span>
+                  <div className={styles["point-content"]}>
+                    <strong>Scalable Monitoring</strong> – 4G/Bluetooth/WiFi devices make CarePro future-ready.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
