@@ -1,5 +1,6 @@
 import React from 'react';
 import './TestimonialSection.css';
+import fingerprint from '../assets/fingerprint-837x961-1.png';
 
 const TestimonialSection = () => {
   return (
@@ -8,7 +9,7 @@ const TestimonialSection = () => {
         <div className="testimonial-main">
           <div className="testimonial-image">
             <img 
-              src="/src/assets/fingerprint-837x961-1.png" 
+              src={fingerprint} 
               alt="fingerprint" 
               width="540" 
               height="620" 

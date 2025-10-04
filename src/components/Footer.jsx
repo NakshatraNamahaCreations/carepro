@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="footer-section footer-services">
+          {/* <div className="footer-section footer-services">
             <h4>Our Services</h4>
             <ul className="footer-menu">
               <li><a href="#revenue-cycle">Revenue Cycle Management</a></li>
@@ -70,7 +70,7 @@ const Footer = () => {
               <li><a href="#payers-solution">Payers Solution</a></li>
             
             </ul>
-          </div>
+          </div> */}
 
           {/* Resources */}
           <div className="footer-section footer-resources">
@@ -79,9 +79,67 @@ const Footer = () => {
               <li><a href="#privacy">Privacy Policy</a></li>
               <li><a href="#terms">Terms of Service</a></li>
               <li><a href="#faq">FAQ</a></li>
-              <li><a href="#blog">Healthcare Blog</a></li>
-              <li><a href="#support">Support Center</a></li>
+              {/* <li><a href="#blog">Healthcare Blog</a></li>
+              <li><a href="#support">Support Center</a></li> */}
             </ul>
+          </div>
+
+          {/* Get in Touch */}
+          <div className="footer-section footer-contact">
+            <h4>Get in Touch</h4>
+            <div className="contact-cards">
+              <div className="contact-card">
+                <div className="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <div className="contact-card-content">
+                  <h5>Head Office</h5>
+                  <p>Bangalore, Karnataka</p>
+                </div>
+              </div>
+              
+              <div className="contact-card">
+                <div className="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                  </svg>
+                </div>
+                <div className="contact-card-content">
+                  <h5>Working Hours</h5>
+                  <p>24/7 Emergency Care</p>
+                </div>
+              </div>
+              
+              <div className="contact-card">
+                <div className="contact-card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div className="contact-card-content">
+                  <h5>Service Areas</h5>
+                  <p>5+ Cities Nationwide</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Certifications Section */}
+        <div className="footer-certifications">
+          <div className="certifications-content">
+            <h4>Certifications</h4>
+            <div className="certifications-list">
+              <span className="certification-badge">FDA</span>
+              <span className="certification-badge">CE</span>
+              <span className="certification-badge">CDSCO</span>
+              <span className="certification-badge">ISO 13485</span>
+              <span className="certification-badge">ISO 27001</span>
+              <span className="certification-badge">ISO 9001</span>
+              <span className="certification-badge">DPDPA Compliant</span>
+            </div>
           </div>
         </div>
 

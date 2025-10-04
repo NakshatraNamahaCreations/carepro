@@ -335,39 +335,39 @@ const OurServicesPage = () => {
         <div className="container">
           <div className="process-header">
             <h2>Our Process</h2>
-            <p>Compassionate, at‑home elder care—from first visit to ongoing support</p>
+            <p>Seamless integration of our Remote Patient Monitoring ecosystem across all healthcare stakeholders</p>
           </div>
           
           <div className="process-steps">
             <div className="process-step">
               <div className="step-number">01</div>
               <div className="step-content">
-                <h3>Patient Monitoring</h3>
-                <p>Our nurse visits your home to understand medical history, mobility, medications, daily routines, and safety needs—keeping elders comfortable and heard.</p>
+                <h3>Ecosystem Integration</h3>
+                <p>CarePro's Remote Patient Monitoring (RPM) ecosystem seamlessly integrates with hospitals, clinics, government programs, insurance systems, and home healthcare agencies to address unique healthcare challenges.</p>
               </div>
             </div>
             
             <div className="process-step">
               <div className="step-number">02</div>
               <div className="step-content">
-                <h3>Personalized Care Plan</h3>
-                <p>Together we create a simple, clear plan: medication schedules, vitals tracking, hydration/nutrition, fall‑prevention, and doctor consultation cadence.</p>
+                <h3>Certified Device Deployment</h3>
+                <p>Our FDA, CE, CDSCO-certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, ensure safety, accuracy, and trust for every partner.</p>
               </div>
             </div>
             
             <div className="process-step">
               <div className="step-number">03</div>
               <div className="step-content">
-                <h3>Care at Home</h3>
-                <p>Our caregivers administer medicines on time, check BP/SpO₂/temperature, coordinate tele‑/in‑person doctor consults, and support daily activities.</p>
+                <h3>Real-time Monitoring</h3>
+                <p>Continuous patient monitoring with 4G/Bluetooth/WiFi connectivity enables real-time vitals tracking, reducing hospital readmissions and ensuring last-mile care delivery in rural areas.</p>
               </div>
             </div>
             
             <div className="process-step">
               <div className="step-number">04</div>
               <div className="step-content">
-                <h3>Ongoing Monitoring & Updates</h3>
-                <p>We track health changes, adjust the plan with your doctor, and keep family informed—prioritizing safety, comfort, and dignity at every step.</p>
+                <h3>Care Coordinator Support</h3>
+                <p>Our Care Coordinators (nurses) provide 24/7 support, acting as an extension of your healthcare team to ensure immediate response to abnormal readings and optimal patient outcomes.</p>
               </div>
             </div>
           </div>

@@ -106,7 +106,7 @@
 
 .service-card {
   background: #ffffff;
-  background-image: url('/src/assets/home_banner/background.webp');
+  background-image: url('/assets/home_banner/background.webp');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 200px 200px;
@@ -132,7 +132,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/src/assets/casestudy/casestudy1.jpg');
+  background-image: url('/assets/casestudy/casestudy1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -149,7 +149,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/src/assets/casestudy/casestudy2.jpg');
+  background-image: url('/assets/casestudy/casestudy2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -166,7 +166,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/src/assets/casestudy/casestudy3.jpg');
+  background-image: url('/assets/casestudy/casestudy3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -183,7 +183,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/src/assets/casestudy/casestudy4.jpg');
+  background-image: url('/assets/casestudy/casestudy4.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -200,7 +200,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/src/assets/casestudy/casestudy5.jpg');
+  background-image: url('/assets/casestudy/casestudy5.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -217,7 +217,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/src/assets/home_banner/home1.jpg');
+  background-image: url('/assets/home_banner/home1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

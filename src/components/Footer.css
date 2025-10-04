@@ -131,7 +131,7 @@
 /* Main Footer Content */
 .footer-main {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 25px;
   margin-bottom: 25px;
 }
@@ -263,6 +263,156 @@
   width: 10px;
 }
 
+/* Get in Touch Section */
+.footer-contact {
+  max-width: 300px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.contact-card-icon {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card-icon svg {
+  width: 16px;
+  height: 16px;
+  color: #e3f2fd;
+}
+
+.contact-card-content {
+  flex: 1;
+}
+
+.contact-card-content h5 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 3px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.contact-card-content p {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 12px;
+  color: #e3f2fd;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Certifications Section */
+.footer-certifications {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-certifications::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64b5f6, #ffffff, #64b5f6);
+}
+
+.certifications-content {
+  text-align: center;
+}
+
+.certifications-content h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.certifications-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+.certification-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.certification-badge:hover::before {
+  left: 100%;
+}
+
+.certification-badge:hover {
+  background: linear-gradient(135deg, #64b5f6, #42a5f5);
+  border-color: #64b5f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+}
+
 /* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -359,6 +509,12 @@
     max-width: none;
     margin-bottom: 20px;
   }
+  
+  .footer-contact {
+    grid-column: 1 / -1;
+    max-width: none;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -402,6 +558,52 @@
     width: 35px;
     height: 35px;
   }
+  
+  .footer-certifications {
+    padding: 20px;
+    margin: 25px 0;
+  }
+  
+  .certifications-content h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .certifications-list {
+    gap: 10px;
+  }
+  
+  .certification-badge {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .contact-cards {
+    gap: 8px;
+  }
+  
+  .contact-card {
+    padding: 10px;
+    gap: 8px;
+  }
+  
+  .contact-card-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-card-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .contact-card-content h5 {
+    font-size: 12px;
+  }
+  
+  .contact-card-content p {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -435,5 +637,51 @@
   
   .footer-copyright p {
     font-size: 12px;
+  }
+  
+  .footer-certifications {
+    padding: 15px;
+    margin: 20px 0;
+  }
+  
+  .certifications-content h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .certifications-list {
+    gap: 8px;
+  }
+  
+  .certification-badge {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  
+  .contact-cards {
+    gap: 6px;
+  }
+  
+  .contact-card {
+    padding: 8px;
+    gap: 6px;
+  }
+  
+  .contact-card-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .contact-card-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .contact-card-content h5 {
+    font-size: 11px;
+  }
+  
+  .contact-card-content p {
+    font-size: 10px;
   }
 }

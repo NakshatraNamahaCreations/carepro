@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSlider.css';
+import home1 from '../assets/home_banner/home1.jpg';
+import home2 from '../assets/home_banner/home2.jpg';
+import home3 from '../assets/home_banner/home3.jpg';
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,28 +12,28 @@ const HeroSlider = () => {
     {
       id: 1,
       type: 'image',
-      imageSrc: '/src/assets/home_banner/home1.jpg',
-      heading: 'Your Health. Connected. 24/7.',
+      imageSrc: home1,
+      heading:  'Your Health. Connected. 24/7.',
       description: 'CarePro brings hospital-level monitoring to homes and communities with smart 4G, Bluetooth, and WiFi-enabled devices — supported by our trained Care Coordinators (nurses) available within seconds.',
-      buttonText: 'Book a Demo',
+      buttonText: 'Explore Solutions',
       buttonLink: 'Talk to Our Team'
     },
     {
       id: 2,
       type: 'image',
-      imageSrc: '/src/assets/home_banner/home2.jpg',
-      heading: 'Compassionate Patient Monitoring',
-      description: 'Professional medical care delivered with compassion and convenience. We understand that mobility challenges shouldn\'t prevent access to quality healthcare.',
-      buttonText: 'Book a Demo',
+      imageSrc: home2,
+      heading: 'FDA, CE, CDSCO-Certified Devices',
+      description: 'Our certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, ensure safety, accuracy, and trust for every partner.',
+      buttonText: 'Learn More',
       buttonLink: 'Talk to Our Team'
     },
     {
       id: 3,
       type: 'image',
-      imageSrc: '/src/assets/home_banner/home3.jpg',
-      heading: 'Your Health, Our Priority',
-      description: 'From routine check-ups to specialized treatments, our home healthcare services ensure you receive the medical attention you need in the comfort of your own home.',
-      buttonText: 'Book a Demo',
+      imageSrc: home3,
+      heading: 'Seamless Integration Across Healthcare Systems',
+      description: 'CarePro\'s RPM ecosystem integrates seamlessly with existing healthcare infrastructure, providing real-time monitoring and immediate response capabilities for better patient outcomes.',
+      buttonText: 'Get Started',
       buttonLink: 'Talk to Our Team'
     }
   ];

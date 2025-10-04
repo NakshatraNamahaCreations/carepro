@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './WhyCareProPage.css';
-import ServicesSection from '../components/ServicesSection';
+
 const WhyCareProPage = () => {
   useEffect(() => {
     // Simple animation - add animate class to all feature items after a short delay
@@ -21,7 +21,7 @@ const WhyCareProPage = () => {
           <div className="container">
             <div className="hero-content">
               <h1>Why Choose CarePro?</h1>
-              <p>Discover what makes us the trusted choice for home healthcare services</p>
+              <p>Discover what makes us the trusted choice for Remote Patient Monitoring (RPM) solutions across all healthcare stakeholders</p>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@ const WhyCareProPage = () => {
         <div className="container">
           <div className="stands-out-header">
             <h2>Why CarePro <span className="highlight-text">Stands Out</span></h2>
-            <p>Experience the difference with our innovative approach to home healthcare</p>
+            <p>Experience the difference with our innovative Remote Patient Monitoring (RPM) ecosystem designed for every healthcare stakeholder</p>
           </div>
           
           <div className="stands-out-content">
@@ -41,8 +41,8 @@ const WhyCareProPage = () => {
               <div className="feature-item" data-delay="0">
                 <div className="feature-number">01</div>
                 <div className="feature-content">
-                  <h3>Patient Monitoring </h3>
-                  <p>We've transformed traditional healthcare by bringing world-class medical services directly to your doorstep, eliminating the need for hospital visits and long waiting times.</p>
+                  <h3>FDA, CE, CDSCO-Certified Devices</h3>
+                  <p>Our certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, ensure safety, accuracy, and trust for every healthcare partner.</p>
                 </div>
                 <div className="feature-line"></div>
               </div>
@@ -50,8 +50,8 @@ const WhyCareProPage = () => {
               <div className="feature-item" data-delay="200">
                 <div className="feature-number">02</div>
                 <div className="feature-content">
-                  <h3>Advanced Technology Integration</h3>
-                  <p>Our cutting-edge medical technology combined with user-friendly digital platforms ensures accurate diagnostics and seamless communication between patients and healthcare providers.</p>
+                  <h3>Multi-Stakeholder Solutions</h3>
+                  <p>Every healthcare stakeholder has unique challenges—from reducing hospital readmissions to ensuring last-mile care delivery in rural areas. Our RPM ecosystem fits seamlessly into hospitals, clinics, government programs, insurance systems, and home healthcare agencies.</p>
                 </div>
                 <div className="feature-line"></div>
               </div>
@@ -59,8 +59,8 @@ const WhyCareProPage = () => {
               <div className="feature-item" data-delay="400">
                 <div className="feature-number">03</div>
                 <div className="feature-content">
-                  <h3>Personalized Care Experience</h3>
-                  <p>Every patient receives individualized attention with customized treatment plans that adapt to your specific needs, lifestyle, and medical history for optimal health outcomes.</p>
+                  <h3>Care Coordinator Support</h3>
+                  <p>Our trained Care Coordinators (nurses at our office) are available within seconds to guide patients, families, and providers, providing 24/7 support and immediate response to abnormal readings.</p>
                 </div>
                 <div className="feature-line"></div>
               </div>
@@ -68,8 +68,8 @@ const WhyCareProPage = () => {
               <div className="feature-item" data-delay="600">
                 <div className="feature-number">04</div>
                 <div className="feature-content">
-                  <h3>Comprehensive Service Range</h3>
-                  <p>From routine check-ups to specialized treatments, we offer a complete spectrum of healthcare services, making us your one-stop solution for all medical needs at home.</p>
+                  <h3>Seamless Integration</h3>
+                  <p>Our RPM ecosystem integrates seamlessly with existing Hospital Management Systems (HMS), ensuring patient history, next steps, and long-term records are always updated with real-time monitoring data.</p>
                 </div>
                 <div className="feature-line"></div>
               </div>
@@ -77,8 +77,8 @@ const WhyCareProPage = () => {
               <div className="feature-item" data-delay="800">
                 <div className="feature-number">05</div>
                 <div className="feature-content">
-                  <h3>Trusted by Thousands</h3>
-                  <p>With over 10,000 satisfied patients and a 98% satisfaction rate, our proven track record speaks volumes about our commitment to excellence and patient care.</p>
+                  <h3>Rural Healthcare Delivery</h3>
+                  <p>Our 4G-enabled devices remove dependence on WiFi or smartphones, enabling last-mile healthcare delivery in underserved rural and remote areas, ensuring no patient's health deteriorates unnoticed.</p>
                 </div>
                 <div className="feature-line"></div>
               </div>
@@ -92,7 +92,7 @@ const WhyCareProPage = () => {
         <div className="container">
           <div className="core-values-header">
             <h2>Our <span className="highlight-text">Core Values</span></h2>
-            <p>The principles that guide everything we do at CarePro</p>
+            <p>The principles that guide our Remote Patient Monitoring (RPM) ecosystem at CarePro</p>
           </div>
           
           <div className="core-values-list">
@@ -217,36 +217,36 @@ const WhyCareProPage = () => {
           
           <div className="info-cards">
             <div className="info-card">
-              <h3>COMPREHENSIVE HEALTHCARE SERVICES</h3>
+              <h3>REMOTE PATIENT MONITORING ECOSYSTEM</h3>
               <p>
-                If you need professional healthcare services for medical conditions and recovery, get it from CarePro. 
-                Check our comprehensive healthcare services and book your required treatment online, via email or over a phone call. 
-                Our qualified healthcare specialists will visit you at your doorstep.
+                CarePro's Remote Patient Monitoring (RPM) ecosystem seamlessly integrates with hospitals, clinics, government programs, 
+                insurance systems, and home healthcare agencies. Our FDA, CE, CDSCO-certified devices address unique healthcare challenges 
+                from reducing hospital readmissions to ensuring last-mile care delivery in rural areas.
               </p>
             </div>
             
             <div className="info-card">
-              <h3>BENEFITS OF HEALTHCARE AT HOME</h3>
+              <h3>CERTIFIED DEVICES & COMPLIANCE</h3>
               <p>
-                Getting healthcare treatment at your doorstep has never been this convenient. During critical phases of life, 
-                you or your loved one might need to rely on professional healthcare to get back to normal life. CarePro offers 
-                a wide range of healthcare services making medical care more accessible and affordable for you.
+                Our FDA, CE, CDSCO-certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, 
+                ensure safety, accuracy, and trust for every healthcare partner. This comprehensive certification framework guarantees 
+                the highest quality standards in remote patient monitoring technology.
               </p>
             </div>
             
             <div className="info-card">
-              <h3>HOW CAN WE HELP</h3>
+              <h3>CARE COORDINATOR SUPPORT</h3>
               <p>
-                Our team of certified healthcare professionals provides personalized care tailored to your specific needs. 
-                From routine check-ups to specialized treatments, we ensure you receive the highest quality medical care 
-                in the comfort of your own home, with 24/7 support and flexible scheduling options.
+                Our Care Coordinators (nurses) provide 24/7 support, acting as an extension of your healthcare team. 
+                They monitor patient vitals in real-time, respond immediately to abnormal readings, and ensure optimal 
+                patient outcomes through continuous monitoring and immediate intervention when needed.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <ServicesSection />
+
       <section className="how-we-work-section">
         <div className="container">
           <div className="how-we-work-header">

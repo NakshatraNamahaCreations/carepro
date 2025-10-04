@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './CaseStudySlider.css';
+import casestudy1 from '../assets/casestudy/casestudy1.jpg';
+import casestudy2 from '../assets/casestudy/casestudy2.jpg';
+import casestudy3 from '../assets/casestudy/casestudy3.jpg';
+import casestudy4 from '../assets/casestudy/casestudy4.jpg';
+import casestudy5 from '../assets/casestudy/casestudy5.jpg';
 
 const CaseStudySlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,7 +15,7 @@ const CaseStudySlider = () => {
       id: 1,
       title: "Post-Surgical Care",
       description: "Discharged patients are still monitored 24/7; Care Coordinators escalate abnormal readings to surgeons.",
-      image: "/src/assets/casestudy/casestudy1.jpg",
+      image: casestudy1,
       link: "/case-study/post-surgical-care",
       category: "Case Scenario",
     },
@@ -18,7 +23,7 @@ const CaseStudySlider = () => {
       id: 2,
       title: "Chronic Care (Diabetes/Hypertension)",
       description: "Vitals are securely logged in HMS for doctors to adjust care remotely.",
-      image: "/src/assets/casestudy/casestudy2.jpg",
+      image: casestudy2,
       link: "/case-study/chronic-care-management",
       category: "Case Scenario",
     },
@@ -26,7 +31,7 @@ const CaseStudySlider = () => {
       id: 3,
       title: "Emergency Intervention",
       description: "When oxygen saturation drops, a Care Coordinator reaches out within seconds, and the doctor is simultaneously notified.",
-      image: "/src/assets/casestudy/casestudy3.jpg",
+      image: casestudy3,
       link: "/case-study/emergency-intervention",
       category: "Case Scenario",
     },
@@ -34,7 +39,7 @@ const CaseStudySlider = () => {
       id: 4,
       title: "Cardiac Monitoring",
       description: "Continuous heart rhythm monitoring detects arrhythmias instantly, with immediate alerts sent to cardiologists for rapid intervention.",
-      image: "/src/assets/casestudy/casestudy4.jpg",
+      image: casestudy4,
       link: "/case-study/cardiac-monitoring",
       category: "Case Scenario",
     },
@@ -42,7 +47,7 @@ const CaseStudySlider = () => {
       id: 5,
       title: "Pediatric Care",
       description: "Specialized monitoring for children with chronic conditions, ensuring parents receive real-time updates and pediatricians stay informed.",
-      image: "/src/assets/casestudy/casestudy5.jpg",
+      image: casestudy5,
       link: "/case-study/pediatric-care",
       category: "Case Scenario",
     }

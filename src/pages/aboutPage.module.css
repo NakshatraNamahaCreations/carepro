@@ -1274,3 +1274,309 @@
     font-size: 36px;
   }
 }
+
+/* Who We Serve Section */
+.who-we-serve {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.who-we-serve::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2c3546, transparent);
+}
+
+.who-we-serve::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2c3546, transparent);
+}
+
+.who-we-serve-header {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.who-we-serve-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2c3546;
+  margin: 0 0 20px 0;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+/* .who-we-serve-header h2::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3546, #4a5568);
+  border-radius: 2px;
+} */
+
+.who-we-serve-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #2c3546, #4a5568);
+  border-radius: 2px;
+}
+
+.who-we-serve-header p {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1.2rem;
+  color: #5a6c7d;
+  margin: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.stakeholders-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(44, 53, 70, 0.12);
+  overflow: hidden;
+  border: 1px solid rgba(44, 53, 70, 0.08);
+  position: relative;
+}
+
+.stakeholders-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3546, #4a5568, #2c3546);
+}
+
+.stakeholder-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 35px 40px;
+  border-bottom: 1px solid #f1f3f4;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.stakeholder-item:last-child {
+  border-bottom: none;
+}
+
+.stakeholder-item:hover {
+  background: linear-gradient(135deg, rgba(44, 53, 70, 0.04), rgba(44, 53, 70, 0.02));
+  transform: translateX(8px);
+  box-shadow: inset 0 0 0 1px rgba(44, 53, 70, 0.1);
+}
+
+.stakeholder-item:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #2c3546, #4a5568);
+  border-radius: 0 3px 3px 0;
+}
+
+.stakeholder-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 240px;
+  flex-shrink: 0;
+}
+
+.stakeholder-icon {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #2c3546, #4a5568);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(44, 53, 70, 0.25);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stakeholder-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.stakeholder-item:hover .stakeholder-icon {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 12px 35px rgba(44, 53, 70, 0.35);
+}
+
+.stakeholder-item:hover .stakeholder-icon::before {
+  left: 100%;
+}
+
+.stakeholder-icon svg {
+  width: 26px;
+  height: 26px;
+  color: #ffffff;
+  stroke-width: 2.2;
+  position: relative;
+  z-index: 1;
+}
+
+.stakeholder-header h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3546;
+  margin: 0;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.stakeholder-description {
+  flex: 1;
+  padding-top: 5px;
+}
+
+.stakeholder-description p {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1.1rem;
+  color: #5a6c7d;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 400;
+  position: relative;
+}
+
+/* Responsive Design for Who We Serve */
+@media (max-width: 768px) {
+  .who-we-serve {
+    padding: 80px 0;
+  }
+  
+  .who-we-serve-header {
+    margin-bottom: 50px;
+  }
+  
+  .who-we-serve-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .who-we-serve-header p {
+    font-size: 1.1rem;
+  }
+  
+  .stakeholders-list {
+    margin: 0 20px;
+    border-radius: 16px;
+  }
+  
+  .stakeholder-item {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 30px;
+  }
+  
+  .stakeholder-header {
+    min-width: auto;
+    gap: 18px;
+  }
+  
+  .stakeholder-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .stakeholder-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .stakeholder-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .stakeholder-description p {
+    font-size: 1.05rem;
+  }
+  
+  .stakeholder-item:hover {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .who-we-serve {
+    padding: 60px 0;
+  }
+  
+  .who-we-serve-header h2 {
+    font-size: 1.9rem;
+  }
+  
+  .stakeholders-list {
+    margin: 0 15px;
+    border-radius: 12px;
+  }
+  
+  .stakeholder-item {
+    padding: 25px 25px;
+    gap: 18px;
+  }
+  
+  .stakeholder-header {
+    gap: 15px;
+  }
+  
+  .stakeholder-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .stakeholder-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .stakeholder-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .stakeholder-description p {
+    font-size: 1rem;
+  }
+}

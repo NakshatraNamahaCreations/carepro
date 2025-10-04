@@ -38,12 +38,12 @@ const AboutUs = () => {
 
   const animateCounters = () => {
     const targets = {
-      outcome1: 85,  // 85% faster recovery rates
-      outcome2: 70,  // 70% reduction in readmissions
-      outcome3: 35,  // 35% improvement in medication adherence
-      outcome4: 98,  // 98% patient satisfaction rate
-      outcome5: 25,  // 25% cost savings for families
-      outcome6: 40   // 40% improvement in quality of life
+      outcome1: 99,  // 99% device accuracy
+      outcome2: 75,  // 75% reduction in readmissions
+      outcome3: 24,  // 24/7 monitoring coverage
+      outcome4: 100, // 100% compliance standards
+      outcome5: 60,  // 60% faster response time
+      outcome6: 95   // 95% stakeholder satisfaction
     };
 
     const duration = 2000;
@@ -75,13 +75,13 @@ const AboutUs = () => {
       <div className="about-us-container">
         <div className="about-content-wrapper">
           <div className="about-left-column">
-            <h2>About Care Pro</h2>
+            <h2>About CarePro</h2>
             <div className="about-text-content">
               <p>
-                CarePro is a next-generation Remote Patient Monitoring (RPM) and telehealth ecosystem designed to bridge the gap between patients, doctors, and hospitals.
+                Every healthcare stakeholder has unique challenges—from reducing hospital readmissions to ensuring last-mile care delivery in rural areas. CarePro's Remote Patient Monitoring (RPM) ecosystem is designed to fit seamlessly into hospitals, clinics, government programs, insurance systems, and home healthcare agencies.
               </p>
               <p>
-                With FDA, CE, and CDSCO-certified devices, backed by ISO 13485, ISO 27001, and ISO 9001 standards, CarePro ensures medical accuracy, data security, and global reliability.
+                Our FDA, CE, CDSCO-certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, ensure safety, accuracy, and trust for every partner.
               </p>
               <p>
                 Our trained Care Coordinators (nurses at our office) ensure patients receive 24/7 assistance, coordinating between families, doctors, and hospitals within seconds.
@@ -97,42 +97,42 @@ const AboutUs = () => {
               <div className="outcome-item">
                 <div className="outcome-number">{counts.outcome1}%</div>
                 <div className="outcome-description">
-                  Faster recovery rates for patients receiving our home healthcare services.
+                  Device accuracy with FDA, CE, CDSCO-certified RPM technology.
                 </div>
               </div>
               
               <div className="outcome-item">
                 <div className="outcome-number">{counts.outcome2}%</div>
                 <div className="outcome-description">
-                  Reduction in hospital readmissions through our preventive care programs.
+                  Reduction in hospital readmissions through real-time monitoring.
                 </div>
               </div>
               
               <div className="outcome-item">
-                <div className="outcome-number">{counts.outcome3}%</div>
+                <div className="outcome-number">{counts.outcome3}/7</div>
                 <div className="outcome-description">
-                  Improvement in medication adherence with our medication management.
+                  Continuous monitoring coverage with Care Coordinator support.
                 </div>
               </div>
               
               <div className="outcome-item">
                 <div className="outcome-number">{counts.outcome4}%</div>
                 <div className="outcome-description">
-                  Patient satisfaction rate with our personalized care approach.
+                  Compliance with ISO 13485, ISO 27001, ISO 9001 standards.
                 </div>
               </div>
               
               <div className="outcome-item">
                 <div className="outcome-number">{counts.outcome5}%</div>
                 <div className="outcome-description">
-                  Cost savings for families through our comprehensive patient monitoring.
+                  Faster response time with immediate Care Coordinator intervention.
                 </div>
               </div>
               
               <div className="outcome-item">
                 <div className="outcome-number">{counts.outcome6}%</div>
                 <div className="outcome-description">
-                  Improvement in quality of life for our chronic disease patients.
+                  Stakeholder satisfaction across hospitals, clinics, and agencies.
                 </div>
               </div>
             </div>

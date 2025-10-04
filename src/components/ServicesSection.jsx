@@ -5,18 +5,18 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "Patient Monitoring",
-      description: "Comprehensive medical care delivered directly to your doorstep, ensuring comfort and convenience for patients who cannot travel to medical facilities."
+      title: "Remote Patient Monitoring (RPM)",
+      description: "FDA, CE, CDSCO-certified devices with 4G/Bluetooth/WiFi connectivity for continuous vital monitoring, seamlessly integrating with hospitals, clinics, and home healthcare agencies."
     },
     {
       id: 2,
-      title: "Skilled Nursing Care",
-      description: "Professional nursing services including wound care, medication management, and post-surgical care provided by licensed healthcare professionals."
+      title: "Care Coordinator Support",
+      description: "Trained nurses available within seconds to guide patients, families, and providers, providing 24/7 support and immediate response to abnormal readings."
     },
     {
       id: 3,
-      title: "Physical Therapy",
-      description: "Personalized rehabilitation and physical therapy services to help patients recover mobility and improve their quality of life in the comfort of their homes."
+      title: "Hospital Management System Integration",
+      description: "Seamless integration with existing HMS to ensure patient history, next steps, and long-term records are always updated with real-time monitoring data."
     },
     {
       id: 4,
@@ -41,12 +41,12 @@ const ServicesSection = () => {
         <div className="services-header">
           <div className="services-title-section">
             <h2>
-              <span className="title-line-1">How We Deliver</span>
-              <span className="title-line-2">Healthcare</span>
-              <span className="title-line-3">Excellence</span>
+              <span className="title-line-1">CarePro's Remote Patient</span>
+              <span className="title-line-2">Monitoring (RPM)</span>
+              <span className="title-line-3">Ecosystem</span>
             </h2>
             <p>
-              With deep expertise in home healthcare, medical technology, and patient care—along with our comprehensive service platform—we help patients recover faster, maintain independence, and achieve better health outcomes. And we deliver it all through a seamless at-home service model.
+              Every healthcare stakeholder has unique challenges—from reducing hospital readmissions to ensuring last-mile care delivery in rural areas. Our FDA, CE, CDSCO-certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, ensure safety, accuracy, and trust for every partner.
             </p>
           </div>
         </div>

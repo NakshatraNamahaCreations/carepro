@@ -249,8 +249,7 @@ const AboutPage = () => {
             <div className={styles["hero-content"]}>
               <h1>About CarePro</h1>
               <p>
-                Transforming healthcare delivery through innovative patient monitoring
-                solutions
+                CarePro's Remote Patient Monitoring (RPM) ecosystem seamlessly integrates with hospitals, clinics, government programs, insurance systems, and home healthcare agencies to address unique healthcare challenges.
               </p>
             </div>
           </div>
@@ -281,11 +280,7 @@ const AboutPage = () => {
                   <div className={styles["timeline-content"]}>
                     <h3>2018 - The Beginning</h3>
                     <p>
-                      CarePro was founded with a simple yet powerful vision: to
-                      bring world-class healthcare directly to patients' homes.
-                      We believe that healing happens best in familiar
-                      surroundings, surrounded by loved ones and the comfort of
-                      home.
+                      CarePro was founded with a vision to address unique healthcare challenges through tailored Remote Patient Monitoring (RPM) solutions for hospitals, clinics, government programs, insurance systems, and home healthcare agencies.
                     </p>
                   </div>
                 </div>
@@ -298,11 +293,7 @@ const AboutPage = () => {
                   <div className={styles["timeline-content"]}>
                     <h3>2020 - Innovation & Growth</h3>
                     <p>
-                      We pioneered the integration of cutting-edge medical
-                      technology with compassionate care, establishing ourselves
-                      as leaders in home healthcare innovation and expanding our
-                      reach to serve thousands of patients across multiple
-                      cities.
+                      We developed FDA, CE, CDSCO-certified devices with ISO 13485, ISO 27001, and ISO 9001 compliance. Our RPM ecosystem began serving healthcare stakeholders, ensuring safety, accuracy, and trust for every partner.
                     </p>
                   </div>
                 </div>
@@ -315,10 +306,7 @@ const AboutPage = () => {
                   <div className={styles["timeline-content"]}>
                     <h3>2024 - Today & Beyond</h3>
                     <p>
-                      Today, we continue to set new standards in home healthcare
-                      delivery, combining advanced medical technology with
-                      personalized care to ensure exceptional outcomes for every
-                      patient and family we serve.
+                      Today, we continue to set new standards in RPM delivery, combining certified devices with DPDPA compliance to ensure exceptional outcomes—from reducing hospital readmissions to enabling last-mile care delivery in rural areas.
                     </p>
                   </div>
                 </div>
@@ -353,6 +341,104 @@ const AboutPage = () => {
       </section>
 
       <CaseStudySlider />
+
+      {/* Who We Serve */}
+      <section className={styles["who-we-serve"]}>
+        <div className="container">
+          <div className={styles["who-we-serve-header"]}>
+            <h2>
+              Who We <span className={styles["highlight-text"]}>Serve</span>
+            </h2>
+            <p>CarePro's Remote Patient Monitoring ecosystem serves diverse healthcare stakeholders</p>
+          </div>
+          
+          <div className={styles["stakeholders-list"]}>
+            <div className={styles["stakeholder-item"]}>
+              <div className={styles["stakeholder-header"]}>
+                <div className={styles["stakeholder-icon"]}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 21h18"/>
+                    <path d="M5 21V7l8-4v18"/>
+                    <path d="M19 21V11l-6-4"/>
+                    <path d="M9 9v.01"/>
+                    <path d="M9 12v.01"/>
+                    <path d="M9 15v.01"/>
+                    <path d="M9 18v.01"/>
+                  </svg>
+                </div>
+                <h3>Hospitals & Clinics</h3>
+              </div>
+              <div className={styles["stakeholder-description"]}>
+                <p>Integrates seamlessly with HMS. Doctors access real-time data for better diagnosis. Reduces readmissions and improves care outcomes.</p>
+              </div>
+            </div>
+
+            <div className={styles["stakeholder-item"]}>
+              <div className={styles["stakeholder-header"]}>
+                <div className={styles["stakeholder-icon"]}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                  </svg>
+                </div>
+                <h3>Home Healthcare Agencies</h3>
+              </div>
+              <div className={styles["stakeholder-description"]}>
+                <p>Care Coordinators extend your nursing team remotely. Families stay confident with 24/7 nurse-led monitoring.</p>
+              </div>
+            </div>
+
+            <div className={styles["stakeholder-item"]}>
+              <div className={styles["stakeholder-header"]}>
+                <div className={styles["stakeholder-icon"]}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <h3>Government Programs</h3>
+              </div>
+              <div className={styles["stakeholder-description"]}>
+                <p>Ideal for eSanjeevani and National Digital Health Mission. Provides hospital-level care access in underserved regions.</p>
+              </div>
+            </div>
+
+            <div className={styles["stakeholder-item"]}>
+              <div className={styles["stakeholder-header"]}>
+                <div className={styles["stakeholder-icon"]}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                    <path d="M12 11h4"/>
+                    <path d="M12 16h4"/>
+                    <path d="M8 11h.01"/>
+                    <path d="M8 16h.01"/>
+                  </svg>
+                </div>
+                <h3>Insurance & Payors</h3>
+              </div>
+              <div className={styles["stakeholder-description"]}>
+                <p>Preventive monitoring lowers costs and claims. Historical records help validate and optimize claim processes.</p>
+              </div>
+            </div>
+
+            <div className={styles["stakeholder-item"]}>
+              <div className={styles["stakeholder-header"]}>
+                <div className={styles["stakeholder-icon"]}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                    <path d="M12 14l3-3 3 3-3 3-3-3z"/>
+                  </svg>
+                </div>
+                <h3>Physicians</h3>
+              </div>
+              <div className={styles["stakeholder-description"]}>
+                <p>Monitor chronic care patients remotely. Get HMS-synced historical records for better decisions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Why Choose Us */}
       <section className={styles["why-choose-us"]}>
@@ -418,32 +504,31 @@ const AboutPage = () => {
               <span className={styles["highlight-text"]}>Questions</span>
             </h2>
             <p>
-              Find answers to common questions about our home healthcare
-              services
+              Find answers to common questions about our Remote Patient Monitoring (RPM) ecosystem
             </p>
           </div>
 
           <div className={styles["faq-accordion"]}>
             {[
               {
-                q: "What services does CarePro offer?",
-                a: "CarePro offers comprehensive home healthcare services including medical consultations, diagnostic tests, sample collection, nursing care, physiotherapy, and specialized treatments.",
+                q: "What is CarePro's Remote Patient Monitoring (RPM) ecosystem?",
+                a: "CarePro's RPM ecosystem is designed to fit seamlessly into hospitals, clinics, government programs, insurance systems, and home healthcare agencies. It addresses unique healthcare challenges from reducing hospital readmissions to ensuring last-mile care delivery in rural areas.",
               },
               {
-                q: "How quickly can I get my test results?",
-                a: "Most test results are available within 12-72 hours through our secure online portal or mobile app. Critical results are prioritized and delivered even faster.",
+                q: "What certifications and standards does CarePro comply with?",
+                a: "Our devices are FDA, CE, and CDSCO-certified, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance. This ensures safety, accuracy, and trust for every healthcare partner.",
               },
               {
-                q: "Are your healthcare professionals certified?",
-                a: "Yes, all our healthcare professionals are fully certified and licensed, including nurses, doctors, phlebotomists, and therapists.",
+                q: "How does CarePro integrate with existing healthcare systems?",
+                a: "CarePro's RPM ecosystem seamlessly integrates with Hospital Management Systems (HMS), government programs like eSanjeevani and National Digital Health Mission (NDHM), and various healthcare platforms to provide real-time patient monitoring and data management.",
               },
               {
-                q: "How do I schedule an appointment?",
-                a: "You can book appointments through our website, mobile app, or by calling our 24/7 support. We offer flexible scheduling including weekends and holidays.",
+                q: "What support does CarePro provide to healthcare stakeholders?",
+                a: "Our Care Coordinators (nurses) provide 24/7 support, acting as an extension of your healthcare team. They monitor patient vitals in real-time and respond immediately to abnormal readings, ensuring optimal patient outcomes.",
               },
               {
-                q: "What areas do you serve?",
-                a: "CarePro currently serves over 50 cities nationwide. Check our website or contact support to confirm if we serve your area.",
+                q: "How does CarePro ensure data security and privacy?",
+                a: "We maintain ISO 27001 certification and full compliance with HIPAA, GDPR, and DPDPA regulations. All patient data is securely stored and transmitted using enterprise-grade encryption and security protocols.",
               },
             ].map((item, idx) => (
               <div
