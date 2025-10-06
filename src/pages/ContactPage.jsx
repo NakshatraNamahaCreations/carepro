@@ -40,7 +40,7 @@ const ContactPage = () => {
           <div className="container">
             <div className="hero-content">
               <h1>Contact Us</h1>
-              <p>Get in touch with our team for any questions or support</p>
+              <p>Let’s Build a Healthier Future Together</p>
             </div>
           </div>
         </div>
@@ -136,35 +136,59 @@ const ContactPage = () => {
                 <h3 className="section-title">Contact Information</h3>
                 <ul className="info-list">
                   <li className="info-item">
-                    <span className="label">Mobile</span>
-                    <div className="values">
-                      <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                      <a href="tel:+15559876543">+1 (555) 987-6543</a>
+                    <div className="info-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    </div>
+                    <div className="info-content">
+                      <span className="label">Headquarters</span>
+                      <div className="values">
+                        <span>Mysore | Bengaluru | USA (Partner Office)</span>
+                      </div>
                     </div>
                   </li>
                   <li className="info-item">
-                    <span className="label">Phone</span>
-                    <div className="values">
-                      <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                    <div className="info-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <div className="info-content">
+                      <span className="label">Email</span>
+                      <div className="values">
+                        <a href="mailto:info@careproaihealth.com">info@careproaihealth.com</a>
+                      </div>
                     </div>
                   </li>
                   <li className="info-item">
-                    <span className="label">Landline</span>
-                    <div className="values">
-                      <a href="tel:+15550000000">+1 (555) 000-0000</a>
+                    <div className="info-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <div className="info-content">
+                      <span className="label">Phone</span>
+                      <div className="values">
+                        <a href="tel:+91-XXXXXXXXXX">+91-XXXXXXXXXX</a>
+                      </div>
                     </div>
                   </li>
                   <li className="info-item">
-                    <span className="label">Email</span>
-                    <div className="values">
-                      <a href="mailto:info@carepro.com">info@carepro.com</a>
-                      <a href="mailto:support@carepro.com">support@carepro.com</a>
+                    <div className="info-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                      </svg>
                     </div>
-                  </li>
-                  <li className="info-item">
-                    <span className="label">Website</span>
-                    <div className="values">
-                      <a href="/">www.carepro.com</a>
+                    <div className="info-content">
+                      <span className="label">Website</span>
+                      <div className="values">
+                        <a href="https://www.careproaihealth.com" target="_blank" rel="noopener noreferrer">www.careproaihealth.com</a>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -173,12 +197,13 @@ const ContactPage = () => {
               <div className="sidebar-card">
                 <h3 className="section-title">Locate Us</h3>
                 <div className="location-block">
-                  <h4>Corporate Address</h4>
-                  <p>123 Healthcare Street, Medical City, MC 12345</p>
+                  <h4>Headquarters</h4>
+                  <p>Mysore | Bengaluru | USA (Partner Office)</p>
                 </div>
                 <div className="location-block">
-                  <h4>Registered Address</h4>
-                  <p>Suite 500, 456 Wellness Ave, Medical City, MC 67890</p>
+                  <h4>Contact</h4>
+                  <p>info@careproaihealth.com</p>
+                  <p>+91-XXXXXXXXXX</p>
                 </div>
               </div>
 
@@ -206,7 +231,7 @@ const ContactPage = () => {
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
               <h3>Interactive Map</h3>
-              <p>123 Healthcare Street, Medical City, MC 12345</p>
+              <p>Mysore | Bengaluru | USA (Partner Office)</p>
             </div>
           </div>
         </div>

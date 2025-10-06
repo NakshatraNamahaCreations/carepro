@@ -12,6 +12,7 @@ import OurTeamPage from './pages/OurTeamPage'
 import RPMPlatformPage from './pages/RPMPlatformPage'
 import TechnologyPage from './pages/TechnologyPage'
 import PartnerWithUsPage from './pages/PartnerWithUsPage'
+import CareerPage from './pages/CareerPage'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/rpm-platform" element={<RPMPlatformPage />} />
           <Route path="/technology" element={<TechnologyPage />} />
           <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
+          <Route path="/career" element={<CareerPage />} />
         </Routes>
         <Footer />
       </div>

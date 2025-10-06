@@ -101,6 +101,10 @@ const Navigation = ({ onLinkClick }) => {
           <Link to="/partner-with-us" onClick={onLinkClick}>Partner with Us</Link>
         </li>
         
+        <li className="menu-item">
+          <Link to="/career" onClick={onLinkClick}>Career</Link>
+        </li>
+        
         {/* Contact Us button - only visible in mobile menu */}
         <li className="menu-item menu-contact-item mobile-only">
           <Link to="/contact" className="menu-contact-button" onClick={onLinkClick}>Contact Us</Link>

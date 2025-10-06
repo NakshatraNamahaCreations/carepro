@@ -1,11 +1,11 @@
-/* Partner with Us Page Styles */
-
-.partner-with-us-page {
+/* Career Page Styles */
+.career-page {
   min-height: 100vh;
+  background-color: #f8f9fa;
 }
 
 /* Hero Section */
-.partner-hero {
+.career-hero {
   position: relative;
   height: 60vh;
   min-height: 400px;
@@ -15,40 +15,36 @@
   overflow: hidden;
 }
 
-.partner-hero-banner {
+.career-hero-banner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/partner_banner.jpg');
-  background-size: cover;
-  background-position: center 30%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #2c3546;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.partner-hero-overlay {
+.career-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: transparent;
   z-index: 1;
 }
 
-.partner-hero .container {
+.career-hero .container {
   position: relative;
   z-index: 2;
   color: white;
   text-align: center;
 }
 
-.partner-hero .hero-content h1 {
+.career-hero .hero-content h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 48px;
   font-weight: 700;
@@ -58,7 +54,7 @@
   background-clip: text;
 }
 
-.partner-hero .hero-content p {
+.career-hero .hero-content p {
   font-family: 'Poppins', sans-serif;
   font-size: 22px;
   font-weight: 400;
@@ -68,35 +64,27 @@
   line-height: 1.6;
 }
 
-/* Container */
-.container {
+/* Main Content */
+.career-main-content {
+  padding: 4rem 0;
+}
+
+.content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Main Content Section */
-.partner-main-content {
-  padding: 6rem 0;
-  background: white;
-}
-
-.content-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
+/* Description Section */
 .description-section {
+  text-align: center;
   margin-bottom: 4rem;
 }
 
 .description-section h2 {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 3rem;
-  text-align: center;
+  color: #2c3546;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
@@ -106,40 +94,63 @@
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
+  width: 80px;
+  height: 4px;
   background: linear-gradient(90deg, #2c3546, #1a2332);
   border-radius: 2px;
 }
 
 .main-description {
-  font-size: 1.3rem;
-  line-height: 1.6;
-  color: #6c757d;
-  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Partners List Section */
-.partners-list-section {
+/* Benefits Section */
+.benefits-section {
   margin-bottom: 4rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+   background:
+    linear-gradient(45deg, transparent 40%, rgba(44, 53, 70, 0.03) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(44, 53, 70, 0.02) 50%, transparent 60%);
+  background-size: 40px 40px; 
   padding: 3rem 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.partners-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.benefits-section h2 {
+  font-size: 2.5rem;
+  color: #2c3546;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.benefits-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3546, #1a2332);
+  border-radius: 2px;
+}
+
+.benefits-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   max-width: 600px;
   margin: 0 auto;
+  list-style: none;
+  padding: 0;
 }
 
-.partners-list li {
+.benefits-list li {
   font-size: 1.2rem;
   font-weight: 600;
   color: #2c3546;
@@ -151,11 +162,11 @@
   transition: all 0.3s ease;
 }
 
-.partners-list li:last-child {
+.benefits-list li:last-child {
   border-bottom: none;
 }
 
-.partners-list li:hover {
+.benefits-list li:hover {
   color: #1a2332;
   padding-left: 3rem;
   background: rgba(255, 255, 255, 0.5);
@@ -165,7 +176,7 @@
   padding-right: 1rem;
 }
 
-.partners-list li::before {
+.benefits-list li::before {
   content: '▶';
   position: absolute;
   left: 0;
@@ -176,45 +187,44 @@
   transition: all 0.3s ease;
 }
 
-.partners-list li:hover::before {
+.benefits-list li:hover::before {
   color: #1a2332;
   transform: translateX(0.3rem);
 }
 
-/* Why Partner Section */
-.why-partner-section {
+/* Roles Section */
+.roles-section {
   margin-bottom: 4rem;
-  background:
+  /* background:
     linear-gradient(45deg, transparent 40%, rgba(44, 53, 70, 0.03) 50%, transparent 60%),
     linear-gradient(-45deg, transparent 40%, rgba(44, 53, 70, 0.02) 50%, transparent 60%);
-  background-size: 40px 40px;
-  padding: 4rem 2rem;
+  background-size: 40px 40px; */
+  padding: 3rem 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.why-partner-section h2 {
+.roles-section h2 {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 3rem;
+  color: #2c3546;
   text-align: center;
+  margin-bottom: 2rem;
   position: relative;
 }
 
-.why-partner-section h2::after {
+.roles-section h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
+  width: 80px;
+  height: 4px;
   background: linear-gradient(90deg, #2c3546, #1a2332);
   border-radius: 2px;
 }
 
-.why-partner-list {
+.roles-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -225,34 +235,35 @@
   margin: 0 auto;
 }
 
-.why-partner-list li {
-  background: white;
+.roles-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 2rem;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  font-size: 1.1rem;
-  color: #2c3546;
-  text-align: center;
   border-left: 4px solid #2c3546;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.why-partner-list li:hover {
+.roles-list li:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(44, 53, 70, 0.15);
+  border-left-color: #1a2332;
 }
 
-/* Why Partner CTA */
-.why-partner-cta {
-  text-align: center;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(44, 53, 70, 0.1);
+.role-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3546;
 }
 
+
+/* Button Styles */
 .btn-primary {
-  background: #2c3546;
-  color: white;
+  background: white;
+  color: #2c3546;
   border: none;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -260,13 +271,15 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(44, 53, 70, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary:hover {
-  background: #1a2332;
+  background: #f8f9fa;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(44, 53, 70, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive Design */
@@ -276,40 +289,33 @@
   }
   
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .description-section h2,
+  .benefits-section h2,
+  .roles-section h2 {
+    font-size: 2rem;
   }
   
   .main-description {
     font-size: 1.1rem;
   }
   
-  .partners-list li {
-    font-size: 1.1rem;
-    padding: 0.8rem 0;
-    padding-left: 2rem;
-  }
-  
-  .partners-list li:hover {
-    padding-left: 2.5rem;
-    margin: 0 -0.5rem;
-    padding-left: calc(2.5rem - 0.5rem);
-    padding-right: 0.5rem;
-  }
-  
-  .why-partner-list li {
-    padding: 1.25rem 1.5rem;
-    font-size: 1rem;
-  }
-  
-  .description-section h2,
-  .why-partner-section h2 {
-    font-size: 2rem;
-  }
-  
-  .btn-primary {
-    padding: 1rem 2.5rem;
+  .benefits-list li {
     font-size: 1.1rem;
   }
+  
+  .roles-list li {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .role-title {
+    font-size: 1.2rem;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -321,38 +327,26 @@
     font-size: 2rem;
   }
   
-  .main-description {
+  .hero-content p {
     font-size: 1rem;
-  }
-  
-  .partners-list li {
-    font-size: 1rem;
-    padding: 0.7rem 0;
-    padding-left: 1.75rem;
-  }
-  
-  .partners-list li:hover {
-    padding-left: 2.25rem;
-    margin: 0 -0.25rem;
-    padding-left: calc(2.25rem - 0.25rem);
-    padding-right: 0.25rem;
-  }
-  
-  .why-partner-list li {
-    padding: 1rem 1.25rem;
-  }
-  
-  .why-partner-section {
-    padding: 2rem 1rem;
   }
   
   .description-section h2,
-  .why-partner-section h2 {
+  .benefits-section h2,
+  .roles-section h2 {
     font-size: 1.8rem;
   }
   
-  .btn-primary {
-    padding: 0.9rem 2rem;
-    font-size: 1rem;
+  .benefits-section {
+    padding: 2rem 1rem;
   }
+  
+  .roles-section {
+    padding: 2rem 1rem;
+  }
+  
+  .roles-list li {
+    padding: 1.2rem 1.5rem;
+  }
+  
 }

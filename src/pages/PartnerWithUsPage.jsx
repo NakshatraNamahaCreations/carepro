@@ -57,13 +57,11 @@ const PartnerWithUsPage = () => {
                 <li>AI-driven analytics that improve outcomes</li>
                 <li>Dedicated operations & compliance team</li>
               </ul>
-            </div>
-
-            {/* CTA Section */}
-            <div className="partner-cta-section">
-              <button className="btn-primary" onClick={handleOpenPartnership}>
-                Become a Partner
-              </button>
+              <div className="why-partner-cta">
+                <button className="btn-primary" onClick={handleOpenPartnership}>
+                  Become a Partner
+                </button>
+              </div>
             </div>
           </div>
         </div>
