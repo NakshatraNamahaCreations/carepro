@@ -70,8 +70,8 @@
 }
 
 .btn-primary {
-  background: #2c3546;
-  color: #ffffff;
+  background: #2c3546 !important;
+  color: #ffffff !important;
 }
 
 .btn-primary:hover {
@@ -80,8 +80,8 @@
 }
 
 .btn-secondary {
-  background: #2c3546;
-  color: #ffffff;
+  background: #2c3546 !important;
+  color: #ffffff !important;
 }
 
 .btn-secondary:hover {

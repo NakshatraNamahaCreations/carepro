@@ -9,6 +9,9 @@ import WhyCareProPage from './pages/WhyCareProPage'
 import ContactPage from './pages/ContactPage'
 import OurServicesPage from './pages/OurServicesPage'
 import OurTeamPage from './pages/OurTeamPage'
+import RPMPlatformPage from './pages/RPMPlatformPage'
+import TechnologyPage from './pages/TechnologyPage'
+import PartnerWithUsPage from './pages/PartnerWithUsPage'
 
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
           <Route path="/our-services" element={<OurServicesPage />} />
           <Route path="/our-team" element={<OurTeamPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/rpm-platform" element={<RPMPlatformPage />} />
+          <Route path="/technology" element={<TechnologyPage />} />
+          <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
         </Routes>
         <Footer />
       </div>

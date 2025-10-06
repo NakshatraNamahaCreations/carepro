@@ -6,27 +6,27 @@ const ServicesSection = () => {
     {
       id: 1,
       title: "Remote Patient Monitoring (RPM)",
-      description: "FDA, CE, CDSCO-certified devices with 4G/Bluetooth/WiFi connectivity for continuous vital monitoring, seamlessly integrating with hospitals, clinics, and home healthcare agencies."
+      description: "24/7 vitals tracking (BP, HR, SpO2, Glucose, Temp, ECG). AI-driven health alerts for clinicians and caregivers. Predictive analytics for early intervention. Integration with EMR/EHR. Compliance with CPT billing codes (99453, 99454, 99457, 99458)."
     },
     {
       id: 2,
-      title: "Care Coordinator Support",
-      description: "Trained nurses available within seconds to guide patients, families, and providers, providing 24/7 support and immediate response to abnormal readings."
+      title: "Chronic Care Management (CCM)",
+      description: "Personalized care plans. Regular follow-ups and education. AI reminders for medication and lifestyle tracking. Monthly reports for providers."
     },
     {
       id: 3,
-      title: "Hospital Management System Integration",
-      description: "Seamless integration with existing HMS to ensure patient history, next steps, and long-term records are always updated with real-time monitoring data."
+      title: "AI-Powered Insights",
+      description: "Predict patient risk with advanced algorithms. Auto-generate reports and care recommendations. Health trend visualization dashboards."
     },
     {
       id: 4,
-      title: "Chronic Disease Management",
-      description: "Specialized care for patients with ongoing health conditions, including diabetes management, heart disease monitoring, and medication adherence support."
+      title: "Device & Connectivity Solutions",
+      description: "Plug-and-play 4G-enabled kits for patients without smartphones. Easy onboarding & setup by our CarePro team. Device calibration and remote troubleshooting."
     },
     {
       id: 5,
-      title: "Medical Equipment Management",
-      description: "Complete setup, maintenance, and training for medical equipment, ensuring patients have access to the tools they need for optimal health outcomes."
+      title: "Revenue Cycle & Compliance",
+      description: "Automated data capture for reimbursement. Real-time CPT tracking. Documentation support to ensure 100% audit compliance."
     },
     {
       id: 6,
@@ -56,10 +56,13 @@ const ServicesSection = () => {
             <div key={service.id} className="service-card">
               <div className="service-card-content">
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <a href={`/services/${service.id}`} className="learn-more-link">
-                  Learn More <span className="arrow">→</span>
-                </a>
+                <ul className="service-points">
+                  {service.description.split('. ').map((point, index) => (
+                    point.trim() && (
+                      <li key={index}>{point.replace(/\.$/, '')}</li>
+                    )
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

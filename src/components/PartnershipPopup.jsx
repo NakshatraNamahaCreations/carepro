@@ -235,3 +235,5 @@ const PartnershipPopup = ({ isOpen, onClose }) => {
 
 export default PartnershipPopup;
 
+
+

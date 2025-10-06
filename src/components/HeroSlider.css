@@ -150,6 +150,34 @@
   box-shadow: 0 8px 25px rgba(112, 111, 188, 0.3);
 }
 
+/* Two Button Layout */
+.hero-cta-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-cta-buttons .btn-main {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+.homepage-banner-card .btn-secondary {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+.homepage-banner-card .btn-secondary:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
 /* Navigation Controls */
 .homepage-banner-navigation {
   position: absolute;
@@ -279,6 +307,16 @@
   .btn-main {
     padding: 12px 25px;
     font-size: 14px;
+  }
+  
+  .hero-cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hero-cta-buttons .btn-main {
+    width: 100%;
+    min-width: auto;
   }
   
   .homepage-banner-navigation {

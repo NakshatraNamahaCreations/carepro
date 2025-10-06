@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeBanner from '../components/HomeBanner'
 import HeroSlider from '../components/HeroSlider'
 import ServicesSection from '../components/ServicesSection'
 import AboutUs from '../components/AboutUs'
@@ -11,6 +12,7 @@ import MissionVision from '../components/MissionVision'
 const HomePage = () => {
   return (
     <div className="home-page">
+      <HomeBanner />
       <HeroSlider />
       <ServicesSection />
       <MissionVision/>

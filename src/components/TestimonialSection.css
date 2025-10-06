@@ -148,6 +148,56 @@
   display: block;
 }
 
+/* Quick Stats Styles */
+.quick-stats {
+  margin-top: 30px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.quick-stats h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stats-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding-left: 25px;
+}
+
+.stats-list li:last-child {
+  border-bottom: none;
+}
+
+.stats-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -166,6 +216,27 @@
   
   .testimonial-person-info .designation {
     font-size: 13px;
+  }
+  
+  .quick-stats {
+    margin-top: 25px;
+    padding: 20px;
+  }
+  
+  .quick-stats h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .stats-list li {
+    font-size: 16px;
+    padding: 10px 0;
+    padding-left: 25px;
+  }
+  
+  .stats-list li::before {
+    top: 10px;
+    font-size: 14px;
   }
 }
 
@@ -241,4 +312,24 @@
     font-size: 12px;
   }
   
+  .quick-stats {
+    margin-top: 20px;
+    padding: 15px;
+  }
+  
+  .quick-stats h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .stats-list li {
+    font-size: 15px;
+    padding: 8px 0;
+    padding-left: 25px;
+  }
+  
+  .stats-list li::before {
+    top: 8px;
+    font-size: 13px;
+  }
 }

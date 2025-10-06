@@ -60,9 +60,8 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:white !important;
+ 
   background-clip: text;
 }
 

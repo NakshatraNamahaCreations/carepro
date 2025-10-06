@@ -248,7 +248,7 @@ const AboutPage = () => {
           <div className="container">
             <div className={styles["hero-content"]}>
               <h1>About CarePro </h1>
-              <p>Learn about our mission, vision, team, and the comprehensive Remote Patient Monitoring (RPM) ecosystem that serves hospitals, clinics, government programs, insurance systems, and home healthcare agencies worldwide</p>
+              <p>A New Era of Smart Healthcare</p>
             </div>
           </div>
         </div>

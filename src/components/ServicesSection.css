@@ -298,6 +298,43 @@
   color: #ffffff;
 }
 
+/* Service Points List Styles */
+.service-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-points li {
+  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 27px;
+  color: #000000;
+  font-weight: 450;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.service-points li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1a237e;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.service-card:hover .service-points li {
+  color: #ffffff;
+}
+
+.service-card:hover .service-points li::before {
+  color: #ffffff;
+}
+
 .learn-more-link {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -336,6 +373,11 @@
     line-height: 27px;
     margin-bottom: 20px;
   }
+  
+  .service-points li {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 @media only screen and (max-width: 1399px) {
@@ -344,6 +386,11 @@
     line-height: 24px;
     margin-bottom: 20px;
   }
+  
+  .service-points li {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -351,6 +398,11 @@
     font-size: 17px;
     line-height: 24px;
     margin-bottom: 18px;
+  }
+  
+  .service-points li {
+    font-size: 17px;
+    line-height: 24px;
   }
 }
 
@@ -405,6 +457,11 @@
   
   .service-card-content p {
     font-size: 14px;
+  }
+  
+  .service-points li {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

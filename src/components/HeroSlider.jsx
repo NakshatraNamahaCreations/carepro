@@ -3,29 +3,35 @@ import './HeroSlider.css';
 import home1 from '../assets/home_banner/home1.jpg';
 import home2 from '../assets/home_banner/home2.jpg';
 import home3 from '../assets/home_banner/home3.jpg';
+import DemoPopup from './DemoPopup';
+import PartnershipPopup from './PartnershipPopup';
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
+  const [isPartnershipPopupOpen, setIsPartnershipPopupOpen] = useState(false);
 
   const slides = [
     {
       id: 1,
       type: 'image',
       imageSrc: home1,
-      heading:  'Your Health. Connected. 24/7.',
-      description: 'CarePro brings hospital-level monitoring to homes and communities with smart 4G, Bluetooth, and WiFi-enabled devices — supported by our trained Care Coordinators (nurses) available within seconds.',
-      buttonText: 'Explore Solutions',
-      buttonLink: 'Talk to Our Team'
+      heading:  'Revolutionizing Remote Patient Monitoring with AI Precision',
+      description: 'Empowering care teams with real-time insights, predictive analytics, and proactive health management — anywhere, anytime.',
+      hasTwoButtons: true,
+      button1Text: 'Book a Demo',
+      button2Text: 'Partner With Us'
     },
     {
       id: 2,
       type: 'image',
       imageSrc: home2,
-      heading: 'FDA, CE, CDSCO-Certified Devices',
-      description: 'Our certified devices, coupled with ISO 13485, ISO 27001, ISO 9001 standards, and DPDPA compliance, ensure safety, accuracy, and trust for every partner.',
-      buttonText: 'Learn More',
-      buttonLink: 'Talk to Our Team'
+      heading: 'Your Health. Connected. 24/7.',
+      description: 'CarePro brings hospital-level monitoring to homes and communities with smart 4G, Bluetooth, and WiFi-enabled devices — supported by our trained Care Coordinators (nurses) available within seconds.',
+      hasTwoButtons: true,
+      button1Text: 'Book a Demo',
+      button2Text: 'Partner With Us'
     },
     {
       id: 3,
@@ -33,8 +39,9 @@ const HeroSlider = () => {
       imageSrc: home3,
       heading: 'Seamless Integration Across Healthcare Systems',
       description: 'CarePro\'s RPM ecosystem integrates seamlessly with existing healthcare infrastructure, providing real-time monitoring and immediate response capabilities for better patient outcomes.',
-      buttonText: 'Get Started',
-      buttonLink: 'Talk to Our Team'
+      hasTwoButtons: true,
+      button1Text: 'Book a Demo',
+      button2Text: 'Partner With Us'
     }
   ];
 
@@ -60,6 +67,22 @@ const HeroSlider = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const handleOpenDemo = () => {
+    setIsDemoPopupOpen(true);
+  };
+
+  const handleCloseDemo = () => {
+    setIsDemoPopupOpen(false);
+  };
+
+  const handleOpenPartnership = () => {
+    setIsPartnershipPopupOpen(true);
+  };
+
+  const handleClosePartnership = () => {
+    setIsPartnershipPopupOpen(false);
+  };
+
   return (
     <div className="homepage-banner-slider">
       <div className="homepage-banner-slider-container">
@@ -78,12 +101,30 @@ const HeroSlider = () => {
               <div className="homepage-banner-card-content">
                 <h1 className="homepage-banner-card-heading">{slide.heading}</h1>
                 <p className="homepage-banner-card-description">{slide.description}</p>
-                <a 
-                  href={slide.buttonLink} 
-                  className="btn-main btn-primary"
-                >
-                  {slide.buttonText}
-                </a>
+                
+                {slide.hasTwoButtons ? (
+                  <div className="hero-cta-buttons">
+                    <button 
+                      onClick={handleOpenDemo}
+                      className="btn-main btn-primary"
+                    >
+                      {slide.button1Text}
+                    </button>
+                    <button 
+                      onClick={handleOpenPartnership}
+                      className="btn-main btn-secondary"
+                    >
+                      {slide.button2Text}
+                    </button>
+                  </div>
+                ) : (
+                  <a 
+                    href={slide.buttonLink} 
+                    className="btn-main btn-primary"
+                  >
+                    {slide.buttonText}
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -124,6 +165,10 @@ const HeroSlider = () => {
           </button>
         </div>
       </div>
+      
+      {/* Popup Components */}
+      <DemoPopup isOpen={isDemoPopupOpen} onClose={handleCloseDemo} />
+      <PartnershipPopup isOpen={isPartnershipPopupOpen} onClose={handleClosePartnership} />
     </div>
   );
 };
