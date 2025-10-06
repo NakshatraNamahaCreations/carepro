@@ -11,7 +11,7 @@ const MissionVision = () => {
             <div className="mission-content">
               <h3>Our Mission</h3>
               <p>
-              To empower every healthcare stakeholder—from hospitals to rural clinics—with seamless Remote Patient Monitoring (RPM) solutions that address unique challenges. We bridge technology, clinical expertise, and human touch to ensure every patient receives continuous, reliable care regardless of location or circumstance.
+              To empower every patient—especially in underserved communities—with continuous, reliable, and compassionate remote care by bridging technology, clinical expertise, and human touch. CarePro ensures that chronic conditions are monitored in real time, reducing risks and enabling healthier, longer lives without unnecessary emergencies.
               </p>
             </div>
           </div>
@@ -21,7 +21,7 @@ const MissionVision = () => {
             <div className="vision-content">
               <h3>Our Vision</h3>
               <p>
-              To become the world's most trusted Remote Patient Monitoring (RPM) ecosystem—starting in India and expanding globally—by transforming healthcare accessibility through FDA, CE, CDSCO-certified devices and ISO-compliant solutions that ensure no patient's health deteriorates unnoticed, regardless of their location or healthcare infrastructure.
+              To become the world’s most trusted chronic care ecosystem—starting in India and expanding globally—by transforming healthcare accessibility in tier 2, 3, and 4 cities where medical resources are scarce, ensuring that no patient’s health deteriorates unnoticed.
               </p>
             </div>
           </div>

@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './CaseStudySlider.css';
 import casestudy1 from '../assets/casestudy/casestudy1.jpg';
 import casestudy2 from '../assets/casestudy/casestudy2.jpg';
 import casestudy3 from '../assets/casestudy/casestudy3.jpg';
 import casestudy4 from '../assets/casestudy/casestudy4.jpg';
-import casestudy5 from '../assets/casestudy/casestudy5.jpg';
 
 const CaseStudySlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const trackRef = useRef(null);
 
   const caseStudies = [
     {
@@ -42,33 +43,46 @@ const CaseStudySlider = () => {
       image: casestudy4,
       link: "/case-study/cardiac-monitoring",
       category: "Case Scenario",
-    },
-    {
-      id: 5,
-      title: "Pediatric Care",
-      description: "Specialized monitoring for children with chronic conditions, ensuring parents receive real-time updates and pediatricians stay informed.",
-      image: casestudy5,
-      link: "/case-study/pediatric-care",
-      category: "Case Scenario",
     }
   ];
 
   // Auto-play functionality
   useEffect(() => {
-    if (isAutoPlaying) {
+    if (isAutoPlaying && !isHovered) {
       const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % caseStudies.length);
+        setCurrentSlide((prev) => {
+          const next = prev + 1;
+          return next >= caseStudies.length ? 0 : next;
+        });
       }, 5000);
       return () => clearInterval(interval);
     }
-  }, [isAutoPlaying, caseStudies.length]);
+  }, [isAutoPlaying, caseStudies.length, isHovered]);
+
+  // Marquee animation effect
+  useEffect(() => {
+    if (trackRef.current) {
+      const track = trackRef.current;
+      if (isHovered) {
+        track.style.animationPlayState = 'paused';
+      } else {
+        track.style.animationPlayState = 'running';
+      }
+    }
+  }, [isHovered]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % caseStudies.length);
+    setCurrentSlide((prev) => {
+      const next = prev + 1;
+      return next >= caseStudies.length ? caseStudies.length - 1 : next;
+    });
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
+    setCurrentSlide((prev) => {
+      const prevSlide = prev - 1;
+      return prevSlide < 0 ? 0 : prevSlide;
+    });
   };
 
   const goToSlide = (index) => {
@@ -90,19 +104,22 @@ const CaseStudySlider = () => {
              data-slide-tablet="2" 
              data-slide-mobile="1" 
              style={{backgroundColor: '#FFFFFF'}} 
-             role="list">
+             role="list"
+             onMouseEnter={() => setIsHovered(true)}
+             onMouseLeave={() => setIsHovered(false)}>
           
           <div className="slick-list draggable" style={{padding: '0px', height: '380px'}}>
-            <div className="slick-track" 
+            <div className="slick-track marquee-track" 
+                 ref={trackRef}
                  style={{
                    opacity: 1, 
-                   width: `${caseStudies.length * 600}px`, 
-                   transform: `translate3d(-${currentSlide * 600}px, 0px, 0px)`
+                   width: `${caseStudies.length * 2 * 600}px`
                  }}>
               
+              {/* First set of cards */}
               {caseStudies.map((study, index) => (
                 <div 
-                  key={study.id}
+                  key={`first-${study.id}`}
                   className={`casestudy-slider__slide slick-slide ${index === currentSlide ? 'slick-current slick-active slick-center' : ''}`}
                   role="listitem"
                   aria-label={study.title}
@@ -132,6 +149,50 @@ const CaseStudySlider = () => {
                       </div>
                       <div className="casestudy-slider__details">
                         <a href={study.link} className="case-study-block-title" tabIndex={index === currentSlide ? 0 : -1}>
+                          {study.title}
+                        </a>
+                        <p className="case-study-description">
+                          {study.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {/* Duplicate set of cards for seamless marquee */}
+              {caseStudies.map((study, index) => (
+                <div 
+                  key={`second-${study.id}`}
+                  className={`casestudy-slider__slide slick-slide`}
+                  role="listitem"
+                  aria-label={study.title}
+                  style={{width: '600px'}}
+                  tabIndex={-1}
+                  data-slick-index={index + caseStudies.length}
+                  aria-hidden="true"
+                >
+                  <div className="casestudy-slider__content" data-url={study.link}>
+                    <img 
+                      loading="lazy" 
+                      decoding="async" 
+                      width="770" 
+                      height="446" 
+                      src={study.image} 
+                      className="attachment-1032 size-1032" 
+                      alt={study.title} 
+                      title={study.title}
+                    />
+                    <div className="casestudy-slider__overlay" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}></div>
+                    <a href={study.link} className="case-study-item-link" tabIndex={-1}>
+                      <span className="screen-reader-text">{study.title}</span>
+                    </a>
+                    <div className="casestudy-slider__content-inner">
+                      <div className="drawer-text">
+                        {study.category}
+                      </div>
+                      <div className="casestudy-slider__details">
+                        <a href={study.link} className="case-study-block-title" tabIndex={-1}>
                           {study.title}
                         </a>
                         <p className="case-study-description">

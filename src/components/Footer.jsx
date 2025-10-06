@@ -72,17 +72,6 @@ const Footer = () => {
             </ul>
           </div> */}
 
-          {/* Resources */}
-          <div className="footer-section footer-resources">
-            <h4>Resources</h4>
-            <ul className="footer-menu">
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms of Service</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              {/* <li><a href="#blog">Healthcare Blog</a></li>
-              <li><a href="#support">Support Center</a></li> */}
-            </ul>
-          </div>
 
           {/* Get in Touch */}
           <div className="footer-section footer-contact">
@@ -91,7 +80,18 @@ const Footer = () => {
               <div className="contact-card">
                 <div className="contact-card-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    <rect x="4" y="6" width="16" height="14" rx="1"/>
+                    <rect x="6" y="8" width="2" height="2"/>
+                    <rect x="10" y="8" width="2" height="2"/>
+                    <rect x="14" y="8" width="2" height="2"/>
+                    <rect x="6" y="12" width="2" height="2"/>
+                    <rect x="10" y="12" width="2" height="2"/>
+                    <rect x="14" y="12" width="2" height="2"/>
+                    <rect x="6" y="16" width="2" height="2"/>
+                    <rect x="10" y="16" width="2" height="2"/>
+                    <rect x="14" y="16" width="2" height="2"/>
+                    <rect x="10" y="18" width="4" height="2"/>
+                    <circle cx="12" cy="19" r="0.5" fill="white"/>
                   </svg>
                 </div>
                 <div className="contact-card-content">
@@ -149,6 +149,13 @@ const Footer = () => {
             <div className="footer-copyright">
               <p>&copy; 2025 Care Pro. All rights reserved.</p>
             </div>
+            
+            {/* Policy Links */}
+            <div className="footer-policy-links">
+              <a href="#privacy" className="policy-link">Privacy Policy</a>
+              <a href="#terms" className="policy-link">Terms of Service</a>
+            </div>
+            
             <div className="footer-social">
               <a href="#" className="social-link" aria-label="Facebook">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -165,7 +172,6 @@ const Footer = () => {
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
-              
             </div>
           </div>
         </div>

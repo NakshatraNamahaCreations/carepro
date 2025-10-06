@@ -247,10 +247,8 @@ const AboutPage = () => {
           <div className={styles["about-hero-overlay"]}></div>
           <div className="container">
             <div className={styles["hero-content"]}>
-              <h1>About CarePro</h1>
-              <p>
-                CarePro's Remote Patient Monitoring (RPM) ecosystem seamlessly integrates with hospitals, clinics, government programs, insurance systems, and home healthcare agencies to address unique healthcare challenges.
-              </p>
+              <h1>About CarePro </h1>
+              <p>Learn about our mission, vision, team, and the comprehensive Remote Patient Monitoring (RPM) ecosystem that serves hospitals, clinics, government programs, insurance systems, and home healthcare agencies worldwide</p>
             </div>
           </div>
         </div>

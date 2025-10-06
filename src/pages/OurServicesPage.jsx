@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './OurServicesPage.css';
 import casestudy1 from '../assets/casestudy/casestudy1.jpg';
 import ServicesSection from '../components/ServicesSection';
+import ConsultationPopup from '../components/ConsultationPopup';
 
 const OurServicesPage = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('revenue-cycle');
   const [currentStakeholder, setCurrentStakeholder] = useState(0);
+  const [isConsultationPopupOpen, setIsConsultationPopupOpen] = useState(false);
 
   const stakeholders = [
     {
@@ -163,6 +167,19 @@ const OurServicesPage = () => {
 
   const goToStakeholder = (index) => {
     setCurrentStakeholder(index);
+  };
+
+  const handleScheduleConsultation = (e) => {
+    e.preventDefault();
+    setIsConsultationPopupOpen(true);
+  };
+
+  const handleCloseConsultation = () => {
+    setIsConsultationPopupOpen(false);
+  };
+
+  const handleGetStarted = () => {
+    navigate('/contact');
   };
 
   const services = {
@@ -494,12 +511,17 @@ const OurServicesPage = () => {
             <h2>Ready to Transform Your Practice?</h2>
             <p>Let us help you optimize your healthcare operations and improve patient outcomes</p>
             <div className="cta-buttons">
-              <button className="btn-primary">Get Started</button>
-              <button className="btn-secondary">Schedule Consultation</button>
+              <button className="btn-primary" onClick={handleGetStarted}>Get Started</button>
+              <button className="btn-secondary" onClick={handleScheduleConsultation}>Schedule Consultation</button>
             </div>
           </div>
         </div>
       </section>
+
+      <ConsultationPopup 
+        isOpen={isConsultationPopupOpen} 
+        onClose={handleCloseConsultation} 
+      />
     </div>
   );
 };

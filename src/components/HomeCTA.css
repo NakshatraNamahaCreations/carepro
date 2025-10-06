@@ -65,6 +65,8 @@
   text-decoration: none;
   display: inline-block;
   transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary {

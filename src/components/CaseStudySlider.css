@@ -54,6 +54,7 @@ a, a:visited, a:hover, a:focus, a:-webkit-any-link {
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 0 !important;
+  width: 100%;
 }
 
 .slick-slider {
@@ -79,12 +80,36 @@ a, a:visited, a:hover, a:focus, a:-webkit-any-link {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  width: 100%;
+  position: relative;
 }
 
 .slick-track {
   display: flex;
   align-items: center;
   transition: transform 0.5s ease;
+  width: 100%;
+}
+
+/* Marquee Animation */
+.marquee-track {
+  animation: marquee 30s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
+}
+
+.casestudy-slider__slide-main:hover .marquee-track {
+  animation-play-state: paused;
+  transition: transform 0.3s ease;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 .slick-slide {

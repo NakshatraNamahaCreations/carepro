@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './WhyCareProPage.css';
+import AppointmentPopup from '../components/AppointmentPopup';
 
 const WhyCareProPage = () => {
+  const [isAppointmentPopupOpen, setIsAppointmentPopupOpen] = useState(false);
+
   useEffect(() => {
     // Simple animation - add animate class to all feature items after a short delay
     const featureItems = document.querySelectorAll('.feature-item');
@@ -11,6 +14,15 @@ const WhyCareProPage = () => {
       }, index * 200);
     });
   }, []);
+
+  const handleBookAppointment = (e) => {
+    e.preventDefault();
+    setIsAppointmentPopupOpen(true);
+  };
+
+  const handleCloseAppointment = () => {
+    setIsAppointmentPopupOpen(false);
+  };
 
   return (
     <div className="why-carepro-page">
@@ -394,12 +406,16 @@ const WhyCareProPage = () => {
             <h2>Ready to Experience CarePro?</h2>
             <p>Transform your healthcare experience with our innovative patient monitoring solutions</p>
             <div className="cta-buttons">
-              <button className="btn-primary">Book Appointment</button>
-              <button className="btn-secondary">Learn More</button>
+              <button className="btn-primary" onClick={handleBookAppointment}>Book Appointment</button>
             </div>
           </div>
         </div>
       </section>
+
+      <AppointmentPopup 
+        isOpen={isAppointmentPopupOpen} 
+        onClose={handleCloseAppointment} 
+      />
     </div>
   );
 };
