@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeBanner from '../components/HomeBanner'
-import HeroSlider from '../components/HeroSlider'
+// import HeroSlider from '../components/HeroSlider'
 import ServicesSection from '../components/ServicesSection'
 import AboutUs from '../components/AboutUs'
 import CaseStudySlider from '../components/CaseStudySlider'
@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <HomeBanner />
-      <HeroSlider />
+      {/* <HeroSlider /> */}
       <ServicesSection />
       <MissionVision/>
       <AboutUs />

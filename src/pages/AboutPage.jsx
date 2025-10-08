@@ -227,7 +227,7 @@
 
 import React, { useState } from "react";
 import MissionVision from "../components/MissionVision";
-import CaseStudySlider from "../components/CaseStudySlider";
+// import CaseStudySlider from "../components/CaseStudySlider";
 import aboutBanner from "../assets/aboutus/about_banner.jpg";
 import casestudy3 from "../assets/casestudy/casestudy3.jpg";
 import styles from "./aboutPage.module.css"; // ✅ Import CSS module
@@ -248,7 +248,7 @@ const AboutPage = () => {
           <div className="container">
             <div className={styles["hero-content"]}>
               <h1>About CarePro </h1>
-              <p>A New Era of Smart Healthcare</p>
+              <p>CarePro AI Health is a global Remote Patient Monitoring (RPM) and healthcare technology company built to redefine chronic care and preventive health.</p>
             </div>
           </div>
         </div>
@@ -338,7 +338,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <CaseStudySlider />
+      {/* <CaseStudySlider /> */}
 
       {/* Who We Serve */}
       <section className={styles["who-we-serve"]}>

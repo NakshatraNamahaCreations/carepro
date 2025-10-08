@@ -130,7 +130,7 @@ const Footer = () => {
                 </div>
                 <div className="contact-card-content">
                   <h5>Service Areas</h5>
-                  <p>5+ Cities Nationwide</p>
+                  <p>3+ Cities Nationwide</p>
                 </div>
               </div>
             </div>

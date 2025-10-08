@@ -21,7 +21,7 @@
 
 .footer-section h3 {
   font-family: 'Poppins', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
   color: #64b5f6;
@@ -37,7 +37,7 @@
 
 .footer-section p {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   color: #cccccc;
   margin-bottom: 10px;
@@ -56,7 +56,7 @@
   color: #cccccc;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -72,7 +72,7 @@
 
 .footer-bottom p {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: #cccccc;
   margin: 0;
 } */
@@ -89,11 +89,11 @@
   }
   
   .footer-section h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
   
   .footer-section h4 {
-    font-size: 16px;
+    font-size: 18px;
   }
 } */
 
@@ -168,7 +168,7 @@
 
 .footer-logo h3 {
   font-family: 'Poppins', sans-serif;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 10px 0;
@@ -184,7 +184,7 @@
 
 .footer-description {
   font-family: "proxima-nova", sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   color: #e3f2fd;
   margin-bottom: 25px;
@@ -201,7 +201,7 @@
   align-items: center;
   gap: 10px;
   font-family: "proxima-nova", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #e3f2fd;
 }
 
@@ -234,7 +234,7 @@
 
 .footer-menu a {
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #b0b8c8;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -317,7 +317,7 @@
 
 .contact-card-content h5 {
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: #ffffff;
   margin: 0 0 3px 0;
@@ -327,7 +327,7 @@
 
 .contact-card-content p {
   font-family: "proxima-nova", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   color: #e3f2fd;
   margin: 0;
   opacity: 0.8;
@@ -383,7 +383,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: #ffffff;
   text-transform: uppercase;
@@ -444,7 +444,7 @@
 
 .footer-copyright p {
   font-family: "proxima-nova", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #e3f2fd;
   margin: 0;
 }
@@ -458,7 +458,7 @@
 
 .policy-link {
   font-family: "proxima-nova", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #e3f2fd;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -559,15 +559,15 @@
   }
   
   .footer-logo h3 {
-    font-size: 24px;
+    font-size: 18px;
   }
   
   .footer-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .footer-menu a {
-    font-size: 13px;
+    font-size: 16px;
   }
   
   .footer-bottom-content {
@@ -583,7 +583,7 @@
   }
   
   .policy-link {
-    font-size: 13px;
+    font-size: 16px;
   }
   
   .footer-social {
@@ -611,7 +611,7 @@
   
   .certification-badge {
     padding: 6px 12px;
-    font-size: 12px;
+    font-size: 16px;
   }
   
   .contact-cards {
@@ -634,11 +634,11 @@
   }
   
   .contact-card-content h5 {
-    font-size: 12px;
+    font-size: 16px;
   }
   
   .contact-card-content p {
-    font-size: 11px;
+    font-size: 16px;
   }
 }
 
@@ -652,27 +652,27 @@
   }
   
   .footer-section h4 {
-    font-size: 15px;
+    font-size: 16px;
   }
   
   .footer-logo h3 {
-    font-size: 22px;
+    font-size: 18px;
   }
   
   .footer-description {
-    font-size: 13px;
+    font-size: 16px;
   }
   
   .contact-item {
-    font-size: 13px;
+    font-size: 16px;
   }
   
   .footer-menu a {
-    font-size: 12px;
+    font-size: 16px;
   }
   
   .footer-copyright p {
-    font-size: 12px;
+    font-size: 16px;
   }
   
   .footer-certifications {
@@ -681,7 +681,7 @@
   }
   
   .certifications-content h4 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 12px;
   }
   
@@ -691,7 +691,7 @@
   
   .certification-badge {
     padding: 5px 10px;
-    font-size: 11px;
+    font-size: 16px;
   }
   
   .contact-cards {
@@ -714,11 +714,11 @@
   }
   
   .contact-card-content h5 {
-    font-size: 11px;
+    font-size: 16px;
   }
   
   .contact-card-content p {
-    font-size: 10px;
+    font-size: 16px;
   }
   
   .footer-policy-links {
@@ -727,6 +727,6 @@
   }
   
   .policy-link {
-    font-size: 12px;
+    font-size: 16px;
   }
 }

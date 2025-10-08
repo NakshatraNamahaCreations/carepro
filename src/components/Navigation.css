@@ -5,7 +5,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -18,8 +18,8 @@
   color: var(--primary-color);
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 550;
+  font-size: 17px;
   padding: 15px 0;
   display: block;
   transition: color 0.3s ease;
@@ -93,6 +93,7 @@
   z-index: 1000;
 }
 
+
 .services-mega-menu:hover .megamenu-main,
 .why-carepro-mega-menu:hover .megamenu-main {
   opacity: 1;
@@ -110,7 +111,7 @@
 .mega-menu-tabs__wrap ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 15px;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -175,6 +176,7 @@
   border-top: 5px solid var(--primary-color);
 }
 
+
 .services-mega-menu:hover .menu-dropdown-arrow,
 .why-carepro-mega-menu:hover .menu-dropdown-arrow {
   transform: rotate(180deg);
@@ -232,6 +234,18 @@
   transform: scaleX(1);
 }
 
+.work-in-progress {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .description {
   color: #6c757d;
   font-size: 14px;
@@ -245,7 +259,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 15px;
 }
 
 .tab-content-head .menu-item {
@@ -331,6 +345,7 @@
   .menu-item {
     width: 100%;
     border-bottom: 1px solid #e9ecef;
+    position: relative;
   }
   
   .menu-item > a {
@@ -366,14 +381,24 @@
   
   .megamenu-main {
     position: static;
-    transform: none;
     width: 100%;
     box-shadow: none;
     border-radius: 0;
     margin-top: 0;
-    opacity: 1;
-    visibility: visible;
+    max-height: 0;
+    overflow: hidden;
     background-color: #f8f9fa;
+    transition: max-height 0.3s ease;
+  }
+  
+  .services-mega-menu:hover .megamenu-main,
+  .why-carepro-mega-menu:hover .megamenu-main {
+    max-height: 200px;
+  }
+  
+  .services-mega-menu:hover .menu-dropdown-arrow,
+  .why-carepro-mega-menu:hover .menu-dropdown-arrow {
+    transform: rotate(180deg);
   }
   
   .megamenu-wrap {
@@ -382,7 +407,7 @@
   
   .mega-menu-tabs__wrap ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
   
   .tab-title {
@@ -392,7 +417,7 @@
   
   .tab-content-head ul {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px;
   }
   
   .tab-content-link {

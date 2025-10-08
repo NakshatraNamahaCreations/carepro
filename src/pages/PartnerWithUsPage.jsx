@@ -22,7 +22,7 @@ const PartnerWithUsPage = () => {
           <div className="partner-hero-overlay"></div>
           <div className="container">
             <div className="hero-content">
-              <h1>Partner with Us</h1>
+              <h1>Partners with Us</h1>
               <p>Join Hands to Deliver Smarter Care</p>
             </div>
           </div>
@@ -50,7 +50,7 @@ const PartnerWithUsPage = () => {
 
             {/* Why Partner Section */}
             <div className="why-partner-section">
-              <h2>Why Partner With Us:</h2>
+              <h2>Why Partners With Us:</h2>
               <ul className="why-partner-list">
                 <li>Global team with US healthcare experience</li>
                 <li>Ready-to-deploy RPM kits</li>

@@ -193,42 +193,52 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="consultationType">Consultation Type *</label>
-                <select
-                  id="consultationType"
-                  name="consultationType"
-                  value={formData.consultationType}
-                  onChange={handleInputChange}
-                  className={errors.consultationType ? 'error' : ''}
-                >
-                  <option value="">Select consultation type</option>
-                  <option value="initial">Initial Assessment</option>
-                  <option value="technical">Technical Integration</option>
-                  <option value="strategy">Strategic Planning</option>
-                  <option value="training">Staff Training</option>
-                  <option value="custom">Custom Solution</option>
-                </select>
+                <div className="select-wrapper">
+                  <select
+                    id="consultationType"
+                    name="consultationType"
+                    value={formData.consultationType}
+                    onChange={handleInputChange}
+                    className={errors.consultationType ? 'error' : ''}
+                  >
+                    <option value="">Select consultation type</option>
+                    <option value="initial">Initial Assessment</option>
+                    <option value="technical">Technical Integration</option>
+                    <option value="strategy">Strategic Planning</option>
+                    <option value="training">Staff Training</option>
+                    <option value="custom">Custom Solution</option>
+                  </select>
+                  <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6,9 12,15 18,9"></polyline>
+                  </svg>
+                </div>
                 {errors.consultationType && <span className="error-message">{errors.consultationType}</span>}
               </div>
 
               <div className="form-group">
                 <label htmlFor="preferredTime">Preferred Time *</label>
-                <select
-                  id="preferredTime"
-                  name="preferredTime"
-                  value={formData.preferredTime}
-                  onChange={handleInputChange}
-                  className={errors.preferredTime ? 'error' : ''}
-                >
-                  <option value="">Select preferred time</option>
-                  <option value="09:00">9:00 AM</option>
-                  <option value="10:00">10:00 AM</option>
-                  <option value="11:00">11:00 AM</option>
-                  <option value="12:00">12:00 PM</option>
-                  <option value="14:00">2:00 PM</option>
-                  <option value="15:00">3:00 PM</option>
-                  <option value="16:00">4:00 PM</option>
-                  <option value="17:00">5:00 PM</option>
-                </select>
+                <div className="select-wrapper">
+                  <select
+                    id="preferredTime"
+                    name="preferredTime"
+                    value={formData.preferredTime}
+                    onChange={handleInputChange}
+                    className={errors.preferredTime ? 'error' : ''}
+                  >
+                    <option value="">Select preferred time</option>
+                    <option value="09:00">9:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="15:00">3:00 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="17:00">5:00 PM</option>
+                  </select>
+                  <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6,9 12,15 18,9"></polyline>
+                  </svg>
+                </div>
                 {errors.preferredTime && <span className="error-message">{errors.preferredTime}</span>}
               </div>
             </div>

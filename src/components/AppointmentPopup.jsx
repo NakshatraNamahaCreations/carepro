@@ -140,20 +140,25 @@ const AppointmentPopup = ({ isOpen, onClose }) => {
 
             <div className="form-group">
               <label htmlFor="appointmentType">Appointment Type *</label>
-              <select
-                id="appointmentType"
-                name="appointmentType"
-                value={formData.appointmentType}
-                onChange={handleInputChange}
-                className={errors.appointmentType ? 'error' : ''}
-              >
-                <option value="">Select appointment type</option>
-                <option value="consultation">Initial Consultation</option>
-                <option value="demo">Product Demo</option>
-                <option value="follow-up">Follow-up Visit</option>
-                <option value="emergency">Emergency Consultation</option>
-                <option value="other">Other</option>
-              </select>
+              <div className="select-wrapper">
+                <select
+                  id="appointmentType"
+                  name="appointmentType"
+                  value={formData.appointmentType}
+                  onChange={handleInputChange}
+                  className={errors.appointmentType ? 'error' : ''}
+                >
+                  <option value="">Select appointment type</option>
+                  <option value="consultation">Initial Consultation</option>
+                  <option value="demo">Product Demo</option>
+                  <option value="follow-up">Follow-up Visit</option>
+                  <option value="emergency">Emergency Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+                <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </div>
               {errors.appointmentType && <span className="error-message">{errors.appointmentType}</span>}
             </div>
 

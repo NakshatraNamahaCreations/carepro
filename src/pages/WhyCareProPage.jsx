@@ -293,9 +293,11 @@ const WhyCareProPage = () => {
               <div className="timeline-content">
                 <div className="timeline-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="M12 1v6m0 6v6"></path>
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                    <circle cx="12" cy="8" r="2"></circle>
+                    <path d="M8 8h8M8 12h6"></path>
                   </svg>
                 </div>
                 <h3>Automatic Monitoring</h3>

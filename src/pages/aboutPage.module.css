@@ -1279,7 +1279,7 @@
 
 /* Who We Serve Section */
 .who-we-serve {
-  padding: 100px 0;
+  padding: 60px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);
   position: relative;
   overflow: hidden;
@@ -1307,16 +1307,16 @@
 
 .who-we-serve-header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   position: relative;
 }
 
 .who-we-serve-header h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #2c3546;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
   position: relative;
   letter-spacing: -0.02em;
 }
@@ -1347,12 +1347,12 @@
 
 .who-we-serve-header p {
   font-family: "proxima-nova", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #5a6c7d;
   margin: 0;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: 400;
 }
 
@@ -1380,8 +1380,8 @@
 .stakeholder-item {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
-  padding: 35px 40px;
+  gap: 25px;
+  padding: 25px 30px;
   border-bottom: 1px solid #f1f3f4;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -1411,20 +1411,20 @@
 .stakeholder-header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  min-width: 240px;
+  gap: 15px;
+  min-width: 200px;
   flex-shrink: 0;
 }
 
 .stakeholder-icon {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   background: linear-gradient(135deg, #2c3546, #4a5568);
-  border-radius: 16px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(44, 53, 70, 0.25);
+  box-shadow: 0 6px 20px rgba(44, 53, 70, 0.25);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -1451,8 +1451,8 @@
 }
 
 .stakeholder-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   color: #ffffff;
   stroke-width: 2.2;
   position: relative;
@@ -1461,7 +1461,7 @@
 
 .stakeholder-header h3 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #2c3546;
   margin: 0;
@@ -1476,9 +1476,9 @@
 
 .stakeholder-description p {
   font-family: "proxima-nova", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #5a6c7d;
-  line-height: 1.8;
+  line-height: 1.6;
   margin: 0;
   font-weight: 400;
   position: relative;
@@ -1487,19 +1487,19 @@
 /* Responsive Design for Who We Serve */
 @media (max-width: 768px) {
   .who-we-serve {
-    padding: 80px 0;
+    padding: 50px 0;
   }
   
   .who-we-serve-header {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   
   .who-we-serve-header h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   
   .who-we-serve-header p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
   
   .stakeholders-list {
@@ -1509,31 +1509,31 @@
   
   .stakeholder-item {
     flex-direction: column;
-    gap: 20px;
-    padding: 30px 30px;
+    gap: 15px;
+    padding: 20px 25px;
   }
   
   .stakeholder-header {
     min-width: auto;
-    gap: 18px;
+    gap: 15px;
   }
   
   .stakeholder-header h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   
   .stakeholder-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   
   .stakeholder-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
   
   .stakeholder-description p {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
   
   .stakeholder-item:hover {
@@ -1543,11 +1543,11 @@
 
 @media (max-width: 480px) {
   .who-we-serve {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   
   .who-we-serve-header h2 {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
   
   .stakeholders-list {
@@ -1556,29 +1556,29 @@
   }
   
   .stakeholder-item {
-    padding: 25px 25px;
-    gap: 18px;
+    padding: 18px 20px;
+    gap: 12px;
   }
   
   .stakeholder-header {
-    gap: 15px;
+    gap: 12px;
   }
   
   .stakeholder-header h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   
   .stakeholder-icon {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
   }
   
   .stakeholder-icon svg {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
   }
   
   .stakeholder-description p {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 }

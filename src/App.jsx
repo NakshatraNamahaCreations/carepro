@@ -11,6 +11,7 @@ import OurServicesPage from './pages/OurServicesPage'
 import OurTeamPage from './pages/OurTeamPage'
 import RPMPlatformPage from './pages/RPMPlatformPage'
 import TechnologyPage from './pages/TechnologyPage'
+import SolutionsPage from './pages/SolutionsPage'
 import PartnerWithUsPage from './pages/PartnerWithUsPage'
 import CareerPage from './pages/CareerPage'
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/rpm-platform" element={<RPMPlatformPage />} />
           <Route path="/technology" element={<TechnologyPage />} />
+          <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
           <Route path="/career" element={<CareerPage />} />
         </Routes>

@@ -188,21 +188,26 @@ const PartnershipPopup = ({ isOpen, onClose }) => {
 
             <div className="form-group">
               <label htmlFor="partnershipType">Partnership Type *</label>
-              <select
-                id="partnershipType"
-                name="partnershipType"
-                value={formData.partnershipType}
-                onChange={handleInputChange}
-                className={errors.partnershipType ? 'error' : ''}
-              >
-                <option value="">Select partnership type</option>
-                <option value="technology">Technology Integration</option>
-                <option value="distribution">Distribution Partner</option>
-                <option value="reseller">Reseller Partner</option>
-                <option value="strategic">Strategic Alliance</option>
-                <option value="referral">Referral Partner</option>
-                <option value="other">Other</option>
-              </select>
+              <div className="select-wrapper">
+                <select
+                  id="partnershipType"
+                  name="partnershipType"
+                  value={formData.partnershipType}
+                  onChange={handleInputChange}
+                  className={errors.partnershipType ? 'error' : ''}
+                >
+                  <option value="">Select partnership type</option>
+                  <option value="technology">Technology Integration</option>
+                  <option value="distribution">Distribution Partner</option>
+                  <option value="reseller">Reseller Partner</option>
+                  <option value="strategic">Strategic Alliance</option>
+                  <option value="referral">Referral Partner</option>
+                  <option value="other">Other</option>
+                </select>
+                <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </div>
               {errors.partnershipType && <span className="error-message">{errors.partnershipType}</span>}
             </div>
 

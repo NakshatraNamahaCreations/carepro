@@ -149,55 +149,70 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="experience">Years of Experience *</label>
-                <select
-                  id="experience"
-                  name="experience"
-                  value={formData.experience}
-                  onChange={handleInputChange}
-                  className={errors.experience ? 'error' : ''}
-                >
-                  <option value="">Select Experience</option>
-                  <option value="0-1">0-1 years</option>
-                  <option value="1-3">1-3 years</option>
-                  <option value="3-5">3-5 years</option>
-                  <option value="5-10">5-10 years</option>
-                  <option value="10+">10+ years</option>
-                </select>
+                <div className="select-wrapper">
+                  <select
+                    id="experience"
+                    name="experience"
+                    value={formData.experience}
+                    onChange={handleInputChange}
+                    className={errors.experience ? 'error' : ''}
+                  >
+                    <option value="">Select Experience</option>
+                    <option value="0-1">0-1 years</option>
+                    <option value="1-3">1-3 years</option>
+                    <option value="3-5">3-5 years</option>
+                    <option value="5-10">5-10 years</option>
+                    <option value="10+">10+ years</option>
+                  </select>
+                  <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6,9 12,15 18,9"></polyline>
+                  </svg>
+                </div>
                 {errors.experience && <span className="error-message">{errors.experience}</span>}
               </div>
               
               <div className="form-group">
                 <label htmlFor="location">Preferred Location</label>
-                <select
-                  id="location"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Select Location</option>
-                  <option value="remote">Remote</option>
-                  <option value="hybrid">Hybrid</option>
-                  <option value="onsite">On-site</option>
-                </select>
+                <div className="select-wrapper">
+                  <select
+                    id="location"
+                    name="location"
+                    value={formData.location}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select Location</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
+                  </select>
+                  <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6,9 12,15 18,9"></polyline>
+                  </svg>
+                </div>
               </div>
             </div>
 
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="availability">Availability</label>
-                <select
-                  id="availability"
-                  name="availability"
-                  value={formData.availability}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Select Availability</option>
-                  <option value="immediate">Immediate</option>
-                  <option value="2-weeks">2 weeks notice</option>
-                  <option value="1-month">1 month notice</option>
-                  <option value="2-months">2 months notice</option>
-                  <option value="3-months">3+ months notice</option>
-                </select>
+                <div className="select-wrapper">
+                  <select
+                    id="availability"
+                    name="availability"
+                    value={formData.availability}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select Availability</option>
+                    <option value="immediate">Immediate</option>
+                    <option value="2-weeks">2 weeks notice</option>
+                    <option value="1-month">1 month notice</option>
+                    <option value="2-months">2 months notice</option>
+                    <option value="3-months">3+ months notice</option>
+                  </select>
+                  <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6,9 12,15 18,9"></polyline>
+                  </svg>
+                </div>
               </div>
               
               <div className="form-group">

@@ -26,8 +26,9 @@ const RPMPlatformPage = () => {
           <div className="rpm-hero-overlay"></div>
           <div className="container">
             <div className="hero-content">
-              <h1>RPM Platform</h1>
-              <p>CarePro Command Center — Your 24/7 Virtual Clinic</p>
+              <h1>CarePro Command Center - Your 24/7 Virtual Clinic</h1>
+              <p>Built for doctors, nurses, and care coordinators, the CarePro AI platform ensures every patient is monitored round the clock.
+              </p>
             </div>
           </div>
         </div>
@@ -52,15 +53,11 @@ const RPMPlatformPage = () => {
                 <li><span>Audit-ready reports and billing data</span></li>
                 <li><span>Multilingual support for India, US, and global markets</span></li>
               </ul>
-            </div>
-
-            <div className="cta-section">
-              <button className="btn-primary" onClick={handleOpenDemo}>
-                Request a Demo
-              </button>
-              <button className="btn-secondary" onClick={handleWatchVideo}>
-                Watch Platform Video
-              </button>
+              <div className="features-cta">
+                <button className="btn-primary" onClick={handleOpenDemo}>
+                  Request a Demo
+                </button>
+              </div>
             </div>
           </div>
         </div>

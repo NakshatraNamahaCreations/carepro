@@ -55,7 +55,7 @@
 }
 
 .home-banner-heading {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -92,16 +92,17 @@
   min-width: 180px;
 }
 
-.btn-primary {
-  background: white;
-  color: #2c3546;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+.home-banner .btn-primary {
+  background: white !important;
+  color: #2c3546 !important;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3) !important;
 }
 
-.btn-primary:hover {
-  background: linear-gradient(135deg, #0056b3, #004085);
+.home-banner .btn-primary:hover {
+  background: white !important;
+  color: #2c3546 !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 6px 20px #2c3546 !important;
 }
 
 .home-banner .btn-secondary {

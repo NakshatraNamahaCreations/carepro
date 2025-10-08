@@ -38,10 +38,10 @@ const CaseStudySlider = () => {
     },
     {
       id: 4,
-      title: "Cardiac Monitoring",
-      description: "Continuous heart rhythm monitoring detects arrhythmias instantly, with immediate alerts sent to cardiologists for rapid intervention.",
+      title: "Vital Screening",
+      description: "Comprehensive vital signs screening monitors temperature, blood pressure, heart rate, and oxygen saturation in real-time, enabling early detection of health issues.",
       image: casestudy4,
-      link: "/case-study/cardiac-monitoring",
+      link: "/case-study/vital-screening",
       category: "Case Scenario",
     }
   ];

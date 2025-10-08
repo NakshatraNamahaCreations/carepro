@@ -18,7 +18,7 @@ const managementTeam = [
   },
   { 
     name: 'Sreenidhi G S D', 
-    role: 'Co-Founder - CTO', 
+    role: 'Cheif Technical Officer ', 
     bio: 'Sreenidhi G S D is an entrepreneur and changemaker with 18+ years of industry experience. He is passionate about creating positive community impact and mentors start-ups across sectors. As a TiE Mysuru member, he supports budding entrepreneurs. With global experience at firms like Mercedes-Benz, IBM, CGI, Citi Bank, and the US Department of Family and Child Services. Skilled in IT strategy, business transformation, and operations, Sreenidhi brings strong leadership and ambition to every venture.',
     avatar: cofounder
   },

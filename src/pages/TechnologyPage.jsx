@@ -21,8 +21,8 @@ const TechnologyPage = () => {
           <div className="tech-hero-overlay"></div>
           <div className="container">
             <div className="hero-content">
-              <h1>Technology</h1>
-              <p>Intelligent Platform. Human-Centered Design.</p>
+              <h1>Intelligent Platform. Human-Centered Design.</h1>
+              <p>Our AI engine analyzes patient data streams in real-time to detect anomalies and predict potential health risks before they become emergencies.</p>
             </div>
           </div>
         </div>
@@ -32,11 +32,11 @@ const TechnologyPage = () => {
       <section className="tech-main-content">
         <div className="container">
           <div className="content-wrapper">
-            <div className="description-section">
+            {/* <div className="description-section">
               <p className="main-description">
                 Our AI engine analyzes patient data streams in real-time to detect anomalies and predict potential health risks before they become emergencies.
               </p>
-            </div>
+            </div> */}
 
             <div className="features-section">
               <h2>Features:</h2>

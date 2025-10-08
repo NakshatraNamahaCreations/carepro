@@ -232,19 +232,24 @@ const CareCoordinatorPopup = ({ isOpen, onClose }) => {
 
             <div className="form-group">
               <label htmlFor="urgency">Urgency Level *</label>
-              <select
-                id="urgency"
-                name="urgency"
-                value={formData.urgency}
-                onChange={handleInputChange}
-                className={errors.urgency ? 'error' : ''}
-              >
-                <option value="">Select urgency level</option>
-                <option value="emergency">Emergency - Immediate attention needed</option>
-                <option value="urgent">Urgent - Within 2 hours</option>
-                <option value="moderate">Moderate - Within 24 hours</option>
-                <option value="routine">Routine - Within 48 hours</option>
-              </select>
+              <div className="select-wrapper">
+                <select
+                  id="urgency"
+                  name="urgency"
+                  value={formData.urgency}
+                  onChange={handleInputChange}
+                  className={errors.urgency ? 'error' : ''}
+                >
+                  <option value="">Select urgency level</option>
+                  <option value="emergency">Emergency - Immediate attention needed</option>
+                  <option value="urgent">Urgent - Within 2 hours</option>
+                  <option value="moderate">Moderate - Within 24 hours</option>
+                  <option value="routine">Routine - Within 48 hours</option>
+                </select>
+                <svg className="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </div>
               {errors.urgency && <span className="error-message">{errors.urgency}</span>}
             </div>
 

@@ -108,6 +108,33 @@
   font-size: 0.95rem;
 }
 
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-wrapper select {
+  cursor: pointer;
+  padding-right: 40px;
+  appearance: none;
+  width: 100%;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.select-wrapper:hover .dropdown-icon {
+  color: #2c3546;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {

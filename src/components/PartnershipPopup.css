@@ -144,9 +144,36 @@
   color: #adb5bd;
 }
 
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-wrapper select {
+  cursor: pointer;
+  padding-right: 40px;
+  appearance: none;
+  width: 100%;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.select-wrapper:hover .dropdown-icon {
+  color: #2c3546;
+}
+
 .form-group select {
   cursor: pointer;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-image: none;
   background-position: right 12px center;
   background-repeat: no-repeat;
   background-size: 16px;
