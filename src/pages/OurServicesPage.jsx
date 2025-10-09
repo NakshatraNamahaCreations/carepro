@@ -169,6 +169,12 @@ const OurServicesPage = () => {
     setCurrentStakeholder(index);
   };
 
+  const handleOpenDemo = (e) => {
+    e.preventDefault();
+    // Add demo popup logic here or navigate to demo page
+    console.log('Open demo clicked');
+  };
+
   const handleScheduleConsultation = (e) => {
     e.preventDefault();
     setIsConsultationPopupOpen(true);
@@ -427,7 +433,7 @@ const OurServicesPage = () => {
       </section>
 
       {/* Stakeholder Solutions Section */}
-      <section className="stakeholder-solutions">
+      {/* <section className="stakeholder-solutions">
         <div className="container">
           <div className="stakeholder-header">
             <h2>Solutions for Every Healthcare Stakeholder</h2>
@@ -502,9 +508,86 @@ const OurServicesPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* CTA Section */}
+  
+      
+      {/* Key Features Section */}
+      <section className="key-features">
+        <div className="container">
+          <div className="features-header">
+            <h2>Key Features</h2>
+            <p>Comprehensive healthcare technology solutions designed to deliver exceptional patient care</p>
+          </div>
+
+          <div className="features-grid">
+            <div className="feature-item">
+              <div className="number">01</div>
+              <div className="feature-content">
+                <h3>Multi-Connectivity Devices</h3>
+                <p>4G, Bluetooth, and WiFi-enabled devices adapt to urban and rural environments.</p>
+                <ul>
+                  <li>No patient training required — just plug and play.</li>
+                  <li>Certified for accuracy: FDA, CE, CDSCO approved; ISO 13485 compliant.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <div className="number">02</div>
+              <div className="feature-content">
+                <h3>24/7 Care Coordinator Support</h3>
+                <p>Our Care Coordinators (trained nurses at our office) are available within seconds.</p>
+                <ul>
+                  <li>They proactively reach out to patients when alerts are triggered or respond instantly to patient calls.</li>
+                  <li>Coordinators act as the link between patients, doctors, and hospitals.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <div className="number">03</div>
+              <div className="feature-content">
+                <h3>Real-Time Doctor Dashboards</h3>
+                <p>All vitals are displayed on the doctor's portal in real-time.</p>
+                <ul>
+                  <li>Doctors see trends, risk scores, and alerts for each patient.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <div className="number">04</div>
+              <div className="feature-content">
+                <h3>Hospital Management System (HMS) Integration</h3>
+                <p>Data automatically syncs into the Hospital Management Software (HMS) for secure storage.</p>
+                <ul>
+                  <li>Doctors can view full medical history, past vitals, and recommended next steps.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <div className="number">05</div>
+              <div className="feature-content">
+                <h3>Comprehensive Vital Monitoring</h3>
+                <p>Heart Rate, SpO₂, BP, Glucose, Respiration, Temperature, ECG, Weight & more.</p>
+              </div>
+            </div>
+
+            <div className="feature-item">
+              <div className="number">06</div>
+              <div className="feature-content">
+                <h3>Data Privacy & Security</h3>
+                <p>HIPAA, GDPR, and DPDPA (India) compliant.</p>
+                <ul>
+                  <li>ISO 27001 certification ensures data confidentiality, integrity, and availability.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="services-cta">
         <div className="container">
           <div className="cta-content">
@@ -517,6 +600,8 @@ const OurServicesPage = () => {
           </div>
         </div>
       </section>
+
+     
 
       <ConsultationPopup 
         isOpen={isConsultationPopupOpen} 
