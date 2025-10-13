@@ -227,7 +227,7 @@
 
 .visual-card {
   background: #ffffff;
-  padding: 30px;
+  padding: 24px 20px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -291,7 +291,7 @@
 
 .stat-item {
   text-align: center;
-  padding: 30px 20px;
+  padding: 24px 16px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -395,10 +395,10 @@
 
 .process-step {
   text-align: center;
-  padding: 28px 22px;
+  padding: 20px 16px;
   background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(44, 53, 70, 0.1);
   transition: all 0.4s ease;
   position: relative;
@@ -429,20 +429,20 @@
 }
 
 .step-number {
-  width: 54px;
-  height: 54px;
+  width: 48px;
+  height: 48px;
   background: linear-gradient(135deg, #2c3546 0%, #64b5f6 100%);
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 0 auto 14px;
+  margin: 0 auto 12px;
   position: relative;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 18px rgba(44, 53, 70, 0.26);
+  box-shadow: 0 4px 12px rgba(44, 53, 70, 0.2);
 }
 
 .process-step:hover .step-number {
@@ -470,19 +470,19 @@
 
 .step-content h3 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #2c3546;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   line-height: 1.3;
 }
 
 .step-content p {
   font-family: 'Poppins', sans-serif;
   color: black;
-  line-height: 1.5;
-  font-size: 0.95rem;
-  max-width: 230px;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  max-width: 220px;
   margin: 0 auto;
 }
 
@@ -805,12 +805,12 @@
   transform: scale(1.1) !important;
 }
 
-.feature-content {
+.services-feature-content {
   flex: 1;
   padding-top: 10px;
 }
 
-.feature-content h3 {
+.services-feature-content h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -820,7 +820,7 @@
   position: relative;
 }
 
-.feature-content h3::after {
+.services-feature-content h3::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -831,11 +831,11 @@
   border-radius: 2px;
 }
 
-.feature-item:nth-child(even) .feature-content h3::after {
+.feature-item:nth-child(even) .services-feature-content h3::after {
   background: linear-gradient(90deg, #8b5cf6 0%, #3b82f6 100%);
 }
 
-.feature-content p {
+.services-feature-content p {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 1.8;
@@ -844,13 +844,13 @@
   font-weight: 400;
 }
 
-.feature-content ul {
+.services-feature-content ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.feature-content li {
+.services-feature-content li {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   color: #64748b;
@@ -861,7 +861,7 @@
   font-weight: 400;
 }
 
-.feature-content li::before {
+.services-feature-content li::before {
   content: '✓';
   position: absolute;
   left: 0;
@@ -871,7 +871,7 @@
   font-size: 14px;
 }
 
-.feature-item:nth-child(even) .feature-content li::before {
+.feature-item:nth-child(even) .services-feature-content li::before {
   color: #8b5cf6;
 }
 
@@ -1007,11 +1007,11 @@
     min-width: 120px;
   }
   
-  .feature-content h3 {
+  .services-feature-content h3 {
     font-size: 32px;
   }
   
-  .feature-content p {
+  .services-feature-content p {
     font-size: 17px;
   }
   
@@ -1069,13 +1069,13 @@
   }
   
   .process-step {
-    padding: 24px 18px;
+    padding: 18px 14px;
   }
   
   .step-number {
-    width: 70px;
-    height: 70px;
-    font-size: 1.6rem;
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
   }
   
   .step-content h3 {
@@ -1145,21 +1145,21 @@
     min-width: auto;
   }
   
-  .feature-content {
+  .services-feature-content {
     padding-top: 0;
   }
   
-  .feature-content h3 {
+  .services-feature-content h3 {
     font-size: 28px;
     margin-bottom: 20px;
   }
   
-  .feature-content h3::after {
+  .services-feature-content h3::after {
     left: 50%;
     transform: translateX(-50%);
   }
   
-  .feature-content p {
+  .services-feature-content p {
     font-size: 16px;
     line-height: 1.7;
   }
@@ -1185,12 +1185,12 @@
     font-size: 60px;
   }
   
-  .feature-content h3 {
+  .services-feature-content h3 {
     font-size: 24px;
     margin-bottom: 18px;
   }
   
-  .feature-content p {
+  .services-feature-content p {
     font-size: 15px;
     line-height: 1.6;
   }
@@ -1216,13 +1216,13 @@
   }
   
   .process-step {
-    padding: 25px 15px;
+    padding: 16px 12px;
   }
   
   .step-number {
-    width: 60px;
-    height: 60px;
-    font-size: 1.4rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
   }
   
   .step-content h3 {
@@ -1386,11 +1386,11 @@
 
 .stakeholder-card {
   background: #ffffff;
-  border-radius: 24px;
-  padding: 45px;
+  border-radius: 20px;
+  padding: 32px 28px;
   box-shadow: 
-    0 20px 60px rgba(44, 53, 70, 0.08),
-    0 8px 25px rgba(44, 53, 70, 0.05),
+    0 15px 40px rgba(44, 53, 70, 0.08),
+    0 6px 20px rgba(44, 53, 70, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(44, 53, 70, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1711,7 +1711,7 @@
   }
   
   .stakeholder-card {
-    padding: 40px;
+    padding: 28px 24px;
   }
   
   .icon-wrapper {
@@ -1752,7 +1752,7 @@
   }
   
   .stakeholder-card {
-    padding: 35px;
+    padding: 24px 20px;
   }
   
   .stakeholder-card h3 {
@@ -1812,7 +1812,7 @@
   }
   
   .stakeholder-card {
-    padding: 25px;
+    padding: 20px 16px;
   }
   
   .icon-wrapper {

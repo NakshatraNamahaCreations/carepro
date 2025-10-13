@@ -22,7 +22,7 @@ const PartnerWithUsPage = () => {
           <div className="partner-hero-overlay"></div>
           <div className="container">
             <div className="hero-content">
-              <h1>Partners with Us</h1>
+              <h1>Only Partners</h1>
               <p>Join Hands to Deliver Smarter Care</p>
             </div>
           </div>

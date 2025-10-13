@@ -359,7 +359,7 @@ const WhyCareProPage = () => {
           </div>
 
           <div className="process-benefits">
-            <div className="benefit-item">
+            {/* <div className="benefit-item">
               <div className="benefit-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -367,31 +367,31 @@ const WhyCareProPage = () => {
                 </svg>
               </div>
               <span>Quick & Efficient</span>
-            </div>
-            <div className="benefit-item">
+            </div> */}
+            {/* <div className="benefit-item">
               <div className="benefit-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M9 12l2 2 4-4"></path>
                 </svg>
               </div>
               <span>Certified Professionals</span>
-            </div>
-            <div className="benefit-item">
+            </div> */}
+            {/* <div className="benefit-item">
               <div className="benefit-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
               <span>Safe & Secure</span>
-            </div>
-            <div className="benefit-item">
+            </div> */}
+            {/* <div className="benefit-item">
               <div className="benefit-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
               <span>24/7 Support</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -401,6 +401,50 @@ const WhyCareProPage = () => {
 
       {/* Testimonials Section */}
       
+      {/* Work in Progress Platforms Section */}
+      <section className="work-in-progress-section">
+        <div className="container">
+          <div className="work-in-progress-header">
+            <h2>Coming Soon</h2>
+            <p>We're working on exciting new platforms to enhance your healthcare experience</p>
+          </div>
+          
+          <div className="platforms-list">
+            <div className="platform-item">
+              <div className="platform-header">
+                <div className="platform-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h3>RTM Platform</h3>
+                <div className="work-in-progress-tag">
+                  <span>(Work in progress)</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="platform-item">
+              <div className="platform-header">
+                <div className="platform-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <h3>CCM Platform</h3>
+                <div className="work-in-progress-tag">
+                  <span>(Work in progress)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="why-cta">
         <div className="container">

@@ -26,21 +26,17 @@ const Navigation = ({ onLinkClick }) => {
                 <Link to="/rpm-platform" className="tab-content-link" onClick={onLinkClick}>
                   RPM Platform
                 </Link>
-                <p className="description">
-                  Advanced Remote Patient Monitoring platform designed for comprehensive healthcare delivery
-                </p>
+               
               </div>
               
               <div className="tab-content-head">
                 <Link to="/investors" className="tab-content-link" onClick={onLinkClick}>
                   Investors
                 </Link>
-                <p className="description">
-                  Investment opportunities and partnership information for healthcare technology investors
-                </p>
+                
               </div>
               
-              <div className="tab-content-head">
+              {/* <div className="tab-content-head">
                 <Link to="/rtm-platform" className="tab-content-link" onClick={onLinkClick}>
                   RTM Platform
                   <span className="work-in-progress">(Work in progress)</span>
@@ -49,8 +45,8 @@ const Navigation = ({ onLinkClick }) => {
                   Real-Time Monitoring platform for continuous patient care and immediate response systems
                 </p>
               </div>
-              
-              <div className="tab-content-head">
+               */}
+              {/* <div className="tab-content-head">
                 <Link to="/ccm-platform" className="tab-content-link" onClick={onLinkClick}>
                   CCM Platform
                   <span className="work-in-progress">(Work in progress)</span>
@@ -58,7 +54,7 @@ const Navigation = ({ onLinkClick }) => {
                 <p className="description">
                   Chronic Care Management platform for long-term patient monitoring and care coordination
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </li>
@@ -75,18 +71,14 @@ const Navigation = ({ onLinkClick }) => {
                 <Link to="/solutions" className="tab-content-link" onClick={onLinkClick}>
                   Solutions
                 </Link>
-                <p className="description">
-                  Comprehensive healthcare technology solutions for modern care delivery
-                </p>
+               
               </div>
               
               <div className="tab-content-head">
                 <Link to="/technology" className="tab-content-link" onClick={onLinkClick}>
                   Technology 
                 </Link>
-                <p className="description">
-                  Advanced technology infrastructure powering our healthcare solutions
-                </p>
+               
               </div>
             </div>
           </div>
@@ -97,7 +89,7 @@ const Navigation = ({ onLinkClick }) => {
         </li>
         
         <li className="menu-item">
-          <Link to="/partner-with-us" onClick={onLinkClick}>Partners with Us</Link>
+          <Link to="/partner-with-us" onClick={onLinkClick}> Only Partners</Link>
         </li>
         
         <li className="menu-item">

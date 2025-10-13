@@ -523,7 +523,7 @@ const OurServicesPage = () => {
           <div className="features-grid">
             <div className="feature-item">
               <div className="number">01</div>
-              <div className="feature-content">
+              <div className="services-feature-content">
                 <h3>Multi-Connectivity Devices</h3>
                 <p>4G, Bluetooth, and WiFi-enabled devices adapt to urban and rural environments.</p>
                 <ul>
@@ -535,7 +535,7 @@ const OurServicesPage = () => {
 
             <div className="feature-item">
               <div className="number">02</div>
-              <div className="feature-content">
+              <div className="services-feature-content">
                 <h3>24/7 Care Coordinator Support</h3>
                 <p>Our Care Coordinators (trained nurses at our office) are available within seconds.</p>
                 <ul>
@@ -547,7 +547,7 @@ const OurServicesPage = () => {
 
             <div className="feature-item">
               <div className="number">03</div>
-              <div className="feature-content">
+              <div className="services-feature-content">
                 <h3>Real-Time Doctor Dashboards</h3>
                 <p>All vitals are displayed on the doctor's portal in real-time.</p>
                 <ul>
@@ -558,7 +558,7 @@ const OurServicesPage = () => {
 
             <div className="feature-item">
               <div className="number">04</div>
-              <div className="feature-content">
+              <div className="services-feature-content">
                 <h3>Hospital Management System (HMS) Integration</h3>
                 <p>Data automatically syncs into the Hospital Management Software (HMS) for secure storage.</p>
                 <ul>
@@ -569,7 +569,7 @@ const OurServicesPage = () => {
 
             <div className="feature-item">
               <div className="number">05</div>
-              <div className="feature-content">
+              <div className="services-feature-content">
                 <h3>Comprehensive Vital Monitoring</h3>
                 <p>Heart Rate, SpO₂, BP, Glucose, Respiration, Temperature, ECG, Weight & more.</p>
               </div>
@@ -577,7 +577,7 @@ const OurServicesPage = () => {
 
             <div className="feature-item">
               <div className="number">06</div>
-              <div className="feature-content">
+              <div className="services-feature-content">
                 <h3>Data Privacy & Security</h3>
                 <p>HIPAA, GDPR, and DPDPA (India) compliant.</p>
                 <ul>
