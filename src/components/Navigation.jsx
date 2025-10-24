@@ -1,41 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navigation.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navigation.css";
 
 const Navigation = ({ onLinkClick }) => {
   return (
     <div className="menu-header-menu-container">
       <ul id="header-primary-menu" className="menu">
         <li className="menu-item">
-          <Link to="/" onClick={onLinkClick}>Home</Link>
+          <Link to="/" onClick={onLinkClick}>
+            Home
+          </Link>
         </li>
-        
+
         <li className="menu-item">
-          <Link to="/about" onClick={onLinkClick}>About Us</Link>
+          <Link to="/about" onClick={onLinkClick}>
+            About Us
+          </Link>
         </li>
-        
+
         <li className="menu-item why-carepro-mega-menu">
           <Link to="/why-carepro" onClick={onLinkClick}>
             Why CarePro
             <span className="menu-dropdown-arrow"></span>
           </Link>
-          
+
           <div className="megamenu-main">
             <div className="megamenu-wrap">
               <div className="tab-content-head">
-                <Link to="/rpm-platform" className="tab-content-link" onClick={onLinkClick}>
+                <Link
+                  to="/rpm-platform"
+                  className="tab-content-link"
+                  onClick={onLinkClick}
+                >
                   RPM Platform
                 </Link>
-               
               </div>
-              
+
               <div className="tab-content-head">
-                <Link to="/investors" className="tab-content-link" onClick={onLinkClick}>
+                <Link
+                  to="/investors"
+                  className="tab-content-link"
+                  onClick={onLinkClick}
+                >
                   Investors
                 </Link>
-                
               </div>
-              
+
               {/* <div className="tab-content-head">
                 <Link to="/rtm-platform" className="tab-content-link" onClick={onLinkClick}>
                   RTM Platform
@@ -58,47 +68,65 @@ const Navigation = ({ onLinkClick }) => {
             </div>
           </div>
         </li>
-        
+
         <li className="menu-item services-mega-menu">
           <Link to="/our-services" onClick={onLinkClick}>
             Our Services
             <span className="menu-dropdown-arrow"></span>
           </Link>
-          
+
           <div className="megamenu-main">
             <div className="megamenu-wrap">
               <div className="tab-content-head">
-                <Link to="/solutions" className="tab-content-link" onClick={onLinkClick}>
+                <Link
+                  to="/solutions"
+                  className="tab-content-link"
+                  onClick={onLinkClick}
+                >
                   Solutions
                 </Link>
-               
               </div>
-              
+
               <div className="tab-content-head">
-                <Link to="/technology" className="tab-content-link" onClick={onLinkClick}>
-                  Technology 
+                <Link
+                  to="/technology"
+                  className="tab-content-link"
+                  onClick={onLinkClick}
+                >
+                  Technology
                 </Link>
-               
               </div>
             </div>
           </div>
         </li>
 
         <li className="menu-item">
-          <Link to="/our-team" onClick={onLinkClick}>Our Team</Link>
+          <Link to="/our-team" onClick={onLinkClick}>
+            Our Team
+          </Link>
         </li>
-        
+
         <li className="menu-item">
-          <Link to="/partner-with-us" onClick={onLinkClick}> Only Partners</Link>
+          <Link to="/partner-with-us" onClick={onLinkClick}>
+            Partner With Us
+          </Link>
         </li>
-        
+
         <li className="menu-item">
-          <Link to="/career" onClick={onLinkClick}>Career</Link>
+          <Link to="/career" onClick={onLinkClick}>
+            Career
+          </Link>
         </li>
-        
+
         {/* Contact Us button - only visible in mobile menu */}
         <li className="menu-item menu-contact-item mobile-only">
-          <Link to="/contact" className="menu-contact-button" onClick={onLinkClick}>Contact Us</Link>
+          <Link
+            to="/contact"
+            className="menu-contact-button"
+            onClick={onLinkClick}
+          >
+            Contact Us
+          </Link>
         </li>
       </ul>
     </div>

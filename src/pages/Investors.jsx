@@ -67,7 +67,7 @@ function Investors() {
 
   const helperStyle = {
     fontFamily: "'Poppins', sans-serif",
-    fontSize: "14px",
+    fontSize: "16px",
     color: "#64748B",
     margin: "0 0 20px 0",
   };
@@ -249,6 +249,46 @@ function Investors() {
             Invest in the Future of Healthcare with CarePro
           </h1>
         </div>
+      </div>
+      <div
+        style={{
+          background: "linear-gradient(145deg, #f8faff, #eef3ff)",
+          borderRadius: "16px",
+          boxShadow: "0 10px 30px rgba(35, 64, 139, 0.25)",
+          margin: "60px 100px",
+          padding: "50px 40px",
+          textAlign: "center",
+          fontFamily: "'Poppins', sans-serif",
+          color: "#0f172a",
+        }}
+      >
+        <p
+          style={{
+            fontSize: "18px",
+            fontWeight: "500",
+            lineHeight: "1.8",
+            marginBottom: "25px",
+            fontStyle: "italic",
+          }}
+        >
+          “An investor is not just a source of capital, but a believer who fuels
+          the fire of innovation and turns dreams into industries. Every
+          investor writes the first line of a company’s success story — their
+          belief becomes the foundation of every breakthrough.”
+        </p>
+
+        <p
+          style={{
+            fontSize: "20px",
+            fontWeight: "700",
+            color: "#23408B",
+            margin: "0",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
+          }}
+        >
+          CarePro Leadership
+        </p>
       </div>
 
       {/* Body + Form */}

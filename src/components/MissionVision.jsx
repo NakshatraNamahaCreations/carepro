@@ -46,9 +46,14 @@ const MissionVision = () => {
                   fontWeight: 500,
                   fontFamily: "'Poppins', sans-serif",
                   marginLeft: "10px",
+                  lineHeight: "1.6",
                 }}
               >
-                Compassion with Precision
+                <strong style={{ color: "#0f172a", fontWeight: 600 }}>
+                  Compassion First
+                </strong>{" "}
+                – Every patient is a person, not just a data point. We combine
+                technology with empathy to deliver true care.
               </li>
               <li
                 style={{
@@ -57,9 +62,14 @@ const MissionVision = () => {
                   fontWeight: 500,
                   fontFamily: "'Poppins', sans-serif",
                   marginLeft: "10px",
+                  lineHeight: "1.6",
                 }}
               >
-                Transparency in Care
+                <strong style={{ color: "#0f172a", fontWeight: 600 }}>
+                  Equity in Access
+                </strong>{" "}
+                – Healthcare is a right, not a privilege. We bring world-class
+                monitoring and coordination to communities often left behind.
               </li>
               <li
                 style={{
@@ -68,9 +78,14 @@ const MissionVision = () => {
                   fontWeight: 500,
                   fontFamily: "'Poppins', sans-serif",
                   marginLeft: "10px",
+                  lineHeight: "1.6",
                 }}
               >
-                Data-Driven Excellence
+                <strong style={{ color: "#0f172a", fontWeight: 600 }}>
+                  Proactive Care
+                </strong>{" "}
+                – Prevention over crisis. We detect, monitor, and act early to
+                avoid emergencies.
               </li>
               <li
                 style={{
@@ -79,9 +94,62 @@ const MissionVision = () => {
                   fontWeight: 500,
                   fontFamily: "'Poppins', sans-serif",
                   marginLeft: "10px",
+                  lineHeight: "1.6",
                 }}
               >
-                Innovation for Every Community
+                <strong style={{ color: "#0f172a", fontWeight: 600 }}>
+                  Trust & Transparency
+                </strong>{" "}
+                – Certified, compliant, and ethical practices that put patient
+                safety and data privacy above all.
+              </li>
+              <li
+                style={{
+                  color: "#64748B",
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: "10px",
+                  lineHeight: "1.6",
+                }}
+              >
+                <strong style={{ color: "#0f172a", fontWeight: 600 }}>
+                  Collaboration
+                </strong>{" "}
+                – Working hand-in-hand with doctors, nurses, caregivers, and
+                families to create a seamless support ecosystem.
+              </li>
+              <li
+                style={{
+                  color: "#64748B",
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: "10px",
+                  lineHeight: "1.6",
+                }}
+              >
+                <strong style={{ color: "#0f172a", fontWeight: 600 }}>
+                  Innovation with Purpose
+                </strong>{" "}
+                – Leveraging technology not for the sake of novelty, but to
+                solve real problems in chronic care and save lives.
+              </li>
+              <li
+                style={{
+                  color: "#64748B",
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  fontFamily: "'Poppins', sans-serif",
+                  marginLeft: "10px",
+                  lineHeight: "1.6",
+                }}
+              >
+                <strong style={{ color: "#0f172a", fontWeight: 600 }}>
+                  Global Mindset, Local Heart
+                </strong>{" "}
+                – Starting with India’s underserved cities, scaling to the world
+                while respecting cultural and healthcare diversity.
               </li>
             </div>
           </div>
