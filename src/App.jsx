@@ -1,20 +1,20 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import WhyCareProPage from './pages/WhyCareProPage'
-import ContactPage from './pages/ContactPage'
-import OurServicesPage from './pages/OurServicesPage'
-import OurTeamPage from './pages/OurTeamPage'
-import RPMPlatformPage from './pages/RPMPlatformPage'
-import TechnologyPage from './pages/TechnologyPage'
-import SolutionsPage from './pages/SolutionsPage'
-import PartnerWithUsPage from './pages/PartnerWithUsPage'
-import CareerPage from './pages/CareerPage'
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import WhyCareProPage from "./pages/WhyCareProPage";
+import ContactPage from "./pages/ContactPage";
+import OurServicesPage from "./pages/OurServicesPage";
+import OurTeamPage from "./pages/OurTeamPage";
+import RPMPlatformPage from "./pages/RPMPlatformPage";
+import TechnologyPage from "./pages/TechnologyPage";
+import SolutionsPage from "./pages/SolutionsPage";
+import PartnerWithUsPage from "./pages/PartnerWithUsPage";
+import CareerPage from "./pages/CareerPage";
+import Investors from "./pages/Investors";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-        
+
           <Route path="/about" element={<AboutPage />} />
           <Route path="/why-carepro" element={<WhyCareProPage />} />
           <Route path="/our-services" element={<OurServicesPage />} />
@@ -35,11 +35,12 @@ function App() {
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/partner-with-us" element={<PartnerWithUsPage />} />
           <Route path="/career" element={<CareerPage />} />
+          <Route path="/investors" element={<Investors />} />
         </Routes>
         <Footer />
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
