@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
 import invest from "../../public/assets/invest/invest.jpeg"; // ✅ move image to src/assets/invest/ (adjust path if needed)
 
-const INVEST_EMAIL = "abinashroutaray097@gmail.com";
-
 function Investors() {
   const [bgOk, setBgOk] = useState(true);
 
-  // Form state
-  const [fullName, setFullName] = useState("");
-  const [organization, setOrganization] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [investmentRange, setInvestmentRange] = useState("");
-  const [background, setBackground] = useState("");
+  // Form state as object
+  const [formData, setFormData] = useState({
+    fullName: "",
+    organization: "",
+    email: "",
+    phone: "",
+    investmentRange: "",
+    background: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState('');
 
   // Preload image so we can gracefully fall back if it fails
   useEffect(() => {
@@ -191,54 +195,104 @@ function Investors() {
   };
 
   // ---------- Logic ----------
-  function validate() {
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
-    const phoneOk = /^[0-9+\-\s()]{7,}$/.test(phone.trim());
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
 
-    if (!fullName.trim()) return "Please enter your full name.";
-    if (!organization.trim()) return "Please enter your organization.";
-    if (!emailOk) return "Please enter a valid email address.";
-    if (!phoneOk) return "Please enter a valid phone number.";
-    if (!investmentRange) return "Please select an estimated investment range.";
-    if (!background.trim())
-      return "Please add a brief background or experience.";
+  const validateForm = () => {
+    const newErrors = {};
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim());
+    const phoneOk = /^[0-9+\-\s()]{7,}$/.test(formData.phone.trim());
 
-    return null;
-  }
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Please enter your full name.";
+    }
+    if (!formData.organization.trim()) {
+      newErrors.organization = "Please enter your organization.";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Please enter an email address.";
+    } else if (!emailOk) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Please enter a phone number.";
+    } else if (!phoneOk) {
+      newErrors.phone = "Please enter a valid phone number.";
+    }
+    if (!formData.investmentRange) {
+      newErrors.investmentRange = "Please select an estimated investment range.";
+    }
+    if (!formData.background.trim()) {
+      newErrors.background = "Please add a brief background or experience.";
+    }
 
-  function handleSubmit(e) {
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validate form before submission
+    if (!validateForm()) {
+      setStatus('');
+      return;
+    }
+
+    setStatus('');
+    setSubmitting(true);
+
     try {
-      const err = validate();
-      if (err) {
-        alert(err);
-        return;
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Check if response is ok (status 200-299)
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status} ${response.statusText}`);
       }
 
-      const subject = "Investor Inquiry | CarePro";
-      const bodyLines = [
-        "Investor interest details:",
-        "",
-        `Full Name: ${fullName}`,
-        `Organization: ${organization}`,
-        `Email: ${email}`,
-        `Phone: ${phone}`,
-        `Estimated Investment Range: ${investmentRange}`,
-        "",
-        "Brief Background / Experience:",
-        background,
-      ];
+      const result = await response.json();
 
-      const mailtoLink = `mailto:${INVEST_EMAIL}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
-
-      window.location.href = mailtoLink;
+      if (result.success) {
+        setStatus("submitted");
+        // Reset form
+        setFormData({
+          fullName: "",
+          organization: "",
+          email: "",
+          phone: "",
+          investmentRange: "",
+          background: "",
+        });
+        setErrors({});
+      } else {
+        setStatus("error");
+      }
     } catch (error) {
-      console.error("Submit failed:", error);
-      alert("Something went wrong. Please try again.");
+      console.error('Submission error:', error);
+      setStatus("error");
+    } finally {
+      setSubmitting(false);
     }
-  }
+  };
 
   return (
     <div>
@@ -310,58 +364,166 @@ function Investors() {
             profile and explore collaboration:
           </p>
 
+          {status === 'submitted' && (
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              padding: "16px",
+              borderRadius: "8px",
+              marginBottom: "24px",
+              backgroundColor: "#d4edda",
+              border: "1px solid #c3e6cb",
+              color: "#155724",
+              fontFamily: "'Poppins', sans-serif",
+              fontSize: "0.95rem",
+            }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Thank you! Your inquiry has been submitted successfully. We will get back to you soon.</span>
+            </div>
+          )}
+
+          {status === 'error' && (
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              padding: "16px",
+              borderRadius: "8px",
+              marginBottom: "24px",
+              backgroundColor: "#f8d7da",
+              border: "1px solid #f5c6cb",
+              color: "#721c24",
+              fontFamily: "'Poppins', sans-serif",
+              fontSize: "0.95rem",
+            }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Something went wrong. Please try again later.</span>
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} noValidate>
             <div style={gridStyle}>
               <div>
                 <label style={labelStyle}>Full Name</label>
                 <input
                   type="text"
+                  name="fullName"
                   placeholder="Your full name"
-                  style={inputStyle}
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
+                  style={{
+                    ...inputStyle,
+                    borderColor: errors.fullName ? "#dc3545" : "#e5e7eb",
+                  }}
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  disabled={submitting}
                 />
+                {errors.fullName && (
+                  <span style={{
+                    color: "#dc3545",
+                    fontSize: "0.85rem",
+                    marginTop: "4px",
+                    display: "block",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}>{errors.fullName}</span>
+                )}
               </div>
 
               <div>
                 <label style={labelStyle}>Organization</label>
                 <input
                   type="text"
+                  name="organization"
                   placeholder="Company / Fund / Family Office"
-                  style={inputStyle}
-                  value={organization}
-                  onChange={(e) => setOrganization(e.target.value)}
+                  style={{
+                    ...inputStyle,
+                    borderColor: errors.organization ? "#dc3545" : "#e5e7eb",
+                  }}
+                  value={formData.organization}
+                  onChange={handleChange}
+                  disabled={submitting}
                 />
+                {errors.organization && (
+                  <span style={{
+                    color: "#dc3545",
+                    fontSize: "0.85rem",
+                    marginTop: "4px",
+                    display: "block",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}>{errors.organization}</span>
+                )}
               </div>
 
               <div>
                 <label style={labelStyle}>Email</label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="you@example.com"
-                  style={inputStyle}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  style={{
+                    ...inputStyle,
+                    borderColor: errors.email ? "#dc3545" : "#e5e7eb",
+                  }}
+                  value={formData.email}
+                  onChange={handleChange}
+                  disabled={submitting}
                 />
+                {errors.email && (
+                  <span style={{
+                    color: "#dc3545",
+                    fontSize: "0.85rem",
+                    marginTop: "4px",
+                    display: "block",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}>{errors.email}</span>
+                )}
               </div>
 
               <div>
                 <label style={labelStyle}>Phone Number</label>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="+91 98XXXXXX12"
-                  style={inputStyle}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  style={{
+                    ...inputStyle,
+                    borderColor: errors.phone ? "#dc3545" : "#e5e7eb",
+                  }}
+                  value={formData.phone}
+                  onChange={handleChange}
+                  disabled={submitting}
                 />
+                {errors.phone && (
+                  <span style={{
+                    color: "#dc3545",
+                    fontSize: "0.85rem",
+                    marginTop: "4px",
+                    display: "block",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}>{errors.phone}</span>
+                )}
               </div>
 
               <div>
                 <label style={labelStyle}>Estimated Investment Range</label>
                 <select
-                  style={selectStyle}
-                  value={investmentRange}
-                  onChange={(e) => setInvestmentRange(e.target.value)}
+                  name="investmentRange"
+                  style={{
+                    ...selectStyle,
+                    borderColor: errors.investmentRange ? "#dc3545" : "#e5e7eb",
+                    opacity: submitting ? 0.7 : 1,
+                    cursor: submitting ? "not-allowed" : "pointer",
+                  }}
+                  value={formData.investmentRange}
+                  onChange={handleChange}
+                  disabled={submitting}
                 >
                   <option value="">Select range</option>
                   <option value="Under ₹10L">Under ₹10L</option>
@@ -369,24 +531,56 @@ function Investors() {
                   <option value="₹50L to ₹2Cr">₹50L to ₹2Cr</option>
                   <option value="Above ₹2Cr">Above ₹2Cr</option>
                 </select>
+                {errors.investmentRange && (
+                  <span style={{
+                    color: "#dc3545",
+                    fontSize: "0.85rem",
+                    marginTop: "4px",
+                    display: "block",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}>{errors.investmentRange}</span>
+                )}
               </div>
 
               <div style={{ gridColumn: "1 / -1" }}>
                 <label style={labelStyle}>Brief Background / Experience</label>
                 <textarea
+                  name="background"
                   placeholder="Share your investing background, focus areas, and any relevant experience."
-                  style={textAreaStyle}
-                  value={background}
-                  onChange={(e) => setBackground(e.target.value)}
+                  style={{
+                    ...textAreaStyle,
+                    borderColor: errors.background ? "#dc3545" : "#e5e7eb",
+                    opacity: submitting ? 0.7 : 1,
+                  }}
+                  value={formData.background}
+                  onChange={handleChange}
+                  disabled={submitting}
                 />
+                {errors.background && (
+                  <span style={{
+                    color: "#dc3545",
+                    fontSize: "0.85rem",
+                    marginTop: "4px",
+                    display: "block",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}>{errors.background}</span>
+                )}
               </div>
             </div>
 
             <hr style={dividerStyle} />
 
             <div style={ctaRowStyle}>
-              <button type="submit" style={buttonStyle}>
-                Reach Out to Invest
+              <button 
+                type="submit" 
+                style={{
+                  ...buttonStyle,
+                  opacity: submitting ? 0.6 : 1,
+                  cursor: submitting ? "not-allowed" : "pointer",
+                }}
+                disabled={submitting}
+              >
+                {submitting ? 'Submitting…' : 'Reach Out to Invest'}
               </button>
             </div>
 

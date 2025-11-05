@@ -79,17 +79,27 @@ body {
 /* Logo Styles */
 .site-logo-main {
   flex-shrink: 0;
+  padding: 3px 0;
+  margin-left: 30px;
 }
 
 .site-logo-main a {
   display: block;
   text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.site-logo-main a:hover {
+  transform: scale(1.05);
 }
 
 .site_logo {
-  height: 60px;
+  height: 70px;
   width: auto;
-  max-width: 200px;
+  max-width: 240px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 /* Menu Styles */
@@ -258,13 +268,31 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .site_logo {
+    height: 80px;
+    max-width: 250px;
+  }
+  
+  .site-logo-main {
+    padding: 5px 0;
+    margin-left: 15px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .header-inner.primary-header-inner {
     padding: 0 15px;
   }
   
   .site_logo {
-    height: 40px;
+    height: 70px;
+    max-width: 220px;
+  }
+  
+  .site-logo-main {
+    padding: 5px 0;
+    margin-left: 10px;
   }
   
   .contactus-button {
@@ -275,18 +303,18 @@ body {
 
 /* Header Spacer for Fixed Header */
 .header-spacer {
-  height: 100px; /* Adjust based on header height */
+  height: 80px; /* Adjust based on header height */
 }
 
 @media only screen and (max-width: 768px) {
   .header-spacer {
-    height: 80px; /* Smaller spacer for mobile */
+    height: 95px; /* Smaller spacer for mobile */
   }
 }
 
 @media only screen and (max-width: 480px) {
   .header-spacer {
-    height: 70px; /* Even smaller spacer for small mobile */
+    height: 85px; /* Even smaller spacer for small mobile */
   }
   
   .site-menu-main {

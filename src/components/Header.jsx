@@ -111,11 +111,11 @@ const Header = () => {
           <div className="site-logo-main">
             <Link to="/">
               <img 
-                src="/stellar-logo.svg" 
+                src="/CarePro_logo_jpg_-removebg-preview.png" 
                 className="site_logo" 
                 loading="eager" 
-                alt="Stellar RCM" 
-                title="Stellar RCM"
+                alt="CarePro" 
+                title="CarePro"
               />
             </Link>
           </div>

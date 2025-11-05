@@ -16,6 +16,8 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
   });
 
   const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -54,10 +56,6 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
       newErrors.phone = 'Phone number is required';
     }
 
-    if (!formData.organization.trim()) {
-      newErrors.organization = 'Organization is required';
-    }
-
     if (!formData.consultationType) {
       newErrors.consultationType = 'Please select consultation type';
     }
@@ -66,26 +64,68 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
       newErrors.preferredTime = 'Preferred time is required';
     }
 
-    if (!formData.currentChallenges.trim()) {
-      newErrors.currentChallenges = 'Current challenges description is required';
-    }
-
-    if (!formData.goals.trim()) {
-      newErrors.goals = 'Goals description is required';
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (validateForm()) {
-      // Here you would typically send the data to your backend
-      console.log('Consultation booking data:', formData);
-      alert('Consultation request submitted successfully! We will contact you soon to schedule your consultation.');
-      onClose();
+    // Validate form before submission
+    if (!validateForm()) {
+      setStatus('');
+      return;
+    }
+
+    setStatus('');
+    setSubmitting(true);
+
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Check if response is ok (status 200-299)
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status} ${response.statusText}`);
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("submitted");
+        // Reset form with correct field names
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          organization: '',
+          consultationType: '',
+          preferredTime: '',
+          currentChallenges: '',
+          goals: '',
+          additionalInfo: ''
+        });
+        setErrors({});
+        
+        // Close popup after 2 seconds
+        setTimeout(() => {
+          onClose();
+          setStatus('');
+        }, 2000);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus("error");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -102,7 +142,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
       <div className="consultation-popup">
         <div className="consultation-popup-header">
           <h2>Schedule a Consultation</h2>
-          <button className="close-button" onClick={onClose}>
+          <button className="close-button" onClick={onClose} disabled={submitting}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -114,6 +154,27 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
           <p className="consultation-description">
             Let's discuss how CarePro's Remote Patient Monitoring ecosystem can transform your healthcare practice. Schedule a personalized consultation with our experts.
           </p>
+
+          {status === 'submitted' && (
+            <div className="status-message success-message">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Thank you! Your consultation request has been submitted successfully. We will contact you soon to schedule your consultation.</span>
+            </div>
+          )}
+
+          {status === 'error' && (
+            <div className="status-message error-message">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Something went wrong. Please try again later.</span>
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="consultation-form">
             <div className="form-row">
@@ -127,6 +188,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   onChange={handleInputChange}
                   className={errors.firstName ? 'error' : ''}
                   placeholder="Enter your first name"
+                  disabled={submitting}
                 />
                 {errors.firstName && <span className="error-message">{errors.firstName}</span>}
               </div>
@@ -141,6 +203,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   onChange={handleInputChange}
                   className={errors.lastName ? 'error' : ''}
                   placeholder="Enter your last name"
+                  disabled={submitting}
                 />
                 {errors.lastName && <span className="error-message">{errors.lastName}</span>}
               </div>
@@ -157,6 +220,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   onChange={handleInputChange}
                   className={errors.email ? 'error' : ''}
                   placeholder="Enter your email address"
+                  disabled={submitting}
                 />
                 {errors.email && <span className="error-message">{errors.email}</span>}
               </div>
@@ -171,6 +235,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                   onChange={handleInputChange}
                   className={errors.phone ? 'error' : ''}
                   placeholder="Enter your phone number"
+                  disabled={submitting}
                 />
                 {errors.phone && <span className="error-message">{errors.phone}</span>}
               </div>
@@ -200,6 +265,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                     value={formData.consultationType}
                     onChange={handleInputChange}
                     className={errors.consultationType ? 'error' : ''}
+                    disabled={submitting}
                   >
                     <option value="">Select consultation type</option>
                     <option value="initial">Initial Assessment</option>
@@ -224,6 +290,7 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                     value={formData.preferredTime}
                     onChange={handleInputChange}
                     className={errors.preferredTime ? 'error' : ''}
+                    disabled={submitting}
                   >
                     <option value="">Select preferred time</option>
                     <option value="09:00">9:00 AM</option>
@@ -280,15 +347,16 @@ const ConsultationPopup = ({ isOpen, onClose }) => {
                 onChange={handleInputChange}
                 rows="3"
                 placeholder="Any additional information or specific requirements"
+                disabled={submitting}
               />
             </div>
 
             <div className="form-actions">
-              <button type="button" className="cancel-button" onClick={onClose}>
+              <button type="button" className="cancel-button" onClick={onClose} disabled={submitting}>
                 Cancel
               </button>
-              <button type="submit" className="submit-button">
-                Schedule Consultation
+              <button type="submit" className="submit-button" disabled={submitting}>
+                {submitting ? 'Submitting…' : 'Schedule Consultation'}
               </button>
             </div>
           </form>

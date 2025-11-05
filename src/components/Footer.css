@@ -730,3 +730,160 @@
     font-size: 16px;
   }
 }
+
+/* Footer Hours Dropdown Styles */
+.hours-item-footer {
+  position: relative;
+}
+
+.footer-hours-container {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-hours-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #e3f2fd;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.footer-hours-toggle:hover {
+  color: #ffffff;
+}
+
+.footer-dropdown-arrow {
+  transition: transform 0.3s ease;
+  color: #64b5f6;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 1;
+  stroke-width: 2.5;
+}
+
+.footer-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.footer-hours-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: #2c3546;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 280px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.footer-hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-hours-row:last-child {
+  border-bottom: none;
+}
+
+.footer-hours-day {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.footer-hours-time {
+  color: #e3f2fd;
+  font-size: 0.95rem;
+}
+
+.footer-hours-time.closed {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+/* Card Hours Dropdown Styles */
+.hours-card {
+  position: relative;
+}
+
+.card-hours-container {
+  position: relative;
+}
+
+.card-hours-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #e3f2fd;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.card-hours-toggle:hover {
+  color: #ffffff;
+}
+
+.card-dropdown-arrow {
+  transition: transform 0.3s ease;
+  color: #64b5f6;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 1;
+  stroke-width: 2.5;
+}
+
+.card-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.card-hours-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: #2c3546;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 280px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.card-hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-hours-row:last-child {
+  border-bottom: none;
+}
+
+.card-hours-day {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.card-hours-time {
+  color: #e3f2fd;
+  font-size: 0.95rem;
+}
+
+.card-hours-time.closed {
+  color: #ff6b6b;
+  font-weight: 600;
+}

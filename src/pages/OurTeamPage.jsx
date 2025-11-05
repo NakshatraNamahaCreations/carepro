@@ -28,6 +28,12 @@ const managementTeam = [
     bio: "Kresshna Kumar R brings over 25 years of diverse experience in IT and business process management. He holds dual postgraduate degrees — MCA and MBA (Marketing) — along with industry-recognized credentials such as PMP, ACP, and Lead Auditor certifications in QMS, IT Service, Business Continuity, PIMS, and ISMS. His expertise covers a wide range of global standards and compliance frameworks, including HIPAA, GDPR, CMMI Dev 3.0, SOC 2 (Type 1 & 2), NABH, NABL, PCI DSS, and SOX, making him a trusted authority in audits and certifications.",
     avatar: chief,
   },
+  {
+    name: "Dhamodaran Annamalai",
+    role: "Chief Legal Advisor",
+    bio: "Dhamodaran Annamalai is a seasoned legal strategist with 6+ years of expertise spanning corporate law, commercial transactions, compliance, intellectual property, and dispute resolution. He has advised leading corporations and high-growth ventures, earning a reputation for his strategic, business-focused legal counsel. As Chief Legal Advisor at CarePro, he is dedicated to establishing a strong legal and compliance framework that protects the organisation and propels its innovation, scalability, and sustainable growth.",
+    avatar: "/team2.png",
+  },
 ];
 
 const advisoryBoard = [

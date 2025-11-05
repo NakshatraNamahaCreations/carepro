@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
+  const [footerHoursDropdownOpen, setFooterHoursDropdownOpen] = useState(false);
+  const [cardHoursDropdownOpen, setCardHoursDropdownOpen] = useState(false);
+  
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -31,7 +34,7 @@ const Footer = () => {
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                   </svg>
                 </span>
-                <span>Mysore | Bengaluru | USA (Partner Office)</span>
+                <span>#191, Suswani Towers, 3rd floor, B Block, 1st stage, C-Block, JP Nagar, Mysuru, Karnataka 570031</span>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">
@@ -47,7 +50,7 @@ const Footer = () => {
                 <span>info@careproaihealth.com</span>
               </div>
               <div className="contact-item">
-                {/* <span className="contact-icon">
+                <span className="contact-icon">
                   <svg
                     width="16"
                     height="16"
@@ -56,8 +59,8 @@ const Footer = () => {
                   >
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.16.37 2.41.57 3.67.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.61.11.35.03.74-.25 1.02l-2.2 2.2z" />
                   </svg>
-                </span> */}
-                {/* <span>+91-XXXXXXXXXX</span> */}
+                </span>
+                <span>097438 07271</span>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">
@@ -71,6 +74,72 @@ const Footer = () => {
                   </svg>
                 </span>
                 <span>www.careproaihealth.com</span>
+              </div>
+              <div className="contact-item hours-item-footer">
+                <span className="contact-icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </span>
+                <div className="footer-hours-container">
+                  <span 
+                    className="footer-hours-toggle"
+                    onClick={() => setFooterHoursDropdownOpen(!footerHoursDropdownOpen)}
+                  >
+                    Open 24 hours
+                    <svg
+                      className={`footer-dropdown-arrow ${footerHoursDropdownOpen ? 'open' : ''}`}
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                  {footerHoursDropdownOpen && (
+                    <div className="footer-hours-dropdown">
+                      <div className="footer-hours-row">
+                        <span className="footer-hours-day">Monday</span>
+                        <span className="footer-hours-time">Open 24 hours</span>
+                      </div>
+                      <div className="footer-hours-row">
+                        <span className="footer-hours-day">Tuesday</span>
+                        <span className="footer-hours-time">Open 24 hours</span>
+                      </div>
+                      <div className="footer-hours-row">
+                        <span className="footer-hours-day">Wednesday</span>
+                        <span className="footer-hours-time">Open 24 hours</span>
+                      </div>
+                      <div className="footer-hours-row">
+                        <span className="footer-hours-day">Thursday</span>
+                        <span className="footer-hours-time">Open 24 hours</span>
+                      </div>
+                      <div className="footer-hours-row">
+                        <span className="footer-hours-day">Friday</span>
+                        <span className="footer-hours-time">Open 24 hours</span>
+                      </div>
+                      <div className="footer-hours-row">
+                        <span className="footer-hours-day">Saturday</span>
+                        <span className="footer-hours-time">Open 24 hours</span>
+                      </div>
+                      <div className="footer-hours-row">
+                        <span className="footer-hours-day">Sunday</span>
+                        <span className="footer-hours-time closed">Closed</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -145,12 +214,29 @@ const Footer = () => {
                   </svg>
                 </div>
                 <div className="contact-card-content">
-                  <h5>Head Quaters</h5>
-                  <p>Bangalore, Mysore, USA(Partner Office)</p>
+                  <h5>Address</h5>
+                  <p>#191, Suswani Towers, 3rd floor, B Block, 1st stage, C-Block, JP Nagar, Mysuru, Karnataka 570031</p>
                 </div>
               </div>
 
               <div className="contact-card">
+                <div className="contact-card-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.16.37 2.41.57 3.67.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.61.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                  </svg>
+                </div>
+                <div className="contact-card-content">
+                  <h5>Phone</h5>
+                  <p>097438 07271</p>
+                </div>
+              </div>
+
+              <div className="contact-card hours-card">
                 <div className="contact-card-icon">
                   <svg
                     width="20"
@@ -163,7 +249,59 @@ const Footer = () => {
                 </div>
                 <div className="contact-card-content">
                   <h5>Working Hours</h5>
-                  <p>24/7 Emergency Care</p>
+                  <div className="card-hours-container">
+                    <span 
+                      className="card-hours-toggle"
+                      onClick={() => setCardHoursDropdownOpen(!cardHoursDropdownOpen)}
+                    >
+                      Open 24 hours
+                      <svg
+                        className={`card-dropdown-arrow ${cardHoursDropdownOpen ? 'open' : ''}`}
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </span>
+                    {cardHoursDropdownOpen && (
+                      <div className="card-hours-dropdown">
+                        <div className="card-hours-row">
+                          <span className="card-hours-day">Monday</span>
+                          <span className="card-hours-time">Open 24 hours</span>
+                        </div>
+                        <div className="card-hours-row">
+                          <span className="card-hours-day">Tuesday</span>
+                          <span className="card-hours-time">Open 24 hours</span>
+                        </div>
+                        <div className="card-hours-row">
+                          <span className="card-hours-day">Wednesday</span>
+                          <span className="card-hours-time">Open 24 hours</span>
+                        </div>
+                        <div className="card-hours-row">
+                          <span className="card-hours-day">Thursday</span>
+                          <span className="card-hours-time">Open 24 hours</span>
+                        </div>
+                        <div className="card-hours-row">
+                          <span className="card-hours-day">Friday</span>
+                          <span className="card-hours-time">Open 24 hours</span>
+                        </div>
+                        <div className="card-hours-row">
+                          <span className="card-hours-day">Saturday</span>
+                          <span className="card-hours-time">Open 24 hours</span>
+                        </div>
+                        <div className="card-hours-row">
+                          <span className="card-hours-day">Sunday</span>
+                          <span className="card-hours-time closed">Closed</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 

@@ -74,10 +74,15 @@
   color: #6c757d;
 }
 
-.close-button:hover {
+.close-button:hover:not(:disabled) {
   background: #f8f9fa;
   color: #2c3546;
   transform: scale(1.1);
+}
+
+.close-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .appointment-popup-content {
@@ -91,6 +96,53 @@
   line-height: 1.6;
   margin: 0 0 30px 0;
   text-align: center;
+}
+
+.status-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 0.95rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-message svg {
+  flex-shrink: 0;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.success-message svg {
+  color: #28a745;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.error-message svg {
+  color: #dc3545;
 }
 
 .appointment-form {
@@ -131,6 +183,14 @@
   background: #ffffff;
   transition: all 0.3s ease;
   outline: none;
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+  background: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .form-group input:focus,
@@ -243,11 +303,18 @@
   border: 2px solid #2c3546;
 }
 
-.submit-button:hover {
+.submit-button:hover:not(:disabled) {
   background: #1a2332;
   border-color: #1a2332;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(44, 53, 70, 0.3);
+}
+
+.submit-button:disabled,
+.cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .submit-button:active {

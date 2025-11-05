@@ -19,6 +19,8 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
   });
 
   const [errors, setErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value, type, files } = e.target;
@@ -52,14 +54,90 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (validateForm()) {
-      // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
-      alert('Application submitted successfully! We will get back to you soon.');
-      onClose();
+    // Validate form before submission
+    if (!validateForm()) {
+      setStatus('');
+      return;
+    }
+
+    setStatus('');
+    setSubmitting(true);
+
+    try {
+      // Convert file to base64 if it exists
+      let resumeBase64 = null;
+      let resumeFileName = null;
+      
+      if (formData.resume) {
+        resumeFileName = formData.resume.name;
+        resumeBase64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result.split(',')[1]); // Remove data:type;base64, prefix
+          reader.onerror = reject;
+          reader.readAsDataURL(formData.resume);
+        });
+      }
+
+      // Prepare submission data (exclude file object, include base64 and filename)
+      const { resume, ...formDataWithoutFile } = formData;
+      const submissionData = {
+        ...formDataWithoutFile,
+        resume: resumeBase64,
+        resumeFileName: resumeFileName,
+        resumeFileType: formData.resume ? formData.resume.type : null
+      };
+
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      // Check if response is ok (status 200-299)
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status} ${response.statusText}`);
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("submitted");
+        // Reset form with correct field names
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          currentCompany: '',
+          experience: '',
+          resume: null,
+          coverLetter: '',
+          position: jobTitle || '',
+          availability: '',
+          salary: '',
+          location: '',
+          noticePeriod: ''
+        });
+        setErrors({});
+        
+        // Close popup after 2 seconds
+        setTimeout(() => {
+          onClose();
+          setStatus('');
+        }, 2000);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus("error");
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -70,8 +148,29 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
       <div className="job-application-popup">
         <div className="popup-header">
           <h2>Apply for {jobTitle}</h2>
-          <button className="close-btn" onClick={onClose}>×</button>
+          <button className="close-btn" onClick={onClose} disabled={submitting}>×</button>
         </div>
+        
+        {status === 'submitted' && (
+          <div className="status-message success-message">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Thank you! Your application has been submitted successfully. We will get back to you soon.</span>
+          </div>
+        )}
+
+        {status === 'error' && (
+          <div className="status-message error-message">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>Something went wrong. Please try again later.</span>
+          </div>
+        )}
         
         <form className="job-application-form" onSubmit={handleSubmit}>
           <div className="form-section">
@@ -86,6 +185,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                   value={formData.firstName}
                   onChange={handleInputChange}
                   className={errors.firstName ? 'error' : ''}
+                  disabled={submitting}
                 />
                 {errors.firstName && <span className="error-message">{errors.firstName}</span>}
               </div>
@@ -99,6 +199,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                   value={formData.lastName}
                   onChange={handleInputChange}
                   className={errors.lastName ? 'error' : ''}
+                  disabled={submitting}
                 />
                 {errors.lastName && <span className="error-message">{errors.lastName}</span>}
               </div>
@@ -114,6 +215,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className={errors.email ? 'error' : ''}
+                  disabled={submitting}
                 />
                 {errors.email && <span className="error-message">{errors.email}</span>}
               </div>
@@ -127,6 +229,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   className={errors.phone ? 'error' : ''}
+                  disabled={submitting}
                 />
                 {errors.phone && <span className="error-message">{errors.phone}</span>}
               </div>
@@ -140,6 +243,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                 name="currentCompany"
                 value={formData.currentCompany}
                 onChange={handleInputChange}
+                disabled={submitting}
               />
             </div>
           </div>
@@ -156,6 +260,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                     value={formData.experience}
                     onChange={handleInputChange}
                     className={errors.experience ? 'error' : ''}
+                    disabled={submitting}
                   >
                     <option value="">Select Experience</option>
                     <option value="0-1">0-1 years</option>
@@ -179,6 +284,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                     name="location"
                     value={formData.location}
                     onChange={handleInputChange}
+                    disabled={submitting}
                   >
                     <option value="">Select Location</option>
                     <option value="remote">Remote</option>
@@ -201,6 +307,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                     name="availability"
                     value={formData.availability}
                     onChange={handleInputChange}
+                    disabled={submitting}
                   >
                     <option value="">Select Availability</option>
                     <option value="immediate">Immediate</option>
@@ -224,6 +331,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                   value={formData.salary}
                   onChange={handleInputChange}
                   placeholder="e.g., $50,000 - $70,000"
+                  disabled={submitting}
                 />
               </div>
             </div>
@@ -240,6 +348,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                 onChange={handleInputChange}
                 accept=".pdf,.doc,.docx"
                 className={errors.resume ? 'error' : ''}
+                disabled={submitting}
               />
               <small>Accepted formats: PDF, DOC, DOCX (Max 5MB)</small>
               {errors.resume && <span className="error-message">{errors.resume}</span>}
@@ -255,17 +364,18 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
                 rows="5"
                 placeholder="Tell us why you're interested in this position and how your experience aligns with our requirements..."
                 className={errors.coverLetter ? 'error' : ''}
+                disabled={submitting}
               />
               {errors.coverLetter && <span className="error-message">{errors.coverLetter}</span>}
             </div>
           </div>
 
           <div className="form-actions">
-            <button type="button" className="btn-secondary" onClick={onClose}>
+            <button type="button" className="btn-secondary" onClick={onClose} disabled={submitting}>
               Cancel
             </button>
-            <button type="submit" className="btn-primary">
-              Submit Application
+            <button type="submit" className="btn-primary" disabled={submitting}>
+              {submitting ? 'Submitting…' : 'Submit Application'}
             </button>
           </div>
         </form>
