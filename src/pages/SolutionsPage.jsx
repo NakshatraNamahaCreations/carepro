@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SolutionsPage.css';
 import solutionsBanner from '../assets/solutions_banner.jpg';
 import DemoPopup from '../components/DemoPopup';
@@ -6,6 +7,7 @@ import DemoPopup from '../components/DemoPopup';
 import ConsultationPopup from '../components/ConsultationPopup';
 
 const SolutionsPage = () => {
+  const navigate = useNavigate();
   const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
   const [isConsultationPopupOpen, setIsConsultationPopupOpen] = useState(false);
   const [currentStakeholder, setCurrentStakeholder] = useState(0);
@@ -16,6 +18,10 @@ const SolutionsPage = () => {
 
   const handleCloseDemo = () => {
     setIsDemoPopupOpen(false);
+  };
+
+  const handleContactUs = () => {
+    navigate('/contact');
   };
 
   const handleScheduleConsultation = (e) => {
@@ -495,7 +501,7 @@ const SolutionsPage = () => {
             <p>Discover how our solutions can help you improve patient outcomes and operational efficiency</p>
             <div className="cta-buttons">
               <button className="btn-primary" onClick={handleOpenDemo}>Request a Demo</button>
-              <button className="btn-secondary">Contact Us</button>
+              <button className="btn-secondary" onClick={handleContactUs}>Contact Us</button>
             </div>
           </div>
         </div>

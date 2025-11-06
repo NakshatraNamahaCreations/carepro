@@ -67,26 +67,7 @@ const PartnerWithUsPage = () => {
         </div>
       </section>
 
-      {/* Google Maps Section */}
-      <section className="partner-map-section">
-        <div className="container">
-          <div className="map-wrapper">
-            <h2>Find Us on Map</h2>
-            <div className="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184130894885!2d-73.98542868459384!3d40.75889597932691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Stellar RCM Location"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Popup Components */}
       <PartnershipPopup isOpen={isPartnershipPopupOpen} onClose={handleClosePartnership} />

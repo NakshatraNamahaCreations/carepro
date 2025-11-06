@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './JobApplicationPopup.css';
 
 const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
+  const fileInputRef = useRef(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -9,8 +10,6 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
     phone: '',
     currentCompany: '',
     experience: '',
-    resume: null,
-    coverLetter: '',
     position: jobTitle || '',
     availability: '',
     salary: '',
@@ -18,15 +17,16 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
     noticePeriod: ''
   });
 
+  const [resumeFile, setResumeFile] = useState(null);
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState('');
 
   const handleInputChange = (e) => {
-    const { name, value, type, files } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'file' ? files[0] : value
+      [name]: value
     }));
     
     // Clear error when user starts typing
@@ -34,6 +34,19 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
       setErrors(prev => ({
         ...prev,
         [name]: ''
+      }));
+    }
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setResumeFile(file);
+    
+    // Clear error when user selects a file
+    if (errors.resume) {
+      setErrors(prev => ({
+        ...prev,
+        resume: ''
       }));
     }
   };
@@ -47,8 +60,7 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
     if (!formData.experience.trim()) newErrors.experience = 'Experience is required';
-    if (!formData.resume) newErrors.resume = 'Resume is required';
-    if (!formData.coverLetter.trim()) newErrors.coverLetter = 'Cover letter is required';
+    if (!resumeFile) newErrors.resume = 'Resume is required';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -67,35 +79,53 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
     setSubmitting(true);
 
     try {
-      // Convert file to base64 if it exists
-      let resumeBase64 = null;
-      let resumeFileName = null;
+      // Create FormData object for multipart/form-data submission
+      const formDataToSend = new FormData();
       
-      if (formData.resume) {
-        resumeFileName = formData.resume.name;
-        resumeBase64 = await new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(reader.result.split(',')[1]); // Remove data:type;base64, prefix
-          reader.onerror = reject;
-          reader.readAsDataURL(formData.resume);
-        });
+      // Map form fields to backend field names (matching Postman format)
+      if (formData.firstName) {
+        formDataToSend.append('First Name', formData.firstName);
       }
-
-      // Prepare submission data (exclude file object, include base64 and filename)
-      const { resume, ...formDataWithoutFile } = formData;
-      const submissionData = {
-        ...formDataWithoutFile,
-        resume: resumeBase64,
-        resumeFileName: resumeFileName,
-        resumeFileType: formData.resume ? formData.resume.type : null
-      };
+      if (formData.lastName) {
+        formDataToSend.append('Last Name', formData.lastName);
+      }
+      if (formData.email) {
+        formDataToSend.append('Email Address', formData.email);
+      }
+      if (formData.phone) {
+        formDataToSend.append('Phone Number', formData.phone);
+      }
+      if (formData.currentCompany) {
+        formDataToSend.append('Current Company', formData.currentCompany);
+      }
+      if (formData.location) {
+        formDataToSend.append('Preferred Location', formData.location);
+      }
+      if (formData.experience) {
+        formDataToSend.append('Yead of Experience', formData.experience);
+      }
+      if (formData.availability) {
+        formDataToSend.append('Availability', formData.availability);
+      }
+      if (formData.salary) {
+        formDataToSend.append('Expected Salary', formData.salary);
+      }
+      if (formData.position) {
+        formDataToSend.append('Position', formData.position);
+      }
+      if (formData.noticePeriod) {
+        formDataToSend.append('Notice Period', formData.noticePeriod);
+      }
+      
+      // Add resume file (matching the Postman format with 'Resume' key)
+      if (resumeFile) {
+        formDataToSend.append('Resume', resumeFile);
+      }
 
       const response = await fetch("http://localhost:5000/send-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(submissionData),
+        // Don't set Content-Type header - browser will set it automatically with boundary for FormData
+        body: formDataToSend,
       });
 
       // Check if response is ok (status 200-299)
@@ -115,14 +145,16 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
           phone: '',
           currentCompany: '',
           experience: '',
-          resume: null,
-          coverLetter: '',
           position: jobTitle || '',
           availability: '',
           salary: '',
           location: '',
           noticePeriod: ''
         });
+        setResumeFile(null);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
         setErrors({});
         
         // Close popup after 2 seconds
@@ -342,31 +374,17 @@ const JobApplicationPopup = ({ isOpen, onClose, jobTitle }) => {
             <div className="form-group">
               <label htmlFor="resume">Resume/CV *</label>
               <input
+                ref={fileInputRef}
                 type="file"
                 id="resume"
                 name="resume"
-                onChange={handleInputChange}
+                onChange={handleFileChange}
                 accept=".pdf,.doc,.docx"
                 className={errors.resume ? 'error' : ''}
                 disabled={submitting}
               />
               <small>Accepted formats: PDF, DOC, DOCX (Max 5MB)</small>
               {errors.resume && <span className="error-message">{errors.resume}</span>}
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="coverLetter">Cover Letter *</label>
-              <textarea
-                id="coverLetter"
-                name="coverLetter"
-                value={formData.coverLetter}
-                onChange={handleInputChange}
-                rows="5"
-                placeholder="Tell us why you're interested in this position and how your experience aligns with our requirements..."
-                className={errors.coverLetter ? 'error' : ''}
-                disabled={submitting}
-              />
-              {errors.coverLetter && <span className="error-message">{errors.coverLetter}</span>}
             </div>
           </div>
 

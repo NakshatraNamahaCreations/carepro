@@ -4,7 +4,6 @@ import "./Footer.css";
 
 const Footer = () => {
   const [footerHoursDropdownOpen, setFooterHoursDropdownOpen] = useState(false);
-  const [cardHoursDropdownOpen, setCardHoursDropdownOpen] = useState(false);
   
   return (
     <footer className="footer">
@@ -233,75 +232,6 @@ const Footer = () => {
                 <div className="contact-card-content">
                   <h5>Phone</h5>
                   <p>097438 07271</p>
-                </div>
-              </div>
-
-              <div className="contact-card hours-card">
-                <div className="contact-card-icon">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-                  </svg>
-                </div>
-                <div className="contact-card-content">
-                  <h5>Working Hours</h5>
-                  <div className="card-hours-container">
-                    <span 
-                      className="card-hours-toggle"
-                      onClick={() => setCardHoursDropdownOpen(!cardHoursDropdownOpen)}
-                    >
-                      Open 24 hours
-                      <svg
-                        className={`card-dropdown-arrow ${cardHoursDropdownOpen ? 'open' : ''}`}
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                      </svg>
-                    </span>
-                    {cardHoursDropdownOpen && (
-                      <div className="card-hours-dropdown">
-                        <div className="card-hours-row">
-                          <span className="card-hours-day">Monday</span>
-                          <span className="card-hours-time">Open 24 hours</span>
-                        </div>
-                        <div className="card-hours-row">
-                          <span className="card-hours-day">Tuesday</span>
-                          <span className="card-hours-time">Open 24 hours</span>
-                        </div>
-                        <div className="card-hours-row">
-                          <span className="card-hours-day">Wednesday</span>
-                          <span className="card-hours-time">Open 24 hours</span>
-                        </div>
-                        <div className="card-hours-row">
-                          <span className="card-hours-day">Thursday</span>
-                          <span className="card-hours-time">Open 24 hours</span>
-                        </div>
-                        <div className="card-hours-row">
-                          <span className="card-hours-day">Friday</span>
-                          <span className="card-hours-time">Open 24 hours</span>
-                        </div>
-                        <div className="card-hours-row">
-                          <span className="card-hours-day">Saturday</span>
-                          <span className="card-hours-time">Open 24 hours</span>
-                        </div>
-                        <div className="card-hours-row">
-                          <span className="card-hours-day">Sunday</span>
-                          <span className="card-hours-time closed">Closed</span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
                 </div>
               </div>
 
